@@ -1,7 +1,29 @@
-$base-color: #ff0000;
-$color: rgba(black, 0.88);
+@import url('https://fonts.googleapis.com/css2?family=Pathway+Extreme&display=swap');
 
-body {
-    background-color: $base-color;
-    color: $color;
+:root {
+    --white: #fefefe;
+    --black: #000000;
+    --brown: #5c2018;
+    --light-red-original: #ff2536;
+    --buttons-red-original: #ff0004;
+    /* colorhunt, colours */
+    --light-red: #FD0054;
+    --dark-red: #A80038;
+    --brown-logo: #2B2024;
+    --white-logo: #FBF9FA;
+    --navbar-color: rgb(7, 7, 7);
+    
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'DM Sans', sans-serif;
+    font-family: 'Questrial', sans-serif;
+    letter-spacing: 1px;
 }
