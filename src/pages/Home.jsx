@@ -9,6 +9,7 @@ const Home = () =>{
     return(
         <div className='background'>
             <img src={neon} alt="s" className='neon'/>
+            <h1>Hola</h1>
         </div>
     )
 }
