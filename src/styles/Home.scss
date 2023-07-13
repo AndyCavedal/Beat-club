@@ -6,7 +6,49 @@
     height: 100%;
     z-index: -1;
     background-image: url(../assets//GINBEAT.jpg);
-    background-repeat: no-repeat;
     background-size: cover;
     background-position: center top;
+    display: flex;
+    align-items: center;
+}
+
+
+.contenedor-banner{
+    padding: 20px;
+    background-color: var(--black);
+    max-width: 520px;
+    margin: auto;
+    text-align: center;
+    height: auto;
+    border-radius: 250px 250px 0 0;
+}
+
+.contenedor-banner img{
+    width: 80%;
+    margin: auto;
+    display: block;
+    margin-top: 50px;
+}
+
+.contenedor-banner p{
+    color: #fff;
+    font-size: 2rem;
+}
+
+
+.banner-btn{
+    margin-top: 8rem;
+}
+
+.contenedor-banner .btn{
+    background-color: var(--dark-red);
+    font-size: 2rem;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.banner-direccion {
+    margin-top: 5rem;
 }
