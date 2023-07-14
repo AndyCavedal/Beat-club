@@ -1,0 +1,50 @@
+.contenedor-banner{
+    padding: 3rem;
+    background-color: var(--black);
+    max-width: 520px;
+    margin: auto;
+    margin-top: 140px;
+    text-align: center;
+    height: auto;
+    border-radius: 250px 250px 0 0;
+}
+
+.contenedor-banner img{
+    width: 80%;
+    margin: auto;
+    display: block;
+    margin-top: 50px;
+}
+
+.contenedor-banner p{
+    color: #fff;
+    font-size: 2.2rem;
+    padding-top: 1rem;
+}
+
+.contenedor-banner hr{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+.banner-text{
+    color: var(--dark-red)!important;
+}
+
+.banner-btn{
+    margin-top: 8rem;
+}
+
+.contenedor-banner .btn{
+    background-color: var(--dark-red);
+    font-size: 2rem;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.banner-direccion {
+    margin-top: 5rem;
+}
