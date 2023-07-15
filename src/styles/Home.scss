@@ -18,5 +18,12 @@
     background-attachment: fixed;
     display: flex;
     align-items: center;
-    
+}
+
+.hr-divisor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 80vw;
 }

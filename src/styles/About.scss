@@ -1,12 +1,43 @@
-.about-panel{
-    background: var(--black);
-    position: relative;
+.about-panel__container {
+    color: white;
+    background-color: var(--smoothBlack);
+    display: flex;
+    margin: 0 auto;
+    font-family: 'Pathway Extreme', sans-serif;
+    margin-bottom: 50px;
 }
 
-.about-title{
-    color: #fff;
+// .about-title__container {
+//     margin-left: 150px;
+// }
+
+.about-title {
+    width: 20vw;
+    padding: 25px 25px 5px 25px;
+    font-size: 5rem;
 }
 
-.about-text{
-    color: #fff;
+.about-subtitle {
+    padding: 0px 25px 25px 25px;
+    font-size: 2.5rem;
+}
+
+.about-text {
+    font-size: 1.8rem;
+    width: 40vw;
+    padding: 40px 0px 0px 40px;
+}
+
+@media only screen and (max-width: 850px) {
+    .about-panel__container {
+        flex-direction: column;
+    }
+
+    .about-title {
+        width: 90vw;
+    }
+
+    .about-text {
+        width: 90vw;
+    }
 }

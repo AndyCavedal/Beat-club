@@ -3,19 +3,33 @@ import '../styles/Header.scss';
 import '../styles/MediaQuery.scss';
 import logo from '../assets/beat-club-logo-header.png';
 import { List, X } from 'react-bootstrap-icons';
-import { useRef } from 'react';
+import { useRef, useState, useEffect } from 'react';
 
 
 const Header = () => {
     const navRef = useRef();
+    const [isNavVisible, setNavVisible] = useState(false);
+
+
+    const handleTouchMove = () =>{
+        setNavVisible(false);
+    }
+
+    useEffect(()=>{
+        window.addEventListener('touchmove', handleTouchMove);
+
+        return () =>{
+            window.removeEventListener('touchmove', handleTouchMove)
+        }
+    }, [])
 
     const showNavbar = () => {
-        navRef.current.classList.toggle('responsive_nav');
+        setNavVisible(!isNavVisible)
     }
 
     return (
         <header>
-            <nav ref={navRef}>
+            <nav ref={navRef} className={isNavVisible ? 'responsive_nav' : ''}>
                 <li className="navbar-list">
                     <img src={logo} alt="beat-club logo" href="/" id="logo-header" className='desktop' />
                     <a className="header-link" id="inicio-link" href="/">Inicio</a>

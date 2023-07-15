@@ -15,6 +15,13 @@ module.exports = {
     //que extensiones se van a usar
     resolve: {
         extensions: ['.js', '.jsx'],
+        alias: {
+            '@components': path.resolve(__dirname, 'src/components/'),
+            '@styles': path.resolve(__dirname, 'src/styles/'),
+            '@pages': path.resolve(__dirname, 'src/pages/'),
+            '@containers': path.resolve(__dirname, 'src/containers/'),
+            '@icons': path.resolve(__dirname, 'src/assets/')
+        }
     },
     //Aqui trabajaremos las reglas que se crearan con los loaders y los plugins que agreguemos
     module: {

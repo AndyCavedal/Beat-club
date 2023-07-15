@@ -3,6 +3,7 @@
 :root {
     --white: #fefefe;
     --black: #000000;
+    --smoothBlack: #0d0c11;
     --brown: #5c2018;
     --light-red-original: #ff2536;
     --buttons-red-original: #ff0004;
@@ -26,6 +27,7 @@ html {
     font-family: 'DM Sans', sans-serif;
     font-family: 'Questrial', sans-serif;
     letter-spacing: 1px;
+    background-color: var(--smoothBlack);
 }
 
 .contenedor{
