@@ -6,6 +6,12 @@
     display: flex;
 }
 
+@media only screen and (min-width: 900px) {
+    .about-title__container {
+        margin-left: 90px;
+    }
+}
+
 @media only screen and (max-width: 850px) {
  //HEADER
  .mobile {
@@ -85,6 +91,12 @@
 .banner-direccion{
     margin-top: 3.5rem;
 }
+
+//about 
+.about-title__container {
+    margin-left: 20px;
+}
+
 }
 
 
@@ -106,5 +118,10 @@
 
     .contenedor-banner .btn{
         font-size: 1.5rem;
+    }
+
+//FOOTER
+    .footer-links-div{
+        margin: 1rem 0;
     }
 }

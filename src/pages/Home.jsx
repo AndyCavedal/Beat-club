@@ -3,7 +3,9 @@ import '../styles/Home.scss';
 import Banner from '../components/Banner'
 import About from '../components/About'
 import Gallery from '../components/Gallery'
-import Entrada from '../components/Entrada'
+import GalleryContainer from '../containers/GalleryContainer';
+import Entrada from '../components/Entrada'; 
+import Footer from '../components/Footer';
 
 
 const Home = () => {
@@ -16,8 +18,9 @@ const Home = () => {
             </div>
             <About />
             <hr className='hr-divisor'/>
-            <Gallery />
+            <GalleryContainer />
             <Entrada />
+            <Footer/>
         </div>
     )
 }
