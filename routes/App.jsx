@@ -23,6 +23,7 @@ const App = () => {
                 <Route exact path='*' element={<NotFound />} />
             </Routes>
             <WhatsApp />
+            <Footer/>
         </BrowserRouter>
     )
 };

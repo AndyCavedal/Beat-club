@@ -2,13 +2,14 @@
     display: flex;
     justify-content: center;
     margin: 70px auto 70px auto;
+    
 }
 
 .entradaweb__container {
     display: flex;
     align-items: center;
     background-color: #161518;
-    width: 1200px;
+    max-width: 1200px;
     height: 500px;
     border-radius: 25px;
 }
@@ -30,9 +31,6 @@
 }
 
 .entradaweb__container-izq {
-    position: relative;
-    bottom: 0;
-    left: 0;
     width: 50%;
     height: 100%;
     display: flex;
@@ -42,18 +40,15 @@
 }
 
 .entradaweb-img {
-    position: relative;
-    top: 0;
-    right: 0;
     width: 50%;
     height: 100%;
     object-fit: cover;
     border-bottom-right-radius: 25px;
     border-top-right-radius: 25px;
+    z-index: 0;
 }
 
 .entradaweb__container-izq .btn {
-    
     text-align: center;
     width: 20vw;
     background-color: var(--dark-red);
@@ -65,6 +60,30 @@
     font-family: 'Pathway Extreme', sans-serif;
 }
 
-@media only screen and (max-width) {
+@media only screen and (max-width: 1050px) {
+    .entradaweb__container {
+        flex-direction: column;
+        width: 80vw;
+        height: 500px;
+        background-image: url(/src/assets/entradasweb.jpg);
+        background-size: cover;
+    }
+
+    .entradaweb__container-izq .btn {
+        width: 200px;
+    }
+
+    #entrada-title {
+        font-size: 3.6rem;
+        padding: 10px;
+    }
     
+    #entrada-subtitle {
+        font-size: 1.6rem;
+        padding: 5px;
+    }
+
+    .entradaweb-img {
+        display: none;
+    }
 }

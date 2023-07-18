@@ -90,11 +90,11 @@ const Galeria = () =>{
         },
         {
             id: 19,
-            imgSrc: Img19,
+            imgSrc: Img14,
         },
         {
             id: 20,
-            imgSrc: Img20,
+            imgSrc: Img19,
         },
     ]
 

@@ -4,23 +4,24 @@ import Banner from '../components/Banner'
 import About from '../components/About'
 import Gallery from '../components/Gallery'
 import GalleryContainer from '../containers/GalleryContainer';
-import Entrada from '../components/Entrada'; 
-import Footer from '../components/Footer';
+import Entrada from '../components/Entrada';
+
 
 
 const Home = () => {
     return (
-        <div className='home-container'>
-            <div className='background'>
-                <div className='contenedor'>
-                    <Banner />
+        <div>
+            <div className='home-container'>
+                <div className='background'>
+                    <div className='contenedor'>
+                        <Banner />
+                    </div>
                 </div>
             </div>
             <About />
-            <hr className='hr-divisor'/>
+            <hr className='hr-divisor' />
             <GalleryContainer />
             <Entrada />
-            <Footer/>
         </div>
     )
 }

@@ -1,0 +1,43 @@
+.menu__container {
+    position: relative;
+    height: calc(100vh + 115px);
+    top: -115px;
+    z-index: -1;
+    display: flex;
+    
+}
+
+.menu-background {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 115px);
+    z-index: -1;
+    background-image: url(../assets/beat-fondo.jpg);
+    background-size: cover;
+    background-position: center top;
+    background-attachment: fixed;
+    display: flex;
+    align-items: flex-end;
+}
+
+.menu-title {
+    font-family: 'Pathway Extreme', sans-serif;
+    font-size: 10rem;
+    padding: 50px;
+    color: rgb(249, 249, 249);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    
+}
+
+@media only screen and (max-width: 800px) {
+    .menu-title {
+        padding: 10px;
+        font-size: 3.2rem;
+    }
+
+    .menu-background {
+        height: 100%;
+    }
+}

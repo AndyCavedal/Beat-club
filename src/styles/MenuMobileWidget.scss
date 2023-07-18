@@ -1,0 +1,43 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Crea 2 columnas de igual ancho */
+    gap: 20px;
+    /* Espacio entre los elementos */
+    padding: 15px;
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.grid-item img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 100%;
+    /* Ajusta el ancho máximo de la imagen según tus necesidades */
+}
+
+.grid-item button {
+    margin-top: 10px;
+    /* Espacio entre la imagen y el botón */
+}
+
+.menu-btn {
+    font-family: 'Pathway Extreme', sans-serif;
+    background-color: var(--dark-red);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px;
+    margin: 15px 0px 10px 0px;
+    border-radius: 2px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+
+

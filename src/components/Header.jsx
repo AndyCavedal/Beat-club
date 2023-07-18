@@ -4,6 +4,7 @@ import '../styles/MediaQuery.scss';
 import logo from '../assets/beat-club-logo-header.png';
 import { List, X } from 'react-bootstrap-icons';
 import { useRef, useState, useEffect } from 'react';
+import { Link } from "react-router-dom";
 
 
 const Header = () => {
@@ -32,10 +33,10 @@ const Header = () => {
             <nav ref={navRef} className={isNavVisible ? 'responsive_nav' : ''}>
                 <li className="navbar-list">
                     <img src={logo} alt="beat-club logo" href="/" id="logo-header" className='desktop' />
-                    <a className="header-link" id="inicio-link" href="/">Inicio</a>
-                    <a className="header-link" href="/">Eventos</a>
-                    <a className="header-link" href="/">Menu</a>
-                    <a className="header-link" href="/">Contacto</a>
+                    <Link className="header-link" id="inicio-link" to="/">Inicio</Link>
+                    <Link className="header-link" to="/eventos">Eventos</Link>
+                    <Link className="header-link" to="/menu">Menu</Link>
+                    <Link className="header-link" to="/contacto">Contacto</Link>
                 </li>
             </nav>
             <List onClick={showNavbar} className='nav-btn mobile' />
