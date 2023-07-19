@@ -1,0 +1,63 @@
+.table {
+    display: flex;
+    width: auto;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin: 0 auto;
+    font-size: 2.6rem;
+    color: white;
+}
+
+.food-title {
+    color: white;
+    font-size: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    
+}
+
+.img__container {
+    margin: 30px 0px 30px 0px;
+}
+
+.img__container img {
+    width: 30vw;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+//td productos y precios
+.td {
+    padding: 15px 110px 15px 110px;
+}
+
+@media only screen and (max-width: 800px) {
+
+    .food-title {
+        margin: 0 auto;
+        font-size: 4rem;
+        padding: 40px 0px 0px 0px;
+    }
+
+    .img__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 30px 0px 30px 0px;
+    }
+
+    .img__container img {
+        width: 55vw;
+    }
+
+    .table {
+        font-size: 2rem;
+    }
+
+    .td {
+        padding: 2px 20px 30px 30px;
+    }
+
+}

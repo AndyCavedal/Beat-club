@@ -13,53 +13,46 @@ import bebidas from '../assets/menu/bebidas.jpeg';
 import ensaladas from '../assets/menu/ensaladas.jpeg';
 
 
-
-
-
 const MenuMobileWidget = () => {
     return (
-        <div class="grid-container">
-            <div class="grid-item">
+        <div className="grid-container">
+            <div className="grid-item">
                 <img src={vinos} alt="seccion vinos" />
                 <a className='menu-btn' href="/">VINOS</a>
             </div>
-            <div class="grid-item">
+            <div className="grid-item">
                 <img src={picadas} alt="seccion picadas" />
                 <a className='menu-btn' href="/">PICADAS</a>
             </div>
-            <div class="grid-item">
+            <div className="grid-item">
                 <img src={bebidas} alt="seccion bebidas" />
                 <a className='menu-btn' href="/">BEBIDAS</a>
             </div>
-            <div class="grid-item">
+            <div className="grid-item">
                 <img src={sandwichs} alt="seccion sandwichs" />
                 <a className='menu-btn' href="/">SANDWICHS</a>
             </div>
-            <div class="grid-item">
+            <div className="grid-item">
                 <img src={burgers} alt="seccion burgers" />
                 <a className='menu-btn' href="/">BURGERS</a>
             </div>
-            <div class="grid-item">
+            <div className="grid-item">
                 <img src={promos} alt="seccion promos" />
                 <a className='menu-btn' href="/">PROMOS</a>
             </div>
-            <div class="grid-item">
+            <div className="grid-item">
                 <img src={postres} alt="seccion postres" />
                 <a className='menu-btn' href="/">POSTRES</a>
             </div>
-            <div class="grid-item">
+            <div className="grid-item">
                 <img src={tragos} alt="seccion tragos" />
                 <a className='menu-btn' href="/">TRAGOS</a>
             </div>
-            <div class="grid-item">
+            <div className="grid-item">
                 <img src={whiskys} alt="seccion whiskys" />
                 <a className='menu-btn' href="/">WHISKYS</a>
             </div>
-            <div class="grid-item">
-                <img src={espumantes} alt="seccion espumantes" />
-                <a className='menu-btn' href="/">ESPUMANTES</a>
-            </div>
-            <div class="grid-item">
+            <div className="grid-item">
                 <img src={ensaladas} alt="seccion ensaladas" />
                 <a className='menu-btn' href="/">ENSALADAS</a>
             </div>
