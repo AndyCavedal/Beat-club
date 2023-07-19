@@ -21,24 +21,26 @@ const MenuTable = () => {
     return (
 
         <div>
-            <h2 className='food-title'>Vinos</h2>
             <div className='img__container'>
                 <img src={vinos} alt="imagen vinos" />
             </div>
-            <table className='table'>
-                <thead className='thead'>
-                    <tr className='tr'>
-                    </tr>
-                </thead>
-                <tbody className='tbody'>
-                    {menuItems.map((item, index) => (
-                        <tr className='tr' key={index}>
-                            <td className='td'>{item.name}</td>
-                            <td className='td'>${item.price}</td>
+            <div className='table__container'>
+                <h2 className='food-title'>Vinos</h2>
+                <table className='table'>
+                    <thead className='thead'>
+                        <tr className='tr'>
                         </tr>
-                    ))}
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody className='tbody'>
+                        {menuItems.map((item, index) => (
+                            <tr className='tr' key={index}>
+                                <td className='td'>{item.name}</td>
+                                <td className='td'>${item.price}</td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </div>
         </div>
     );
 };
