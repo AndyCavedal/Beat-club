@@ -39,5 +39,10 @@
     font-family: 'Roboto Condensed', sans-serif;
 }
 
+@media only screen and (min-width: 950px) {
+    .grid-container {
+        display: none;
+    }
+}
 
 
