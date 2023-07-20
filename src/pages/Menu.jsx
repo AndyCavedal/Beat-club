@@ -3,6 +3,7 @@ import React from 'react';
 import MenuBienvenida from '../components/MenuBienvenida';
 import MenuMobileWidget from '../containers/MenuMobileWidgets';
 import MenuTable from '../components/MenuTable';
+import MenuPagos from '../components/MenuPagos';
 
 const Menu = () =>{
     return(
@@ -10,6 +11,7 @@ const Menu = () =>{
             <MenuBienvenida />
             <MenuMobileWidget />
             <MenuTable />
+            <MenuPagos />
         </div>
     )
 }

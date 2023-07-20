@@ -3,19 +3,20 @@ import '../styles/MenuMobileWidget.scss';
 import vinos from '../assets/menu/vinos.jpg';
 import picadas from '../assets/menu/picadas.jpg';
 import tragos from '../assets/menu/tragos.jpg';
-import espumantes from '../assets/menu/espumantes.jpg';
-import promos from '../assets/menu/promos.png';
-import whiskys from '../assets/menu/whiskys.jpeg';
+//import espumantes from '../assets/menu/espumantes.jpg';
+import promos from '../assets/menu/promos.svg';
+import whiskys from '../assets/menu/whiskys.jpg';
 import burgers from '../assets/menu/burgers.jpg';
 import postres from '../assets/menu/postres.jpeg';
 import sandwichs from '../assets/menu/sandwichs.jpg';
-import bebidas from '../assets/menu/bebidas.jpeg';
+import bebidas from '../assets/menu/bebidas.jpg';
 import ensaladas from '../assets/menu/ensaladas.jpeg';
 
 
 const MenuMobileWidget = () => {
     return (
         <div className="grid-container">
+            <h2 className="widgets-title">Nuestra Carta</h2>
             <div className="grid-item">
                 <img src={vinos} alt="seccion vinos" />
                 <a className='menu-btn' href="/">VINOS</a>
