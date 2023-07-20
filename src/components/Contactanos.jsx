@@ -23,19 +23,7 @@ const Contactanos = () => {
                         <Facebook className='icon-logo' id='facebook-logo' />
                     </div>
                 </div>
-                <div className='form-container'>
-                    <h1 className='contactanos-text' id='form-title'>Envianos tu mensaje</h1>
-                    <div className='row-container'>
-                        <input type="text" placeholder='Nombre' className='form-input' id='name-input' />
-                        <input type='email' placeholder='Email' className='form-input' id='email-input' />
-                    </div>
-                    <div className='row-container'>
-                        <input type="number" readOnly placeholder='Numero' className='form-input' id='number-input' />
-                        <h2 className='contactanos-text' id='form-subtitle'>En el siguiente bloque tu mensaje</h2>
-                    </div>
-                    <input type="text" placeholder='Mensaje' className='form-input' id='msg-input' />
-                    <button className='button' id='form-button'>Enviar</button>
-                </div>
+                
             </div>
         </div>
     )

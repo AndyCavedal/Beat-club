@@ -5,6 +5,7 @@ import About from '../components/About'
 //import Gallery from '../components/Gallery'
 import GalleryContainer from '../containers/GalleryContainer';
 import Entrada from '../components/Entrada';
+import Contactanos from '../components/Contactanos';
 
 
 
@@ -22,6 +23,7 @@ const Home = () => {
             <hr className='hr-divisor' />
             <GalleryContainer />
             <Entrada />
+            <Contactanos />
         </div>
     )
 }

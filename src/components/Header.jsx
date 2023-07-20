@@ -36,7 +36,7 @@ const Header = () => {
                     <Link className="header-link" id="inicio-link" to="/">Inicio</Link>
                     <Link className="header-link" to="/eventos">Eventos</Link>
                     <Link className="header-link" to="/menu">Menu</Link>
-                    <Link className="header-link" to="/contacto">Contacto</Link>
+                    <Link className="header-link" to="/">Contacto</Link>
                 </li>
             </nav>
             <List onClick={showNavbar} className='nav-btn mobile' />

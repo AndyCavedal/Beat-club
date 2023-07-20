@@ -4,7 +4,6 @@
     top: -115px;
     z-index: -1;
     display: flex;
-    
 }
 
 .menu-background {
@@ -28,9 +27,9 @@
     padding: 50px;
     color: rgb(249, 249, 249);
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-    
 }
 
+//no pasar a mediaquerys.scss hasta que no terminemos de mejorar la portada
 @media only screen and (max-width: 800px) {
     .menu-title {
         padding: 10px;

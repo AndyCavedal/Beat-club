@@ -36,7 +36,7 @@
 }
 
 .form-container {
-    background-color: #a1896f;
+    background-color: var(--smoothBlack);
     width: 600px;
     height: 600px;
     display: flex;
@@ -158,7 +158,7 @@
 }
 
 #form-title {
-    color: #161518;
+    color: white;
     font-size: 47px;
 }
 
@@ -173,5 +173,5 @@
     margin-right: 10px;
     margin-left: 0px;
     padding: 0px;
-    color: #161518;
+    color: white;
 }
