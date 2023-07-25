@@ -9,6 +9,7 @@ import NotFound from '../src/pages/NotFound';
 import Header from '../src/components/Header';
 import Footer from '../src/components/Footer';
 import WhatsApp from '../src/components/WhatsApp';
+import Admin from '../src/pages/Admin';
 
 const App = () => {
     return (
@@ -18,6 +19,7 @@ const App = () => {
                 <Route exact path='/' element={<Home />} />
                 <Route exact path='/eventos' element={<Eventos />} />
                 <Route exact path='/menu' element={<Menu />} />
+                <Route exact path='/root' element={<Admin />} />
                 <Route exact path='*' element={<NotFound />} />
             </Routes>
             <WhatsApp />
