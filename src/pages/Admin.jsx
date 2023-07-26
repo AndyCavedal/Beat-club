@@ -1,10 +1,11 @@
 import React from "react";
-import RootPassword from "../components/RootPassword";
+import '../styles/Admin.scss';
+
 
 const Admin = ()=> {
     return (
         <div>
-            <RootPassword />
+            <h2>MENU PARA ADMIN</h2>
         </div>
     );
 };

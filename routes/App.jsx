@@ -10,6 +10,7 @@ import Header from '../src/components/Header';
 import Footer from '../src/components/Footer';
 import WhatsApp from '../src/components/WhatsApp';
 import Admin from '../src/pages/Admin';
+import Login from '../src/pages/Login';
 
 const App = () => {
     return (
@@ -20,6 +21,7 @@ const App = () => {
                 <Route exact path='/eventos' element={<Eventos />} />
                 <Route exact path='/menu' element={<Menu />} />
                 <Route exact path='/root' element={<Admin />} />
+                <Route exact path='/login' element={<Login />} />
                 <Route exact path='*' element={<NotFound />} />
             </Routes>
             <WhatsApp />
