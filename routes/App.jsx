@@ -11,6 +11,9 @@ import Footer from '../src/components/Footer';
 import WhatsApp from '../src/components/WhatsApp';
 import Admin from '../src/pages/Admin';
 import Login from '../src/pages/Login';
+import ProtectedRoute from '../src/components/ProtectedRoute';
+
+
 
 const App = () => {
     return (
@@ -20,7 +23,9 @@ const App = () => {
                 <Route exact path='/' element={<Home />} />
                 <Route exact path='/eventos' element={<Eventos />} />
                 <Route exact path='/menu' element={<Menu />} />
-                <Route exact path='/root' element={<Admin />} />
+                <Route element={<ProtectedRoute canActive={false} />}>
+                    <Route exact path='/root' element={<Admin />} />
+                </Route>
                 <Route exact path='/login' element={<Login />} />
                 <Route exact path='*' element={<NotFound />} />
             </Routes>

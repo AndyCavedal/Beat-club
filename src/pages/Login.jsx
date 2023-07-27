@@ -4,33 +4,35 @@ import axios from 'axios';
 import '../styles/Login.scss';
 
 const Login = () => {
-    const [body, setBody] = useState({username: '', password: ''})
+    const [body, setBody] = useState({ username: '', password: '' })
     const navigate = useNavigate();
 
 
-    const inputChange= (e)=>{
-        const {name, value} = e.target
+    const inputChange = (e) => {
+        const { name, value } = e.target
         setBody({
             ...body,
-            [name] : value
+            [name]: value
         })
     }
 
-    const onSubmit = (e)=>{
+    const onSubmit = (e) => {
         e.preventDefault();
         axios.post('https://server-api-beat-club.vercel.app/api/login', body)
-        .then(( {data} )=>{
-            navigate('/root')
-        })
-        .catch(({response})=>{
-            console.log(response.data)
-        })
+            .then(({ data }) => {
+                localStorage.setItem('auth', '"yes"')
+                navigate('/root'); // Redirige al usuario a la página protegida
+                console.log(data);
+            })
+            .catch(({ response }) => {
+                console.log(response.data);
+            })
     }
 
     return (
         <div className='form-container'>
             <h2>Iniciar Sesión</h2>
-            <form>
+            <form onSubmit={onSubmit}>
                 <div>
                     <label>Nombre de Usuario:</label>
                     <input
@@ -51,7 +53,7 @@ const Login = () => {
                         required
                     />
                 </div>
-                <button onClick={onSubmit}>Iniciar Sesión</button>
+                <button type="submit">Iniciar Sesión</button>
             </form>
         </div>
     );

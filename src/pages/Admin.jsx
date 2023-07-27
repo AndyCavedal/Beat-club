@@ -5,7 +5,7 @@ import '../styles/Admin.scss';
 const Admin = ()=> {
     return (
         <div>
-            <h2>MENU PARA ADMIN</h2>
+            <h2 className="titulo-menu">MENU PARA ADMIN</h2>
         </div>
     );
 };
