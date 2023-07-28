@@ -12,6 +12,10 @@ import WhatsApp from '../src/components/WhatsApp';
 import Admin from '../src/pages/Admin';
 import Login from '../src/pages/Login';
 import ProtectedRoute from '../src/components/ProtectedRoute';
+import ReadProductos from '../src/pages/ReadProductos';
+import ReadEventos from '../src/pages/ReadEventos';
+import CreateProducto from '../src/pages/CreateProducto';
+import UpdateProducto from '../src/pages/UpdateProducto';
 
 
 
@@ -23,8 +27,12 @@ const App = () => {
                 <Route exact path='/' element={<Home />} />
                 <Route exact path='/eventos' element={<Eventos />} />
                 <Route exact path='/menu' element={<Menu />} />
-                <Route element={<ProtectedRoute canActive={false} />}>
+                <Route element={<ProtectedRoute />}>
                     <Route exact path='/root' element={<Admin />} />
+                    <Route exact path='/readproductos' element={<ReadProductos />} />
+                    <Route exact path='/readeventos' element={<ReadEventos />} />
+                    <Route exact path='/createproducto' element={<CreateProducto />} />
+                    <Route exact path='/updateproducto' element={<UpdateProducto />} />
                 </Route>
                 <Route exact path='/login' element={<Login />} />
                 <Route exact path='*' element={<NotFound />} />
