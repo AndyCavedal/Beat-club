@@ -1,0 +1,19 @@
+.supercontainer {
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.producto-form__container label{
+    font-size: 2.2rem;
+}
+
+.producto-form__container input {
+    padding: 5px;
+    border-radius: 15px;
+}
+
+.producto-form__container button {
+    padding: 5px;
+}

@@ -56,8 +56,8 @@ const CreateProducto = () => {
 
 
     return (
-        <div>
-            <div>
+        <div className="supercontainer">
+            <div className="producto-form__container">
                 <form>
                     <label>Nombre</label> <br />
                     <input
@@ -91,13 +91,13 @@ const CreateProducto = () => {
                     <br />
                     <Link to="/readproductos">
                         <button onClick={postData} type="submit">
-                            done
+                            Crear Categoria
                         </button>
                     </Link>
 
                     <Link to="/readproductos">
                         <button type="submit">
-                            cerrar
+                            Cerrar
                         </button>
                     </Link>
                 </form>
