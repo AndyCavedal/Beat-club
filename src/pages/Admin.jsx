@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 
 const Admin = ()=> {
     return (
-        <div>
-            <h2 className="titulo-menu">MENU PARA ADMIN</h2>
+        <div className="root-interface__container">
+            <h2>MENU PARA ADMIN</h2>
             <div>
                 <Link to='/readproductos'>
                     <button>Productos</button>

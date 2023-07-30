@@ -4,37 +4,40 @@ import axios from 'axios';
 import '../styles/Login.scss';
 
 const Login = () => {
-    const [body, setBody] = useState({ username: '', password: '' })
+    const [body, setBody] = useState({ username: '', password: '' });
     const navigate = useNavigate();
 
+    //para el mensaje de error
+    const [errorMessage, setErrorMessage] = useState('');
 
     const inputChange = (e) => {
-        const { name, value } = e.target
+        const { name, value } = e.target;
         setBody({
             ...body,
             [name]: value
-        })
-    }
+        });
+    };
 
     const onSubmit = (e) => {
         e.preventDefault();
         axios.post('https://server-api-beat-club.vercel.app/api/login', body)
             .then(({ data }) => {
-                localStorage.setItem('auth', '"yes"')
+                localStorage.setItem('auth', '"yes"');
                 navigate('/root'); // Redirige al usuario a la página protegida
                 console.log(data);
             })
             .catch(({ response }) => {
                 console.log(response.data);
-            })
-    }
+                setErrorMessage('Verificación Incorrecta');
+            });
+    };
 
     return (
-        <div className='form-container'>
+        <div className='login-container'>
             <h2>Iniciar Sesión</h2>
-            <form onSubmit={onSubmit}>
+            <form className='login-form' onSubmit={onSubmit}>
                 <div>
-                    <label>Nombre de Usuario:</label>
+                    <label>Usuario:</label>
                     <input
                         type="text"
                         value={body.username}
@@ -53,7 +56,8 @@ const Login = () => {
                         required
                     />
                 </div>
-                <button type="submit">Iniciar Sesión</button>
+                <button type="submit">Verificar</button>
+            {errorMessage && <p>{errorMessage}</p>}
             </form>
         </div>
     );

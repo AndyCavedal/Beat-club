@@ -1,3 +1,31 @@
-.titulo-menu{
-    color: aliceblue;
+.root-interface__container {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.root-interface__container h2{
+    font-size: 2.4rem;
+    padding: 10px;
+}
+
+.root-interface__container button {
+    padding: 5px;
+    margin: 5px;
+    font-weight: bold;
+    font-size: 1.8rem;
+    background-color: var(--dark-red);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    border: 1px solid white;
+}
+
+.root-interface__container button:hover {
+    background-color: white;
+    color: var(--dark-red);
+    border: 1px solid var(--dark-red);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }

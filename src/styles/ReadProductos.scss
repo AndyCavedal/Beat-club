@@ -1,3 +1,86 @@
-.datatable{
+.productos-container__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.datatable {
     color: #fff;
+    font-size: 1.8rem;
+}
+
+.table-title {
+    font-size: 2rem;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.datatable button {
+    font-size: 1.8rem;
+    padding: 5px;
+    margin: 2px;
+    background-color: var(--dark-red);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    border: 1px solid white;
+}
+
+.datatable button:hover {
+    background-color: white;
+    color: var(--dark-red);
+    border: 1px solid var(--dark-red);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.links button {
+    font-size: 2.2rem;
+    background-color: white;
+    border-radius: 3px;
+    color: black;
+    border: none;
+    cursor: pointer;
+
+}
+
+.new-product__link {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 15px;
+    border-radius: 50px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    margin: 15px 25px 20px 25px;
+}
+
+.new-product__link:hover {
+    transform: scale(1.2);
+    transform-origin: center;
+}
+
+.database-logo {
+    margin-left: 20px;
+    width: 35px;
+}
+
+.create-product__link {
+    display: flex;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+}
+
+.volver__link {
+    display: flex;
+    text-decoration: none;
+    font-size: 3.1rem;
+    color: inherit;
 }

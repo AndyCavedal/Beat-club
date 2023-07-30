@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import '../styles/ReadProductos.scss';
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { ArrowReturnLeft } from 'react-bootstrap-icons';
+import database from '../assets/database-add.svg';
 
 const ReadProductos = () => {
     const [apiProductos, setApiProductos] = useState([])
@@ -17,31 +19,35 @@ const ReadProductos = () => {
         });
     }
 
-    function onDelete(id){
-        axios.delete(`https://server-api-beat-club.vercel.app/productos/${id}`).then(()=>{
+    function onDelete(id) {
+        axios.delete(`https://server-api-beat-club.vercel.app/productos/${id}`).then(() => {
             getProductos();
         })
     }
 
     return (
-        <div>
-            <div>
-                <div>
-                    <Link to='/createproducto'>
+        <div className="productos-container__container">
+            <div className="links">
+                <div className="new-product__link">
+                    <Link className="create-product__link" to='/createproducto' >
                         <button>Nuevo producto</button>
+                        <img src={database} className="database-logo" alt="database add icon" />
                     </Link>
-                    <Link to='/root'>
+                </div>
+                <div className="new-product__link">
+                    <Link className="volver__link" to='/root'>
                         <button>Volver</button>
+                        <ArrowReturnLeft className="database-logo"/>
                     </Link>
                 </div>
             </div>
             <table className="datatable">
                 <thead>
                     <tr>
-                        <td>Nombre</td>
-                        <td>Precio</td>
-                        <td>Descripcion</td>
-                        <td>Categoria</td>
+                        <td className="table-title">Nombre</td>
+                        <td className="table-title">Precio</td>
+                        <td className="table-title">Descripcion</td>
+                        <td className="table-title">Categoria</td>
                     </tr>
                 </thead>
                 <tbody>
@@ -55,7 +61,7 @@ const ReadProductos = () => {
                                 <button>Edit</button>
                             </td>
                             <td>
-                                <button onClick={()=>onDelete(elem.producto_id)}>Delete</button>
+                                <button onClick={() => onDelete(elem.producto_id)}>Delete</button>
                             </td>
                         </tr>
                     ))}
@@ -66,4 +72,4 @@ const ReadProductos = () => {
 }
 
 
-export default ReadProductos
+export default ReadProductos;
