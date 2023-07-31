@@ -6,7 +6,7 @@ const Contactanos = () => {
  return (
   <div className='container-container'>
     <div className='social-container'>
-     <div className='square'>
+     <div className='square-contacto'>
       <h2 className='contactanos-text'>Beat Club Mendoza</h2>
       <div>
        <p className='contactanos-link' id='location-link'>Av.Perú 1773, M5500 Mendoza, Argentina</p>

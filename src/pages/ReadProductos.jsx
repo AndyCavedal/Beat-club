@@ -25,6 +25,10 @@ const ReadProductos = () => {
         })
     }
 
+    function setData(){
+        
+    }
+
     return (
         <div className="productos-container__container">
             <div className="links">
