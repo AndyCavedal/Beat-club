@@ -60,29 +60,34 @@ const MenuTable = () => {
                     </table>
                 </div>
             </div>
-            <div className='img__container'>
-                <img src={imgEspumante} alt="imagen vinos" />
-            </div>
-            <div className='table__container'>
-                <h2 className='food-title'>Espumante</h2>
-                <table className='table'>
-                    <thead className='thead'>
-                        <tr className='tr'>
-                        </tr>
-                    </thead>
-                    <tbody className='tbody'>
-                        {espumante.map((item, index) => (
-                            <tr className='tr' key={index}>
-                                <td className='td'>{item.nombre}</td>
-                                <td className='td'>${item.precio}</td>
+            <div className='tables__container'>
+                <div className='square square-left'>
+                    <img src={imgEspumante} alt="imagen espumantes" />
+                </div>
+                <div className='square square-right'>
+                    <div className='foto-responsive'>
+                        <img src={imgEspumante} alt="imagen espumantes" />
+                    </div>
+                    <h2 className='food-title'>Espumante</h2>
+                    <table className='table'>
+                        <thead className='thead'>
+                            <tr className='tr'>
                             </tr>
-                        ))}
-                    </tbody>
-                    <thead className='thead'>
-                        <tr className='tr'>
-                        </tr>
-                    </thead>
-                </table>
+                        </thead>
+                        <tbody className='tbody'>
+                            {espumante.map((item, index) => (
+                                <tr className='tr' key={index}>
+                                    <td className='td'>{item.nombre}</td>
+                                    <td className='td'>${item.precio}</td>
+                                </tr>
+                            ))}
+                        </tbody>
+                        <thead className='thead'>
+                            <tr className='tr'>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
             </div>
         </div>
     );

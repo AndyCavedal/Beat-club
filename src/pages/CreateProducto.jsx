@@ -12,6 +12,7 @@ const CreateProducto = () => {
     const [precio, setPrecio] = useState("");
     const [descripcion, setDescripcion] = useState("")
     const [categoria, setCategoria] = useState("")
+    const [imagen, setImagen] = useState("")
     const [categorias, setCategorias] = useState([]);
     const [dtProd, setDtProd] = useState([])
 
@@ -50,7 +51,8 @@ const CreateProducto = () => {
                     nombre,
                     precio,
                     descripcion,
-                    categoria_id: categoria
+                    categoria_id: categoria,
+                    imagen_url: imagen
                 });
             }
         }
@@ -81,6 +83,12 @@ const CreateProducto = () => {
                         onChange={(e) => setDescripcion(e.target.value)}
                     /> <br />
 
+                    <label>Imagen con url</label> <br />
+                    <input
+                        placeholder="poner imagen con url"
+                        onChange={(e) => setImagen(e.target.value)}
+                    /> <br />
+
                     <label>Categoria</label> <br />
                     <select required onChange={(e) => setCategoria(e.target.value)}>
                         <option value="">Seleccionar categoría</option>
@@ -96,7 +104,7 @@ const CreateProducto = () => {
                             <button id="crear-categoria__link" onClick={postData} type="submit">
                                 Crear Producto
                                 <img className="links-icons" src={database} alt="database add icon" />
-                                
+
                             </button>
                         </Link>
 

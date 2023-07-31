@@ -25,7 +25,14 @@ const ReadProductos = () => {
         })
     }
 
-    function setData(){
+    function setData(data) {
+        let { producto_id, nombre, precio, descripcion, categoria_id, imagen_url } = data;
+        localStorage.setItem("ID", producto_id);
+        localStorage.setItem("Nombre", nombre);
+        localStorage.setItem("Precio", precio);
+        localStorage.setItem("Descripcion", descripcion);
+        localStorage.setItem("Categoria_id", categoria_id);
+        localStorage.setItem("Imagen_url", imagen_url)
         
     }
 
@@ -41,7 +48,7 @@ const ReadProductos = () => {
                 <div className="new-product__link">
                     <Link className="volver__link" to='/root'>
                         <button>Volver</button>
-                        <ArrowReturnLeft className="database-logo"/>
+                        <ArrowReturnLeft className="database-logo" />
                     </Link>
                 </div>
             </div>
@@ -62,7 +69,11 @@ const ReadProductos = () => {
                             <td>{elem.descripcion}</td>
                             <td>{elem.categoria_nombre}</td>
                             <td>
-                                <button><Pencil /></button>
+                                <Link to='/updateproducto'>
+                                    <button onClick={() => setData(elem)}>
+                                        <Pencil />
+                                    </button>
+                                </Link>
                             </td>
                             <td>
                                 <button onClick={() => onDelete(elem.producto_id)}><Trash3 /></button>
