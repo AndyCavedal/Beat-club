@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import '../styles/CreateProducto.scss';
 import { Link } from "react-router-dom";
 import axios from "axios";
+import backarrow from '../assets/back-arrow2.svg';
+import database from '../assets/database-add.svg';
 
 
 
@@ -89,17 +91,22 @@ const CreateProducto = () => {
                         ))}
                     </select>
                     <br />
-                    <Link to="/readproductos">
-                        <button onClick={postData} type="submit">
-                            Crear Categoria
-                        </button>
-                    </Link>
+                    <ul>
+                        <Link to="/readproductos">
+                            <button id="crear-categoria__link" onClick={postData} type="submit">
+                                Crear Producto
+                                <img className="links-icons" src={database} alt="database add icon" />
+                                
+                            </button>
+                        </Link>
 
-                    <Link to="/readproductos">
-                        <button type="submit">
-                            Cerrar
-                        </button>
-                    </Link>
+                        <Link to="/readproductos">
+                            <button id="cerrar__link" type="submit">
+                                Volver
+                                <img className="links-icons" src={backarrow} alt="back arrow icon" />
+                            </button>
+                        </Link>
+                    </ul>
                 </form>
             </div>
         </div>
