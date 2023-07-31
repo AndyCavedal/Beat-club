@@ -5,7 +5,9 @@ import '../styles/UpdateProducto.scss';
 
 const UpdateProducto = ()=>{
     return(
-        <div></div>
+        <div>
+            
+        </div>
     )
 }
 

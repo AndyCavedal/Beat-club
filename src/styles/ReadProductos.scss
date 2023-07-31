@@ -17,11 +17,14 @@
 }
 
 .datatable button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 1.8rem;
     padding: 5px;
     margin: 2px;
-    background-color: var(--dark-red);
-    color: white;
+    background-color: white;
+    color: black;
     border: none;
     border-radius: 10px;
     border: 1px solid white;

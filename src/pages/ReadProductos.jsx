@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import '../styles/ReadProductos.scss';
 import axios from "axios";
 import { Link } from "react-router-dom";
-import { ArrowReturnLeft } from 'react-bootstrap-icons';
+import { ArrowReturnLeft, Pencil, Trash3 } from 'react-bootstrap-icons';
 import database from '../assets/database-add.svg';
 
 const ReadProductos = () => {
@@ -58,10 +58,10 @@ const ReadProductos = () => {
                             <td>{elem.descripcion}</td>
                             <td>{elem.categoria_nombre}</td>
                             <td>
-                                <button>Edit</button>
+                                <button><Pencil /></button>
                             </td>
                             <td>
-                                <button onClick={() => onDelete(elem.producto_id)}>Delete</button>
+                                <button onClick={() => onDelete(elem.producto_id)}><Trash3 /></button>
                             </td>
                         </tr>
                     ))}
