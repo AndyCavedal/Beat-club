@@ -1,6 +1,6 @@
 .tables__container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 30% 70%;
     gap: 10px;
     height: 100%;
     margin-bottom: 100px;
@@ -57,14 +57,37 @@
 
 //td productos y precios
 .td {
-    padding: 15px 110px 15px 110px;
+    padding: 15px 30px 15px 30px;
+}
+
+.descripcion {
+    font-size: 1.5rem;
+    color: rgb(192, 192, 192);
+    padding: 0px 30px 0px 30px;
+}
+
+.tr-grid {
+    display: grid;
+    grid-template-columns: 70% 30%;
 }
 
 @media only screen and (max-width: 800px) {
 
+    .td {
+        padding: 0px;
+    }
+
+    .descripcion {
+        padding: 0px;
+    }
+
     .food-title {
         font-size: 4rem;
         padding: 40px 0px 0px 0px;
+    }
+
+    .descripcion {
+        font-size: 1rem;
     }
 
     .tables__container {
@@ -91,10 +114,6 @@
 
     .table {
         font-size: 1.7rem;
-    }
-
-    .td {
-        padding: 2px 20px 30px 30px;
     }
 
 }

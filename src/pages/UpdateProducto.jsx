@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import '../styles/UpdateProducto.scss';
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { X, Check } from "react-bootstrap-icons";
 
 const UpdateProducto = () => {
     const [id, setID] = useState(null)
@@ -44,9 +45,9 @@ const UpdateProducto = () => {
 
 
     return (
-        <div>
-            <form >
-                <h1>{categoria_id}</h1>
+        <div className="update__container">
+            <form className="update-form__container">
+                <h2>{categoria_id}</h2>
                 <label>Nombre</label> <br />
                 <input
                     placeholder="Nombre"
@@ -75,12 +76,14 @@ const UpdateProducto = () => {
                     onChange={(e) => setImagen(e.target.value)}
                 /> <br />
                 <br />
-                <Link to='/readproductos'>
-                    <button onClick={() => updateApiData()} type="submit">ACEPTAR</button>
-                </Link>
-                <Link to='/readproductos'>
-                    <button>CANCELAR</button>
-                </Link>
+                <ul>
+                    <Link to='/readproductos'>
+                        <button id="first-button" onClick={() => updateApiData()} type="submit">ACEPTAR <Check className="button-icons"/></button>
+                    </Link>
+                    <Link to='/readproductos'>
+                        <button>CANCELAR <X className="button-icons"/></button>
+                    </Link>
+                </ul>
             </form>
         </div>
     )

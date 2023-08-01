@@ -154,7 +154,6 @@ const MenuTable = () => {
     }
 
     return (
-
         <div>
             <div className='tables__container'>
                 <div className='square square-left'>
@@ -172,9 +171,10 @@ const MenuTable = () => {
                         </thead>
                         <tbody className='tbody'>
                             {vinos.map((item, index) => (
-                                <tr className='tr' key={index}>
+                                <tr className='tr tr-grid' key={index}>
                                     <td className='td'>{item.nombre}</td>
                                     <td className='td'>${item.precio}</td>
+                                    <td className='descripcion'>{item.descripcion}</td>
                                 </tr>
                             ))}
                         </tbody>
@@ -201,9 +201,10 @@ const MenuTable = () => {
                         </thead>
                         <tbody className='tbody'>
                             {espumante.map((item, index) => (
-                                <tr className='tr' key={index}>
+                                <tr className='tr tr-grid' key={index}>
                                     <td className='td'>{item.nombre}</td>
                                     <td className='td'>${item.precio}</td>
+                                    <td className='descripcion'>{item.descripcion}</td>
                                 </tr>
                             ))}
                         </tbody>
@@ -230,9 +231,10 @@ const MenuTable = () => {
                         </thead>
                         <tbody className='tbody'>
                             {promos.map((item, index) => (
-                                <tr className='tr' key={index}>
+                                <tr className='tr tr-grid' key={index}>
                                     <td className='td'>{item.nombre}</td>
                                     <td className='td'>${item.precio}</td>
+                                    <td className='descripcion'>{item.descripcion}</td>
                                 </tr>
                             ))}
                         </tbody>
@@ -259,9 +261,10 @@ const MenuTable = () => {
                         </thead>
                         <tbody className='tbody'>
                             {foreverYoung.map((item, index) => (
-                                <tr className='tr' key={index}>
+                                <tr className='tr tr-grid' key={index}>
                                     <td className='td'>{item.nombre}</td>
                                     <td className='td'>${item.precio}</td>
+                                    <td className='descripcion'>{item.descripcion}</td>
                                 </tr>
                             ))}
                         </tbody>
@@ -288,9 +291,10 @@ const MenuTable = () => {
                         </thead>
                         <tbody className='tbody'>
                             {timeForGin.map((item, index) => (
-                                <tr className='tr' key={index}>
+                                <tr className='tr tr-grid' key={index}>
                                     <td className='td'>{item.nombre}</td>
                                     <td className='td'>${item.precio}</td>
+                                    <td className='descripcion'>{item.descripcion}</td>
                                 </tr>
                             ))}
                         </tbody>
@@ -317,9 +321,10 @@ const MenuTable = () => {
                         </thead>
                         <tbody className='tbody'>
                             {weLoveRon.map((item, index) => (
-                                <tr className='tr' key={index}>
+                                <tr className='tr tr-grid' key={index}>
                                     <td className='td'>{item.nombre}</td>
                                     <td className='td'>${item.precio}</td>
+                                    <td className='descripcion'>{item.descripcion}</td>
                                 </tr>
                             ))}
                         </tbody>
@@ -346,9 +351,10 @@ const MenuTable = () => {
                         </thead>
                         <tbody className='tbody'>
                             {speakeasyLicor.map((item, index) => (
-                                <tr className='tr' key={index}>
+                                <tr className='tr tr-grid' key={index}>
                                     <td className='td'>{item.nombre}</td>
                                     <td className='td'>${item.precio}</td>
+                                    <td className='descripcion'>{item.descripcion}</td>
                                 </tr>
                             ))}
                         </tbody>
@@ -375,9 +381,10 @@ const MenuTable = () => {
                         </thead>
                         <tbody className='tbody'>
                             {irish.map((item, index) => (
-                                <tr className='tr' key={index}>
+                                <tr className='tr tr-grid' key={index}>
                                     <td className='td'>{item.nombre}</td>
                                     <td className='td'>${item.precio}</td>
+                                    <td className='descripcion'>{item.descripcion}</td>
                                 </tr>
                             ))}
                         </tbody>
@@ -404,9 +411,10 @@ const MenuTable = () => {
                         </thead>
                         <tbody className='tbody'>
                             {american.map((item, index) => (
-                                <tr className='tr' key={index}>
+                                <tr className='tr tr-grid' key={index}>
                                     <td className='td'>{item.nombre}</td>
                                     <td className='td'>${item.precio}</td>
+                                    <td className='descripcion'>{item.descripcion}</td>
                                 </tr>
                             ))}
                         </tbody>
@@ -433,9 +441,10 @@ const MenuTable = () => {
                         </thead>
                         <tbody className='tbody'>
                             {bebidas.map((item, index) => (
-                                <tr className='tr' key={index}>
+                                <tr className='tr tr-grid' key={index}>
                                     <td className='td'>{item.nombre}</td>
                                     <td className='td'>${item.precio}</td>
+                                    <td className='descripcion'>{item.descripcion}</td>
                                 </tr>
                             ))}
                         </tbody>
@@ -462,9 +471,10 @@ const MenuTable = () => {
                         </thead>
                         <tbody className='tbody'>
                             {picadas.map((item, index) => (
-                                <tr className='tr' key={index}>
+                                <tr className='tr tr-grid' key={index}>
                                     <td className='td'>{item.nombre}</td>
                                     <td className='td'>${item.precio}</td>
+                                    <td className='descripcion'>{item.descripcion}</td>
                                 </tr>
                             ))}
                         </tbody>
@@ -491,9 +501,10 @@ const MenuTable = () => {
                         </thead>
                         <tbody className='tbody'>
                             {sandwiches.map((item, index) => (
-                                <tr className='tr' key={index}>
+                                <tr className='tr tr-grid' key={index}>
                                     <td className='td'>{item.nombre}</td>
                                     <td className='td'>${item.precio}</td>
+                                    <td className='descripcion'>{item.descripcion}</td>
                                 </tr>
                             ))}
                         </tbody>
@@ -520,9 +531,10 @@ const MenuTable = () => {
                         </thead>
                         <tbody className='tbody'>
                             {ensaladas.map((item, index) => (
-                                <tr className='tr' key={index}>
+                                <tr className='tr tr-grid' key={index}>
                                     <td className='td'>{item.nombre}</td>
                                     <td className='td'>${item.precio}</td>
+                                    <td className='descripcion'>{item.descripcion}</td>
                                 </tr>
                             ))}
                         </tbody>
@@ -549,9 +561,10 @@ const MenuTable = () => {
                         </thead>
                         <tbody className='tbody'>
                             {burgers.map((item, index) => (
-                                <tr className='tr' key={index}>
+                                <tr className='tr  tr-grid' key={index}>
                                     <td className='td'>{item.nombre}</td>
                                     <td className='td'>${item.precio}</td>
+                                    <td className='descripcion'>{item.descripcion}</td>
                                 </tr>
                             ))}
                         </tbody>
@@ -578,9 +591,10 @@ const MenuTable = () => {
                         </thead>
                         <tbody className='tbody'>
                             {postres.map((item, index) => (
-                                <tr className='tr' key={index}>
+                                <tr className='tr tr-grid' key={index}>
                                     <td className='td'>{item.nombre}</td>
                                     <td className='td'>${item.precio}</td>
+                                    <td className='descripcion'>{item.descripcion}</td>
                                 </tr>
                             ))}
                         </tbody>
