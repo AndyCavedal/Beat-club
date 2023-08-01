@@ -1,19 +1,17 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-const EventosFuturos = () => {
+const EventosPasados = ()=>{
+    const [apiEventosP, setApiEventosP] = useState([])
 
-    const [apiEventosF, setApiEventosF] = useState([])
 
+    useEffect(()=>{
+        getEventosP()
+    },[])
 
-    useEffect(() => {
-        getEventosF()
-    }, [])
-
-    function getEventosF() {
-        axios.get("https://server-api-beat-club.vercel.app/eventos/futuros").then((resp) => {
-            setApiEventosF(resp.data)
-            console.log(resp.data)
+    function getEventosP(){
+        axios.get("https://server-api-beat-club.vercel.app/eventos/pasados").then((resp)=>{
+            setApiEventosP(resp.data)
         })
     }
 
@@ -23,7 +21,7 @@ const EventosFuturos = () => {
 
     return (
         <div>
-            {apiEventosF.map((evento, index) => (
+            {apiEventosP.map((evento, index)=>(
                 <div key={index}>
                     <h4>{evento.titulo}</h4>
                     <img src={evento.img_url} alt={evento.titulo} />
@@ -34,4 +32,5 @@ const EventosFuturos = () => {
     )
 }
 
-export default EventosFuturos;
+
+export default EventosPasados;
