@@ -16,6 +16,7 @@ const CreateProducto = () => {
     const [categorias, setCategorias] = useState([]);
     const [dtProd, setDtProd] = useState([])
 
+
     useEffect(() => {
         getProductos()
         getCategorias()
@@ -43,7 +44,7 @@ const CreateProducto = () => {
             alert('Este producto ya esta cargado')
         }
         else {
-            if (nombre === "") {
+            if (nombre === "" || precio === "" || categoria === "") {
                 alert('campos vacio')
             }
             else {
@@ -53,7 +54,7 @@ const CreateProducto = () => {
                     descripcion,
                     categoria_id: categoria,
                     imagen_url: imagen
-                });
+                })
             }
         }
     };
@@ -100,16 +101,14 @@ const CreateProducto = () => {
                     </select>
                     <br />
                     <ul>
-                        <Link to="/readproductos">
+                        <Link to='/readproductos'>
                             <button id="crear-categoria__link" onClick={postData} type="submit">
                                 Crear Producto
                                 <img className="links-icons" src={database} alt="database add icon" />
-
                             </button>
                         </Link>
-
                         <Link to="/readproductos">
-                            <button id="cerrar__link" type="submit">
+                            <button id="cerrar__link">
                                 Volver
                                 <img className="links-icons" src={backarrow} alt="back arrow icon" />
                             </button>
