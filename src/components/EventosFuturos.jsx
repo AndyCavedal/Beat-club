@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 import '../styles/EventosPasados.scss';
 
 const EventosFuturos = () => {
 
     const [apiEventosF, setApiEventosF] = useState([]);
-    
+
 
     useEffect(() => {
         getEventosF();
@@ -17,11 +18,11 @@ const EventosFuturos = () => {
             const currentDate = new Date().toISOString();
             const eventosActualizados = resp.data.map((evento) => {
                 const fechaEvento = new Date(evento.fecha_evento).toISOString().split('T')[0];
-                console.log("fecha actual:",currentDate)
+                console.log("fecha actual:", currentDate)
                 console.log("fechaEvento:", fechaEvento)
                 console.log("fecha del evento de la base de datos:", evento.fecha_evento)
                 // Si la fecha del evento es menor o igual a la fecha actual, actualizar es_proximo a 0
-                if (fechaEvento <= currentDate) {
+                if (fechaEvento < currentDate) {
                     return {
                         ...evento,
                         es_proximo: 0,
@@ -29,7 +30,7 @@ const EventosFuturos = () => {
                 }
                 return evento;
             });
-            // Realizar el PATCH para actualizar los eventos cuya fecha ya pasó
+            // Realizar el PATCH para actualizar los eventos cuya fecha ya paso
             axios
                 .patch("https://server-api-beat-club.vercel.app/Eventos", eventosActualizados)
                 .then(() => {
@@ -46,7 +47,13 @@ const EventosFuturos = () => {
 
 
     const formatDate = (dateString) => {
-        return dateString.substring(0, 10);
+        // Convertir la fecha UTC a un objeto Date
+        const fechaUTC = new Date(dateString);
+
+        // Obtener la fecha local en formato de cadena (por ejemplo, 'dd/mm/yyyy')
+        const fechaLocalString = fechaUTC.toLocaleDateString();
+
+        return fechaLocalString;
     };
 
     return (

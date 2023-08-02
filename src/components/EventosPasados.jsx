@@ -17,7 +17,13 @@ const EventosPasados = () => {
     }
 
     const formatDate = (dateString) => {
-        return dateString.substring(0, 10);
+        // Convertir la fecha UTC a un objeto Date
+        const fechaUTC = new Date(dateString);
+
+        // Obtener la fecha local en formato de cadena (por ejemplo, 'dd/mm/yyyy')
+        const fechaLocalString = fechaUTC.toLocaleDateString();
+
+        return fechaLocalString;
     };
 
     return (

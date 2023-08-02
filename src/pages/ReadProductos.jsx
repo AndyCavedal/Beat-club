@@ -33,7 +33,6 @@ const ReadProductos = () => {
         localStorage.setItem("Descripcion", descripcion);
         localStorage.setItem("Categoria_id", categoria_id);
         localStorage.setItem("Imagen_url", imagen_url)
-        
     }
 
     return (

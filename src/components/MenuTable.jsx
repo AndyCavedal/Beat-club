@@ -57,101 +57,73 @@ const MenuTable = () => {
         getPostres()
     }, [])
 
+    function fetchData(url, setData) {
+        axios.get(url).then((resp) => {
+            setData(resp.data);
+        });
+    }
+
     function getVino() {
-        axios.get("https://server-api-beat-club.vercel.app/productos/vino").then((resp) => {
-            setVinos(resp.data);
-        })
+        fetchData("https://server-api-beat-club.vercel.app/productos/vino", setVinos);
     }
 
     function getEspumante() {
-        axios.get("https://server-api-beat-club.vercel.app/productos/espumante").then((resp) => {
-            setEspumante(resp.data)
-        })
+        fetchData("https://server-api-beat-club.vercel.app/productos/espumante", setEspumante);
     }
 
     function getPromos() {
-        axios.get("https://server-api-beat-club.vercel.app/productos/promociones").then((resp) => {
-            setPromos(resp.data)
-        })
+        fetchData("https://server-api-beat-club.vercel.app/productos/promociones", setPromos);
     }
 
     function getForeverYoung() {
-        axios.get("https://server-api-beat-club.vercel.app/productos/Forever-young").then((resp) => {
-            setForeverYoung(resp.data)
-        })
+        fetchData("https://server-api-beat-club.vercel.app/productos/Forever-young", setForeverYoung);
     }
 
     function getTimeForGin() {
-        axios.get("https://server-api-beat-club.vercel.app/productos/its-time-for-gin").then((resp) => {
-            setTimeForGin(resp.data)
-        })
+        fetchData("https://server-api-beat-club.vercel.app/productos/its-time-for-gin", setTimeForGin);
     }
-    
+
     function getWeLoveRon() {
-        axios.get("https://server-api-beat-club.vercel.app/productos/we-love-ron").then((resp) => {
-            setWeLoveRon(resp.data)
-        })
+        fetchData("https://server-api-beat-club.vercel.app/productos/we-love-ron", setWeLoveRon);
     }
 
     function getSpeakeasyLicor() {
-        axios.get("https://server-api-beat-club.vercel.app/productos/speakeasy-licor-scotch").then((resp) => {
-            setSpeakeasyLicor(resp.data)
-        })
+        fetchData("https://server-api-beat-club.vercel.app/productos/speakeasy-licor-scotch", setSpeakeasyLicor);
     }
 
     function getIrish() {
-        axios.get("https://server-api-beat-club.vercel.app/productos/irish").then((resp) => {
-            setIrish(resp.data)
-        })
-    }
-
-    function getTimeForGin() {
-        axios.get("https://server-api-beat-club.vercel.app/productos/its-time-for-gin").then((resp) => {
-            setTimeForGin(resp.data)
-        })
+        fetchData("https://server-api-beat-club.vercel.app/productos/irish", setIrish);
     }
 
     function getAmerican() {
-        axios.get("https://server-api-beat-club.vercel.app/productos/american").then((resp) => {
-            setAmerican(resp.data)
-        })
+        fetchData("https://server-api-beat-club.vercel.app/productos/american", setAmerican);
     }
 
     function getBebidas() {
-        axios.get("https://server-api-beat-club.vercel.app/productos/bebidas").then((resp) => {
-            setBebidas(resp.data)
-        })
+        fetchData("https://server-api-beat-club.vercel.app/productos/bebidas", setBebidas);
     }
 
     function getPicadas() {
-        axios.get("https://server-api-beat-club.vercel.app/productos/picadas").then((resp) => {
-            setPicadas(resp.data)
-        })
+        fetchData("https://server-api-beat-club.vercel.app/productos/picadas", setPicadas);
     }
 
     function getSandwiches() {
-        axios.get("https://server-api-beat-club.vercel.app/productos/sandwiches").then((resp) => {
-            setSandwiches(resp.data)
-        })
+        fetchData("https://server-api-beat-club.vercel.app/productos/sandwiches", setSandwiches);
     }
 
     function getEnsaladas() {
-        axios.get("https://server-api-beat-club.vercel.app/productos/ensaladas").then((resp) => {
-            setEnsaladas(resp.data)
-        })
+        fetchData("https://server-api-beat-club.vercel.app/productos/ensaladas", setEnsaladas);
     }
 
     function getPostres() {
-        axios.get("https://server-api-beat-club.vercel.app/productos/postres").then((resp) => {
-            setPostres(resp.data)
-        })
+        fetchData("https://server-api-beat-club.vercel.app/productos/postres", setPostres);
     }
 
     function getBurgers() {
-        axios.get("https://server-api-beat-club.vercel.app/productos/burgers").then((resp) => {
-            setBurgers(resp.data)
-        })
+        fetchData("https://server-api-beat-club.vercel.app/productos/burgers", setBurgers);
     }
+
+    
 
     return (
         <div>

@@ -16,6 +16,8 @@ import ReadProductos from '../src/pages/ReadProductos';
 import ReadEventos from '../src/pages/ReadEventos';
 import CreateProducto from '../src/pages/CreateProducto';
 import UpdateProducto from '../src/pages/UpdateProducto';
+import CreateEvento from '../src/pages/CreateEvento';
+import UpdateEvento from '../src/pages/UpdateEvento';
 
 
 
@@ -33,6 +35,8 @@ const App = () => {
                     <Route exact path='/readeventos' element={<ReadEventos />} />
                     <Route exact path='/createproducto' element={<CreateProducto />} />
                     <Route exact path='/updateproducto' element={<UpdateProducto />} />
+                    <Route exact path='/createevento' element={<CreateEvento />} />
+                    <Route exact path='updateevento' element={<UpdateEvento />} />
                 </Route>
                 <Route exact path='/login' element={<Login />} />
                 <Route exact path='*' element={<NotFound />} />

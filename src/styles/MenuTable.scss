@@ -81,7 +81,7 @@
     }
 
     .descripcion {
-        padding: 0px;
+        padding: 0px 0px 10px 0px;
     }
 
     .food-title {
@@ -117,6 +117,10 @@
 
     .table {
         font-size: 1.7rem;
+    }
+
+    .square {
+        padding: 0px 15px 0px 15px;
     }
 
 }
