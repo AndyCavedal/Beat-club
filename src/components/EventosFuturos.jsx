@@ -4,38 +4,46 @@ import '../styles/EventosPasados.scss';
 
 const EventosFuturos = () => {
 
-    const [apiEventosF, setApiEventosF] = useState([])
-
+    const [apiEventosF, setApiEventosF] = useState([]);
+    
 
     useEffect(() => {
-        getEventosF()
-        const currentDate = new Date().toISOString();
-        const eventosActualizados = apiEventosF.map((evento) => {
-            // Si la fecha del evento es menor o igual a la fecha actual, actualizar es_proximo a 0
-            if (evento.fecha_evento < currentDate) {
-                return {
-                    ...evento,
-                    es_proximo: 0,
-                };
-            }
-            return evento;
-        });
-        // Realizar el PATCH para actualizar los eventos cuya fecha ya pasó
-        axios
-            .patch("https://server-api-beat-club.vercel.app/Eventos", eventosActualizados)
-            .then((resp) => {
-                getEventosF();
-            })
-            .catch((error) => {
-                console.error("Error al actualizar eventos pasados", error);
-            });
-    }, [apiEventosF])
+        getEventosF();
+    }, []);
 
-    function getEventosF() {
-        axios.get("https://server-api-beat-club.vercel.app/eventos/futuros").then((resp) => {
-            setApiEventosF(resp.data)
-        })
-    }
+    const getEventosF = async () => {
+        try {
+            const resp = await axios.get("https://server-api-beat-club.vercel.app/eventos/futuros");
+            const currentDate = new Date().toISOString();
+            const eventosActualizados = resp.data.map((evento) => {
+                const fechaEvento = new Date(evento.fecha_evento).toISOString().split('T')[0];
+                console.log("fecha actual:",currentDate)
+                console.log("fechaEvento:", fechaEvento)
+                console.log("fecha del evento de la base de datos:", evento.fecha_evento)
+                // Si la fecha del evento es menor o igual a la fecha actual, actualizar es_proximo a 0
+                if (fechaEvento <= currentDate) {
+                    return {
+                        ...evento,
+                        es_proximo: 0,
+                    };
+                }
+                return evento;
+            });
+            // Realizar el PATCH para actualizar los eventos cuya fecha ya pasó
+            axios
+                .patch("https://server-api-beat-club.vercel.app/Eventos", eventosActualizados)
+                .then(() => {
+                    // Actualizar el estado local con los eventos actualizados
+                    setApiEventosF(eventosActualizados);
+                })
+                .catch((error) => {
+                    console.error("Error al actualizar eventos pasados", error);
+                });
+        } catch (error) {
+            console.error("Error al obtener eventos futuros", error);
+        }
+    };
+
 
     const formatDate = (dateString) => {
         return dateString.substring(0, 10);
@@ -52,7 +60,7 @@ const EventosFuturos = () => {
                 </div>
             ))}
         </div>
-    )
-}
+    );
+};
 
 export default EventosFuturos;
