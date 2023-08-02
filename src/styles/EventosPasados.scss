@@ -1,0 +1,33 @@
+.eventos__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.eventos-container__container h2{
+    font-size: 3rem;
+    text-align: center;
+    padding: 5px;
+    background-color: bisque;
+}
+
+.eventos__container img {
+    width: 13vw;
+}
+
+.folleto__container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--smoothBlack);
+    font-size: 1.8rem;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    border: 3px dotted black;
+}
+
+.eventos-fecha {
+    background-color: aliceblue;
+    color: black;
+    border-radius: 7px;
+}
