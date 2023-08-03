@@ -33,7 +33,7 @@ const EventosPasados = () => {
                 {apiEventosP.map((evento, index) => (
                     <div className="folleto__container" key={index}>
                         <h4>{evento.titulo}</h4>
-                        <img src={evento.img_url} alt={evento.titulo} />
+                        <img src={evento.imagen_url} alt={evento.titulo} />
                         <span className="eventos-fecha">{formatDate(evento.fecha_evento)}</span>
                     </div>
                 ))}

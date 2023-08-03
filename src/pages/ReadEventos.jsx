@@ -69,7 +69,7 @@ const ReadEventos = () => {
 
     return (
         <div className='contenedor-evento'>
-            <div className="links">
+            <div className="links linkeventos">
                 <div className="new-product__link">
                     <Link className="create-product__link" to='/createevento' >
                         <button>Nuevo evento</button>
@@ -83,9 +83,9 @@ const ReadEventos = () => {
                     </Link>
                 </div>
             </div>
-            <div>
+            <div className="readeventos__container">
                 <h2>Eventos Futuros</h2>
-                <table>
+                <table className="eventos-table">
                     <thead>
                         <tr>
                             <th>Imagen</th>
@@ -107,9 +107,9 @@ const ReadEventos = () => {
                     </tbody>
                 </table>
             </div>
-            <div>
+            <div className="readeventos__container">
                 <h2>Eventos Pasados</h2>
-                <table>
+                <table className="eventos-table">
                     <thead>
                         <tr>
                             <th>Imagen</th>
@@ -120,9 +120,9 @@ const ReadEventos = () => {
                     <tbody>
                         {apiEventosP.map((elem) => (
                             <tr key={elem.evento_id}>
-                                <th className="table-header"><img src={elem.img_url} alt={elem.titulo} /></th>
-                                <th>{elem.titulo}</th>
-                                <th>{formatDate(elem.fecha_evento)}</th>
+                                <td className="table-header"><img src={elem.img_url} alt={elem.titulo} /></td>
+                                <td>{elem.titulo}</td>
+                                <td>{formatDate(elem.fecha_evento)}</td>
                                 <td>
                                     <button onClick={() => onDelete(elem.evento_id)}><Trash3 /></button>
                                 </td>

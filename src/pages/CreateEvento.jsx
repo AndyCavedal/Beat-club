@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import backarrow from '../assets/back-arrow2.svg';
 import database from '../assets/database-add.svg';
+import '../styles/CreateEvento.scss';
 
 const CreateEvento = () => {
     const [titulo, setTitulo] = useState("");
@@ -12,18 +13,18 @@ const CreateEvento = () => {
 
     const postData = () => {
         if (titulo === "" || fechaEvento === "" || imgUrl === "") {
-            alert('Campos vacíos');
+            alert('Campos vacios');
         } else {
             const fechaEventoUTC = new Date(fechaEvento).toISOString();
             axios.post('https://server-api-beat-club.vercel.app/eventos', {
                 titulo,
-                img_url: imgUrl,
+                imagen_url: imgUrl,
                 fecha_evento: fechaEventoUTC,
                 es_proximo: true,
             }).then((response) => {
-                // Aquí puedes manejar la respuesta del servidor si es necesario
+                // Aqui puedes manejar la respuesta del servidor si es necesario
                 console.log("Evento creado:", response.data);
-                // Puedes redireccionar a otra página después de crear el evento si lo deseas
+                // Puedes redireccionar a otra pagina despues de crear el evento si lo deseas
             }).catch((error) => {
                 console.error("Error al crear evento:", error);
             });
@@ -32,7 +33,7 @@ const CreateEvento = () => {
 
     return (
         <div className="supercontainer">
-            <div className="evento-form__container">
+            <div className="producto-form__container">
                 <form>
                     <label>Título</label> <br />
                     <input
@@ -59,7 +60,7 @@ const CreateEvento = () => {
 
                     <ul>
                         <Link to='/readeventos'>
-                            <button id="crear-evento__link" onClick={postData} type="submit">
+                            <button id="crear-categoria__link" onClick={postData} type="submit">
                                 Crear Evento
                                 <img className="links-icons" src={database} alt="database add icon" />
                             </button>

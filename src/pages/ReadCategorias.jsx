@@ -65,7 +65,7 @@ const ReadCategorias = ()=>{
                     {apiCategorias.map((elem, index) => (
                         <tr key={index}>
                             <td>{elem.nombre}</td>
-                            <td><img src={elem.imagen_url} alt={elem.nombre} /></td>
+                            <td><img id="datatable-categorias__img" src={elem.imagen_url} alt={elem.nombre} /></td>
                             <td>
                                 <Link to='/updatecategorias'>
                                     <button onClick={() => setData(elem)}>

@@ -62,7 +62,7 @@ const EventosFuturos = () => {
             {apiEventosF.map((evento, index) => (
                 <div className="" key={index}>
                     <h4>{evento.titulo}</h4>
-                    <img src={evento.img_url} alt={evento.titulo} />
+                    <img src={evento.imagen_url} alt={evento.titulo} />
                     <span>{formatDate(evento.fecha_evento)}</span>
                 </div>
             ))}
