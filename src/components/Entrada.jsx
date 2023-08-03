@@ -4,7 +4,7 @@ import publico from '../assets/entradasweb.jpg';
 
 const Entrada = () => {
     return (
-        <div className='container__container'>
+        <div className='container__container' data-aos="fade-down" data-aos-duration="500">
             <div className='entradaweb__container'>
                 <div className='entradaweb__container-izq'>
                     <h2 className='entrada-text' id='entrada-title'>Compra tu entrada ahora mismo!</h2>

@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const Banner = () => {
     return (
-        <div className='contenedor-banner'>
+        <div className='contenedor-banner' data-aos="zoom-in">
             <div>
                 <img src={beat} alt="a" />
             </div>

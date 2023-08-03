@@ -96,7 +96,7 @@ const ReadEventos = () => {
                     <tbody>
                         {apiEventosF.map((elem) => (
                             <tr key={elem.evento_id}>
-                                <td className="table-header"><img src={elem.img_url} alt={elem.titulo} /></td>
+                                <td className="table-header"><img className="readevent-foto" src={elem.imagen_url} alt={elem.titulo} /></td>
                                 <td>{elem.titulo}</td>
                                 <td>{formatDate(elem.fecha_evento)}</td>
                                 <td>
@@ -120,7 +120,7 @@ const ReadEventos = () => {
                     <tbody>
                         {apiEventosP.map((elem) => (
                             <tr key={elem.evento_id}>
-                                <td className="table-header"><img src={elem.img_url} alt={elem.titulo} /></td>
+                                <td className="table-header"><img className="readevent-foto" src={elem.imagen_url} alt={elem.titulo} /></td>
                                 <td>{elem.titulo}</td>
                                 <td>{formatDate(elem.fecha_evento)}</td>
                                 <td>

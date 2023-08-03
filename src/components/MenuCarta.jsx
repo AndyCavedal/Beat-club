@@ -35,7 +35,7 @@ const PruebaMenu = () => {
     return (
         <div>
             {Object.entries(productos).map(([categoriaId, categoriaData]) => (
-                <div key={categoriaId} className="tables__container">
+                <div key={categoriaId} className="tables__container" data-aos="zoom-in-down" data-aos-duration="500">
                     <div className="square square-left">
                         <img src={categoriaData.categoria_imagen_url} alt={`imagen ${categoriaData.categoria_nombre}`} />
                     </div>

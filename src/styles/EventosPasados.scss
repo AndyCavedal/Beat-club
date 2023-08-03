@@ -1,6 +1,5 @@
 .eventos__container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: flex;
 }
 
 .eventos-container__container h2{
@@ -11,13 +10,13 @@
 }
 
 .eventos__container img {
-    width: 13vw;
+    width: 300px;
 }
 
 .folleto__container {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 400px;
     background-color: var(--smoothBlack);
     font-size: 1.8rem;
     color: white;

@@ -102,7 +102,7 @@ const Galeria = () =>{
         <div className='gallery'>
             {data.map((item, index)=> {
                 return(
-                    <div className='pics' key={index}>
+                    <div className='pics' data-aos="fade-up" data-aos-duration="2000" key={index}>
                         <img src={item.imgSrc} style={{width: '100%'}} />
                     </div>
                 )

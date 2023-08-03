@@ -57,15 +57,17 @@ const EventosFuturos = () => {
     };
 
     return (
-        <div className="">
+        <div className="eventos-container__container">
             <h2>Proximos Eventos!</h2>
-            {apiEventosF.map((evento, index) => (
-                <div className="" key={index}>
-                    <h4>{evento.titulo}</h4>
-                    <img src={evento.imagen_url} alt={evento.titulo} />
-                    <span>{formatDate(evento.fecha_evento)}</span>
-                </div>
-            ))}
+            <div className="eventos__container">
+                {apiEventosF.map((evento, index) => (
+                    <div className="folleto__container" key={index}>
+                        <h4>{evento.titulo}</h4>
+                        <img src={evento.imagen_url} alt={evento.titulo} />
+                        <span className="eventos-fecha">{formatDate(evento.fecha_evento)}</span>
+                    </div>
+                ))}
+            </div>
         </div>
     );
 };
