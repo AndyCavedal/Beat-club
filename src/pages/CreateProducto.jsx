@@ -100,7 +100,7 @@ const CreateProducto = () => {
                         ))}
                     </select>
                     <br />
-                    <ul>
+                    <div className="buttons-container">
                         <Link to='/readproductos'>
                             <button id="crear-categoria__link" onClick={postData} type="submit">
                                 Crear Producto
@@ -113,7 +113,7 @@ const CreateProducto = () => {
                                 <img className="links-icons" src={backarrow} alt="back arrow icon" />
                             </button>
                         </Link>
-                    </ul>
+                    </div>
                 </form>
             </div>
         </div>

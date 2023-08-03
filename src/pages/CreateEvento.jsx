@@ -58,7 +58,7 @@ const CreateEvento = () => {
 
                     {/* Agregar más campos para otros datos del evento si es necesario */}
 
-                    <ul>
+                    <div className="buttons-container">
                         <Link to='/readeventos'>
                             <button id="crear-categoria__link" onClick={postData} type="submit">
                                 Crear Evento
@@ -71,7 +71,7 @@ const CreateEvento = () => {
                                 <img className="links-icons" src={backarrow} alt="back arrow icon" />
                             </button>
                         </Link>
-                    </ul>
+                    </div>
                 </form>
             </div>
         </div>

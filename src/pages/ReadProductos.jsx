@@ -39,13 +39,13 @@ const ReadProductos = () => {
         <div className="productos-container__container">
             <div className="links">
                 <div className="new-product__link">
-                    <Link className="create-product__link" to='/createproducto' >
+                    <Link className="create-product__link" to="/createproducto">
                         <button>Nuevo producto</button>
                         <img src={database} className="database-logo" alt="database add icon" />
                     </Link>
                 </div>
                 <div className="new-product__link">
-                    <Link className="volver__link" to='/root'>
+                    <Link className="volver__link" to="/root">
                         <button>Volver</button>
                         <ArrowReturnLeft className="database-logo" />
                     </Link>
@@ -54,28 +54,32 @@ const ReadProductos = () => {
             <table className="datatable">
                 <thead>
                     <tr>
-                        <td className="table-title">Nombre</td>
-                        <td className="table-title">Precio</td>
-                        <td className="table-title">Descripcion</td>
-                        <td className="table-title">Categoria</td>
+                        <th className="table-title">Nombre</th>
+                        <th className="table-title">Precio</th>
+                        <th className="table-title">Descripcion</th>
+                        <th className="table-title">Categoria</th>
+                        <th className="table-title">Editar</th>
+                        <th className="table-title">Eliminar</th>
                     </tr>
                 </thead>
                 <tbody>
                     {apiProductos.map((elem, index) => (
                         <tr key={index}>
                             <td>{elem.nombre}</td>
-                            <td>{elem.precio}</td>
+                            <td>${elem.precio}</td>
                             <td>{elem.descripcion}</td>
                             <td>{elem.categoria_nombre}</td>
                             <td>
-                                <Link to='/updateproducto'>
+                                <Link to="/updateproducto">
                                     <button onClick={() => setData(elem)}>
                                         <Pencil />
                                     </button>
                                 </Link>
                             </td>
                             <td>
-                                <button onClick={() => onDelete(elem.producto_id)}><Trash3 /></button>
+                                <button onClick={() => onDelete(elem.producto_id)}>
+                                    <Trash3 />
+                                </button>
                             </td>
                         </tr>
                     ))}

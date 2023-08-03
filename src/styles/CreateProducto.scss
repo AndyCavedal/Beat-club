@@ -1,72 +1,73 @@
 .supercontainer {
-    background-color: whitesmoke;
+    background-color: #222222;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.producto-form__container form{
+    height: 100%;
+  }
+  
+  .producto-form__container {
+    width: 90%;
+    max-width: 600px;
+    padding: 30px;
+    background-color: #f5f5f5;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+  }
+  
+  .producto-form__container form {
     display: flex;
     justify-content: center;
     flex-direction: column;
-}
-
-.producto-form__container label {
-    font-size: 2.2rem;
-}
-
-.producto-form__container input {
-    padding: 5px;
-    border-radius: 15px;
-
-}
-
-.producto-form__container button {
-    padding: 5px;
-    float: left;
-    border-right: 2px solid white;
+  }
+  
+  .producto-form__container label {
+    text-decoration: none;
+    font-size: 2rem;
+    margin-top: 10px;
+  }
+  
+  .producto-form__container input,
+  .producto-form__container select {
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+  }
+  
+  .producto-form__container input::placeholder,
+  .producto-form__container select::placeholder {
+    color: #999;
+  }
+  
+  .producto-form__container button {
     display: flex;
+    background-color: #222222;
     justify-content: center;
     align-items: center;
-    color: black;
-    padding: 15px 17px;
-    border: 2px solid rgb(193, 193, 193);
-    box-shadow: none;
     font-size: 1.8rem;
-    background-color: white;
-}
-
-.producto-form__container button:hover {
-    background-color: grey;
+    padding: 15px;
     color: white;
-}
-
-.producto-form__container ul {
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .producto-form__container button:hover {
+    background-color: #333;
+  }
+  
+  .buttons-container {
     display: flex;
-    justify-content: space-between;
-    list-style-type: none;
-    margin: 1px;
-    padding: 1px;
-    overflow: hidden;
-    bottom: 0;
-    width: 500px;
-    border-radius: 50px;
-}
-
-#crear-categoria__link {
-    width: 300px;
-    border-radius: 50px 0px 0px 50px;
-}
-
-#cerrar__link {
-    width: 200px;
-    border-radius: 0px 50px 50px 0px;
-}
-
-.links-icons {
-    width: 25px;
-    height: 25px;
+    justify-content: space-evenly;
+  }
+  
+  .links-icons {
+    width: 20px;
+    height: 20px;
     margin-left: 10px;
-    fill: blue;
-}
-
+    fill: #fff;
+  }

@@ -3,24 +3,36 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
-
-// .productos-container__container td {
-//     border-bottom: 1px solid white;
-// }
-
-.datatable {
+  }
+  
+  .datatable {
     color: #fff;
     font-size: 1.8rem;
-}
-
-.table-title {
+    width: 95%;
+    border-collapse: collapse;
+    margin-bottom: 5rem;
+  }
+  
+  .table-title {
     font-size: 2rem;
     font-weight: bold;
-    padding-bottom: 10px;
-}
-
-.datatable button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-align: left;
+    border: 1px solid #444;
+  }
+  
+  .datatable tbody tr:nth-child(even) {
+    background-color: #222222;
+  }
+  
+  .datatable td {
+    padding: 10px 20px;
+    border: 1px solid #444;
+  }
+  
+  .datatable button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,27 +43,29 @@
     color: black;
     border: none;
     border-radius: 10px;
-    border: 1px solid white;
-}
+    cursor: pointer;
+    border: 1px solid black;
+  }
 
-.datatable button:hover {
+  //"Leonardo Fabio/Nino/Bravo/Canciones de Autor"
+  
+  .datatable button:hover {
     background-color: white;
     color: var(--dark-red);
     border: 1px solid var(--dark-red);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.links button {
+  }
+  
+  .links button {
     font-size: 2.2rem;
     background-color: white;
     border-radius: 3px;
     color: black;
     border: none;
     cursor: pointer;
-
-}
-
-.new-product__link {
+  }
+  
+  .new-product__link {
     background-color: white;
     display: flex;
     align-items: center;
@@ -62,37 +76,32 @@
     transition: transform 0.3s ease;
     cursor: pointer;
     margin: 15px 25px 20px 25px;
-}
-
-.new-product__link:hover {
+  }
+  
+  .new-product__link:hover {
     transform: scale(1.2);
     transform-origin: center;
-}
-
-.database-logo {
+  }
+  
+  .database-logo {
     margin-left: 20px;
     width: 35px;
-}
-
-.create-product__link {
+  }
+  
+  .create-product__link {
     display: flex;
     text-decoration: none;
     margin-left: 5px;
-}
-
-.links {
+  }
+  
+  .links {
     display: flex;
     flex-direction: row;
-}
-
-.volver__link {
+  }
+  
+  .volver__link {
     display: flex;
     text-decoration: none;
     font-size: 3.1rem;
     color: inherit;
-}
-
-//readcategorias:
-#datatable-categorias__img {
-    width: 100px;
-}
+  }

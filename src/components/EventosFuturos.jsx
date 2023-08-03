@@ -62,7 +62,7 @@ const EventosFuturos = () => {
         </div>
     ):(
         <div className="eventos-container__container">
-            <h2>Proximos Eventos!</h2>
+            <h2 id="evento-futuro-title">Proximos Eventos!</h2>
             <div className="eventos__container">
                 {apiEventosF.map((evento, index) => (
                     <div className="eventos-container__container"key={index}>
