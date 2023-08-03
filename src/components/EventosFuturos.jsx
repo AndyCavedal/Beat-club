@@ -18,9 +18,9 @@ const EventosFuturos = () => {
             const currentDate = new Date().toISOString();
             const eventosActualizados = resp.data.map((evento) => {
                 const fechaEvento = new Date(evento.fecha_evento).toISOString().split('T')[0];
-                console.log("fecha actual:", currentDate)
-                console.log("fechaEvento:", fechaEvento)
-                console.log("fecha del evento de la base de datos:", evento.fecha_evento)
+                // console.log("fecha actual:", currentDate)
+                // console.log("fechaEvento:", fechaEvento)
+                // console.log("fecha del evento de la base de datos:", evento.fecha_evento)
                 // Si la fecha del evento es menor o igual a la fecha actual, actualizar es_proximo a 0
                 if (fechaEvento < currentDate) {
                     return {
@@ -56,15 +56,21 @@ const EventosFuturos = () => {
         return fechaLocalString;
     };
 
-    return (
+    return apiEventosF.length === 0 ?(
+        <div>
+            <h3>No hay eventos</h3>
+        </div>
+    ):(
         <div className="eventos-container__container">
             <h2>Proximos Eventos!</h2>
             <div className="eventos__container">
                 {apiEventosF.map((evento, index) => (
-                    <div className="folleto__container" key={index}>
+                    <div className="eventos-container__container"key={index}>
+                    <div className="folleto__container">
                         <h4>{evento.titulo}</h4>
                         <img src={evento.imagen_url} alt={evento.titulo} />
                         <span className="eventos-fecha">{formatDate(evento.fecha_evento)}</span>
+                    </div>
                     </div>
                 ))}
             </div>

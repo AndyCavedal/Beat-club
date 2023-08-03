@@ -10,10 +10,13 @@ const EventosPasados = () => {
         getEventosP()
     }, [])
 
-    function getEventosP() {
-        axios.get("https://server-api-beat-club.vercel.app/eventos/pasados").then((resp) => {
-            setApiEventosP(resp.data)
-        })
+    async function getEventosP() {
+        try {
+            const response = await axios.get("https://server-api-beat-club.vercel.app/eventos/pasados");
+            setApiEventosP(response.data);
+        } catch (error) {
+            console.error("Error al obtener eventos pasados:", error);
+        }
     }
 
     const formatDate = (dateString) => {
@@ -31,8 +34,8 @@ const EventosPasados = () => {
             <h2>Lo que te perdiste salamin</h2>
             <div className="eventos__container">
                 {apiEventosP.map((evento, index) => (
-                    <div className="folleto-container__container">
-                        <div className="folleto__container" key={index}>
+                    <div className="folleto-container__container" key={index}>
+                        <div className="folleto__container" >
                             <h4>{evento.titulo}</h4>
                             <img src={evento.imagen_url} alt={evento.titulo} />
                             <span className="eventos-fecha">{formatDate(evento.fecha_evento)}</span>
