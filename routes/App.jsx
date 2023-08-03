@@ -17,8 +17,10 @@ import ReadEventos from '../src/pages/ReadEventos';
 import CreateProducto from '../src/pages/CreateProducto';
 import UpdateProducto from '../src/pages/UpdateProducto';
 import CreateEvento from '../src/pages/CreateEvento';
-import UpdateEvento from '../src/pages/UpdateEvento';
-
+import PruebaMenu from '../src/pages/PruebaMenu';
+import ReadCategorias from '../src/pages/ReadCategorias';
+import CreateCategorias from '../src/pages/CreateCategorias';
+import UpdateCategorias from '../src/pages/UpdateCategorias';
 
 
 const App = () => {
@@ -36,7 +38,10 @@ const App = () => {
                     <Route exact path='/createproducto' element={<CreateProducto />} />
                     <Route exact path='/updateproducto' element={<UpdateProducto />} />
                     <Route exact path='/createevento' element={<CreateEvento />} />
-                    <Route exact path='updateevento' element={<UpdateEvento />} />
+                    <Route exact path='/pruebamenu' element={<PruebaMenu />} />
+                    <Route exact path='/readcategorias' element={<ReadCategorias />} />
+                    <Route exact path='/createcategorias' element={<CreateCategorias />} />
+                    <Route exact path='/updatecategorias' element={<UpdateCategorias />} />
                 </Route>
                 <Route exact path='/login' element={<Login />} />
                 <Route exact path='*' element={<NotFound />} />

@@ -12,20 +12,34 @@ const ReadEventos = () => {
 
 
     useEffect(() => {
-        getEventosP()
-        getEventosF()
-    }, [])
+        fetchData();
+    }, []);
 
-    function getEventosP() {
-        axios.get("https://server-api-beat-club.vercel.app/eventos/pasados").then((resp) => {
-            setApiEventosP(resp.data)
-        })
+    async function fetchData() {
+        try {
+            await getEventosP();
+            await getEventosF();
+        } catch (error) {
+            console.error("Error al obtener eventos:", error);
+        }
     }
 
-    function getEventosF() {
-        axios.get("https://server-api-beat-club.vercel.app/eventos/futuros").then((resp) => {
-            setApiEventosF(resp.data)
-        })
+    async function getEventosP() {
+        try {
+            const resp = await axios.get("https://server-api-beat-club.vercel.app/eventos/pasados");
+            setApiEventosP(resp.data);
+        } catch (error) {
+            throw new Error("Error al obtener eventos pasados: " + error.message);
+        }
+    }
+
+    async function getEventosF() {
+        try {
+            const resp = await axios.get("https://server-api-beat-club.vercel.app/eventos/futuros");
+            setApiEventosF(resp.data);
+        } catch (error) {
+            throw new Error("Error al obtener eventos futuros: " + error.message);
+        }
     }
 
     function onDelete(id) {
@@ -36,7 +50,11 @@ const ReadEventos = () => {
     }
 
     function setData(data) {
-        
+        let {evento_id, img_url, titulo, fecha_evento}=data
+        localStorage.setItem("eventoID", evento_id);
+        localStorage.setItem("Imagen", img_url);
+        localStorage.setItem("Titulo", titulo);
+        localStorage.setItem("fecha_evento", fecha_evento);
     }
 
     const formatDate = (dateString) => {
@@ -78,16 +96,9 @@ const ReadEventos = () => {
                     <tbody>
                         {apiEventosF.map((elem) => (
                             <tr key={elem.evento_id}>
-                                <th className="table-header"><img src={elem.img_url} alt={elem.titulo} /></th>
-                                <th>{elem.titulo}</th>
-                                <th>{formatDate(elem.fecha_evento)}</th>
-                                <td>
-                                <Link to='/updateevento'>
-                                    <button onClick={() => setData(elem)}>
-                                        <Pencil />
-                                    </button>
-                                </Link>
-                            </td>
+                                <td className="table-header"><img src={elem.img_url} alt={elem.titulo} /></td>
+                                <td>{elem.titulo}</td>
+                                <td>{formatDate(elem.fecha_evento)}</td>
                                 <td>
                                     <button onClick={() => onDelete(elem.evento_id)}><Trash3 /></button>
                                 </td>

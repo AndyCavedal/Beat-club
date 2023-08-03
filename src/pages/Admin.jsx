@@ -13,6 +13,9 @@ const Admin = ()=> {
                 <Link to='/readeventos'>
                     <button>Eventos</button>
                 </Link>
+                <Link to='/readcategorias'>
+                    <button>Categorias</button>
+                </Link>
             </div>
         </div>
     );
