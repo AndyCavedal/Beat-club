@@ -57,8 +57,8 @@ const EventosFuturos = () => {
     };
 
     return apiEventosF.length === 0 ?(
-        <div>
-            <h3>No hay eventos</h3>
+        <div className="no-events__container">
+            <h3>No Hay Eventos Próximos</h3>
         </div>
     ):(
         <div className="eventos-container__container">

@@ -31,10 +31,10 @@ const EventosPasados = () => {
 
     return (
         <div className="eventos-container__container">
-            <h2>Lo que te perdiste salamin</h2>
+            <h2>Ultimos Eventos</h2>
             <div className="eventos__container">
                 {apiEventosP.map((evento, index) => (
-                    <div className="folleto-container__container" key={index}>
+                    <div className="eventos-container__container" key={index}>
                         <div className="folleto__container" >
                             <h4>{evento.titulo}</h4>
                             <img src={evento.imagen_url} alt={evento.titulo} />

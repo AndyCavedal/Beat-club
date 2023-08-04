@@ -68,7 +68,7 @@ const ReadEventos = () => {
     };
 
     return (
-        <div className='contenedor-evento'>
+        <div className='contenedor-readeventos'>
             <div className="links linkeventos">
                 <div className="new-product__link">
                     <Link className="create-product__link" to='/createevento' >
@@ -88,9 +88,10 @@ const ReadEventos = () => {
                 <table className="eventos-table">
                     <thead>
                         <tr>
-                            <th>Imagen</th>
-                            <th>Titulo</th>
-                            <th>Fecha</th>
+                            <th className="table-title">Imagen</th>
+                            <th className="table-title">Titulo</th>
+                            <th className="table-title">Fecha</th>
+                            <th className="table-title">Eliminar</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -112,9 +113,10 @@ const ReadEventos = () => {
                 <table className="eventos-table">
                     <thead>
                         <tr>
-                            <th>Imagen</th>
-                            <th>Titulo</th>
-                            <th>Fecha</th>
+                            <th className="table-title">Imagen</th>
+                            <th className="table-title">Titulo</th>
+                            <th className="table-title">Fecha</th>
+                            <th className="table-title">Eliminar</th>
                         </tr>
                     </thead>
                     <tbody>

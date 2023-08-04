@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 import '../styles/CreateProducto.scss';
 import { Link } from "react-router-dom";
 import axios from "axios";
-import backarrow from '../assets/back-arrow2.svg';
-import database from '../assets/database-add.svg';
+import { DatabaseAdd, ArrowReturnLeft } from "react-bootstrap-icons";
 
 
 
@@ -101,16 +100,16 @@ const CreateProducto = () => {
                     </select>
                     <br />
                     <div className="buttons-container">
-                        <Link to='/readproductos'>
+                        <Link className="text-fix" to='/readproductos'>
                             <button id="crear-categoria__link" onClick={postData} type="submit">
                                 Crear Producto
-                                <img className="links-icons" src={database} alt="database add icon" />
+                                <DatabaseAdd className="create-logo"/>
                             </button>
                         </Link>
-                        <Link to="/readproductos">
+                        <Link className="text-fix" to="/readproductos">
                             <button id="cerrar__link">
                                 Volver
-                                <img className="links-icons" src={backarrow} alt="back arrow icon" />
+                                <ArrowReturnLeft className="create-logo"/>
                             </button>
                         </Link>
                     </div>

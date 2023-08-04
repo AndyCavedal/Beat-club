@@ -6,6 +6,10 @@
     /* Permite que los elementos se acomoden en varias filas */
 }
 
+.eventos__container h2 {
+    border-bottom: 2px solid var(--dark-red);
+}
+
 .eventos-container__container {
     background-color: var(--smoothBlack);
 }
@@ -14,6 +18,8 @@
     width: 300px;
     height: 300px;
     overflow: hidden;
+    border-top: 2px solid var(--dark-red);
+    border-bottom: 2px solid var(--dark-red);
     /* Mantiene la relación de aspecto de la imagen */
 }
 
@@ -35,7 +41,10 @@
 .eventos-container__container h2 {
     font-size: 3.3rem;
     margin-bottom: 16px;
+    padding: 8px;
     color: white;
+    border-bottom: 3px solid var(--dark-red);
+    display: inline-block;
 }
 
 /* Estilos para la fecha */
@@ -55,5 +64,32 @@
 @media only screen and (max-width: 850px) {
     #evento-futuro-title {
         margin-top: 100px;
+    border-bottom: 3px solid var(--dark-red);
+
     }
+
+    .eventos__container img {
+        width: 200px;
+        height: 200px;
+        overflow: hidden;
+    }
+
+    .folleto__container {
+        margin: 0;
+    }
+}
+
+//cuando no hay eventos
+.no-events__container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--smoothBlack);
+}
+
+.no-events__container h3 {
+    font-size: 3.2rem;
+    padding: 10px;
+    color: white;
+    border-bottom: 3px solid var(--dark-red);
 }

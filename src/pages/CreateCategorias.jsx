@@ -3,17 +3,18 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import backarrow from '../assets/back-arrow2.svg';
 import database from '../assets/database-add.svg';
+import { ArrowReturnLeft, DatabaseAdd } from "react-bootstrap-icons";
 
 
-const CreateCategorias = ()=>{
-    const [nombreC, setNombreC]=useState("")
-    const [imgCategoria, setImgCategoria]=("")
+const CreateCategorias = () => {
+    const [nombreC, setNombreC] = useState("")
+    const [imgCategoria, setImgCategoria] = ("")
     const [dtCategoria, setDtCategorias] = useState([])
 
 
-    useEffect(()=>{
+    useEffect(() => {
         getCategorias()
-    },[])
+    }, [])
 
     async function getCategorias() {
         try {
@@ -43,8 +44,8 @@ const CreateCategorias = ()=>{
         }
     };
 
-    return(
-        <div className="supercontainer">
+    return (
+        <div className="supercontainer container-create ">
             <div className="producto-form__container">
                 <form>
                     <label>Nombre</label> <br />
@@ -61,18 +62,20 @@ const CreateCategorias = ()=>{
                     /> <br />
 
                     <ul>
-                        <Link to='/readcategorias'>
-                            <button id="crear-categoria__link" onClick={postData} type="submit">
-                                Crear Categoria
-                                <img className="links-icons" src={database} alt="database add icon" />
-                            </button>
-                        </Link>
-                        <Link to="/readcategorias">
-                            <button id="cerrar__link">
-                                Volver
-                                <img className="links-icons" src={backarrow} alt="back arrow icon" />
-                            </button>
-                        </Link>
+                        <div className="buttons-container">
+                            <Link className="text-fix" to='/readcategorias'>
+                                <button id="crear-categoria__link" onClick={postData} type="submit">
+                                    Crear Categoria
+                                    <DatabaseAdd className="create-logo" />
+                                </button>
+                            </Link>
+                            <Link className="text-fix" to="/readcategorias">
+                                <button id="cerrar__link">
+                                    Volver
+                                    <ArrowReturnLeft className="create-logo" />
+                                </button>
+                            </Link>
+                        </div>
                     </ul>
                 </form>
             </div>

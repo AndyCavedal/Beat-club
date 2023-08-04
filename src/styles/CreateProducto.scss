@@ -43,16 +43,20 @@
   
   .producto-form__container button {
     display: flex;
-    background-color: #222222;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.8rem;
-    padding: 15px;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  background-color: #222222;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  padding: 15px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  }
+
+  .text-fix {
     text-decoration: none;
   }
   

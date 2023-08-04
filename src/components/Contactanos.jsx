@@ -4,7 +4,7 @@ import { GeoAltFill, EnvelopeFill, TelephoneFill, Instagram, Facebook } from 're
 
 const Contactanos = () => {
  return (
-  <div className='container-container'>
+  <div className='container-container' id='#section-social'>
     <div className='social-container' data-aos="fade-down" data-aos-duration="500">
      <div className='square-contacto'>
       <h2 className='contactanos-text'>Beat Club Mendoza</h2>

@@ -12,14 +12,14 @@ const Header = () => {
     const [isNavVisible, setNavVisible] = useState(false);
 
 
-    const handleTouchMove = () =>{
+    const handleTouchMove = () => {
         setNavVisible(false);
     }
 
-    useEffect(()=>{
+    useEffect(() => {
         window.addEventListener('touchmove', handleTouchMove);
 
-        return () =>{
+        return () => {
             window.removeEventListener('touchmove', handleTouchMove)
         }
     }, [])
@@ -36,7 +36,10 @@ const Header = () => {
                     <Link className="header-link" id="inicio-link" to="/">Inicio</Link>
                     <Link className="header-link" to="/eventos">Eventos</Link>
                     <Link className="header-link" to="/menu">Menu</Link>
-                    <Link className="header-link" to="/">Contacto</Link>
+                    <a className="header-link" href="##section-social" smooth={true}
+                        duration={500}
+                        spy={true}
+                        offset={-70} >Contacto</a>
                 </li>
             </nav>
             <List onClick={showNavbar} className='nav-btn mobile' />

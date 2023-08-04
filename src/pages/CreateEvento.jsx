@@ -4,6 +4,7 @@ import axios from "axios";
 import backarrow from '../assets/back-arrow2.svg';
 import database from '../assets/database-add.svg';
 import '../styles/CreateEvento.scss';
+import { DatabaseAdd, ArrowReturnLeft } from "react-bootstrap-icons";
 
 const CreateEvento = () => {
     const [titulo, setTitulo] = useState("");
@@ -32,7 +33,7 @@ const CreateEvento = () => {
     };
 
     return (
-        <div className="supercontainer">
+        <div className="supercontainer container-create">
             <div className="producto-form__container">
                 <form>
                     <label>Título</label> <br />
@@ -59,16 +60,16 @@ const CreateEvento = () => {
                     {/* Agregar más campos para otros datos del evento si es necesario */}
 
                     <div className="buttons-container">
-                        <Link to='/readeventos'>
+                        <Link className="text-fix" to='/readeventos'>
                             <button id="crear-categoria__link" onClick={postData} type="submit">
                                 Crear Evento
-                                <img className="links-icons" src={database} alt="database add icon" />
+                                <DatabaseAdd className="create-logo"/>
                             </button>
                         </Link>
-                        <Link to="/readeventos">
+                        <Link className="text-fix" to="/readeventos">
                             <button id="cerrar__link">
                                 Volver
-                                <img className="links-icons" src={backarrow} alt="back arrow icon" />
+                                <ArrowReturnLeft className="create-logo"/>
                             </button>
                         </Link>
                     </div>
