@@ -1,4 +1,5 @@
 import React from 'react';
+import SimpleSlider from '../components/TestCarrousel';
 
 const NotFound = () => {
 
@@ -9,6 +10,7 @@ const NotFound = () => {
     return (
     <div>
         <h1 style={styleError}>Page not found, error 404.</h1>
+        <SimpleSlider/>
     </div>
     );
 }

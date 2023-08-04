@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import '../styles/EventosPasados.scss';
+import { ScaleLoader } from 'react-spinners'
 
 const EventosFuturos = () => {
 
@@ -23,8 +24,8 @@ const EventosFuturos = () => {
                 // console.log("fechaEvento:", fechaEvento)
                 // console.log("fecha del evento de la base de datos:", evento.fecha_evento)
                 // Si la fecha del evento es menor o igual a la fecha actual, actualizar es_proximo a 0
-                
-                
+
+
                 if (fechaEvento < currentDate) {
                     return {
                         ...evento,
@@ -32,7 +33,7 @@ const EventosFuturos = () => {
                     };
                 }
                 return evento;
-                
+
             });
             // Realizar el PATCH para actualizar los eventos cuya fecha ya paso
             axios
@@ -65,7 +66,12 @@ const EventosFuturos = () => {
     if (loading) {
         return (
             <div className="loading-message">
-                Cargando Eventos Próximos...
+                <ScaleLoader
+                    color="#A80038"
+                    height={70}
+                    margin={4}
+                    width={8}
+                />
             </div>
         );
     }

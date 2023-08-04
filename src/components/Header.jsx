@@ -36,9 +36,9 @@ const Header = () => {
                     <Link className="header-link" id="inicio-link" to="/">Inicio</Link>
                     <Link className="header-link" to="/eventos">Eventos</Link>
                     <Link className="header-link" to="/menu">Menu</Link>
-                    <a className="header-link" href="##section-social" smooth={true}
+                    <a className="header-link" href="##section-social"
                         duration={500}
-                        spy={true}
+                        
                         offset={-70} >Contacto</a>
                 </li>
             </nav>
