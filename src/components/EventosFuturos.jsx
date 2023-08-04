@@ -6,6 +6,7 @@ import '../styles/EventosPasados.scss';
 const EventosFuturos = () => {
 
     const [apiEventosF, setApiEventosF] = useState([]);
+    const [loading, setLoading] = useState(true);
 
 
     useEffect(() => {
@@ -22,6 +23,8 @@ const EventosFuturos = () => {
                 // console.log("fechaEvento:", fechaEvento)
                 // console.log("fecha del evento de la base de datos:", evento.fecha_evento)
                 // Si la fecha del evento es menor o igual a la fecha actual, actualizar es_proximo a 0
+                
+                
                 if (fechaEvento < currentDate) {
                     return {
                         ...evento,
@@ -29,6 +32,7 @@ const EventosFuturos = () => {
                     };
                 }
                 return evento;
+                
             });
             // Realizar el PATCH para actualizar los eventos cuya fecha ya paso
             axios
@@ -36,11 +40,13 @@ const EventosFuturos = () => {
                 .then(() => {
                     // Actualizar el estado local con los eventos actualizados
                     setApiEventosF(eventosActualizados);
+                    setLoading(false);
                 })
                 .catch((error) => {
                     console.error("Error al actualizar eventos pasados", error);
                 });
         } catch (error) {
+            setLoading(false);
             console.error("Error al obtener eventos futuros", error);
         }
     };
@@ -56,21 +62,30 @@ const EventosFuturos = () => {
         return fechaLocalString;
     };
 
-    return apiEventosF.length === 0 ?(
+    if (loading) {
+        return (
+            <div className="loading-message">
+                Cargando Eventos Próximos...
+            </div>
+        );
+    }
+
+
+    return apiEventosF.length === 0 ? (
         <div className="no-events__container">
             <h3>No Hay Eventos Próximos</h3>
         </div>
-    ):(
+    ) : (
         <div className="eventos-container__container">
             <h2 id="evento-futuro-title">Proximos Eventos!</h2>
             <div className="eventos__container">
                 {apiEventosF.map((evento, index) => (
-                    <div className="eventos-container__container"key={index}>
-                    <div className="folleto__container">
-                        <h4>{evento.titulo}</h4>
-                        <img src={evento.imagen_url} alt={evento.titulo} />
-                        <span className="eventos-fecha">{formatDate(evento.fecha_evento)}</span>
-                    </div>
+                    <div className="eventos-container__container" key={index}>
+                        <div className="folleto__container">
+                            <h4>{evento.titulo}</h4>
+                            <img src={evento.imagen_url} alt={evento.titulo} />
+                            <span className="eventos-fecha">{formatDate(evento.fecha_evento)}</span>
+                        </div>
                     </div>
                 ))}
             </div>

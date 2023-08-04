@@ -16,9 +16,9 @@ const UpdateProducto = () => {
         setID(localStorage.getItem("ID"));
         setNombre(localStorage.getItem("Nombre"))
         setPrecio(localStorage.getItem("Precio"))
-        
+
         setCategoria_id(localStorage.getItem("Categoria_id"))
-        
+
 
         // Verificar si la descripcion ya tiene un valor en el formulario
         const storedDescripcion = localStorage.getItem("Descripcion");
@@ -47,43 +47,51 @@ const UpdateProducto = () => {
     return (
         <div className="update__container">
             <form className="update-form__container">
-                <h2>{categoria_id}</h2>
-                <label>Nombre</label> <br />
+                <h2>categoria: {categoria_id}</h2>
+                <label htmlFor="nombre">Nombre</label> <br />
                 <input
+                    type="text"
+                    id="nombre"
                     placeholder="Nombre"
                     value={nombre}
                     onChange={(e) => setNombre(e.target.value)}
                 /><br />
 
-                <label>Precio</label> <br />
+                <label htmlFor="precio">Precio</label> <br />
                 <input
+                    type="text"
+                    id="precio"
                     placeholder="Precio"
                     value={precio}
                     onChange={(e) => setPrecio(e.target.value)}
                 /> <br />
 
-                <label>Descripcion</label> <br />
+                <label htmlFor="descripcion">Descripcion</label> <br />
                 <input
+                    type="text"
+                    id="descripcion"
                     placeholder="Descripcion"
                     value={descripcion}
                     onChange={(e) => setDescripcion(e.target.value)}
                 /> <br />
 
-                <label>Imagen Url</label> <br />
+                <label htmlFor="imagen">Imagen Url</label> <br />
                 <input
+                    type="url"
+                    id="imagen"
                     placeholder="Imagen_url"
                     value={imagen}
                     onChange={(e) => setImagen(e.target.value)}
                 /> <br />
-                <br />
-                <ul>
-                    <Link to='/readproductos'>
-                        <button id="first-button" onClick={() => updateApiData()} type="submit">ACEPTAR <Check className="button-icons"/></button>
+
+                <div className="buttons-container">
+                    <Link className="text-fix" to='/readproductos'>
+                        <button id="first-button" onClick={() => updateApiData()}>ACEPTAR <Check className="button-icons" /></button>
                     </Link>
-                    <Link to='/readproductos'>
-                        <button>CANCELAR <X className="button-icons"/></button>
+                    <Link className="text-fix" to='/readproductos'>
+                        <button>CANCELAR <X className="button-icons" /></button>
                     </Link>
-                </ul>
+                </div>
             </form>
         </div>
     )

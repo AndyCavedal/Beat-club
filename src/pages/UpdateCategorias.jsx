@@ -27,7 +27,7 @@ const UpdateCategorias = ()=>{
     return(
         <div className="update__container">
             <form className="update-form__container">
-                <h2>{catId}</h2>
+                <h2>categoria: {catId}</h2>
                 <label>Nombre</label> <br />
                 <input
                     placeholder="Nombre"
@@ -42,14 +42,14 @@ const UpdateCategorias = ()=>{
                     onChange={(e) => setImagenCat(e.target.value)}
                 /> <br />
                 <br />
-                <ul>
-                    <Link to='/readcategorias'>
+                <div className="buttons-container">
+                    <Link className="text-fix" to='/readcategorias'>
                         <button id="first-button" onClick={() => updateCategoria()} type="submit">ACEPTAR <Check className="button-icons"/></button>
                     </Link>
-                    <Link to='/readcategorias'>
+                    <Link className="text-fix" to='/readcategorias'>
                         <button>CANCELAR <X className="button-icons"/></button>
                     </Link>
-                </ul>
+                </div>
             </form>
         </div>
     )

@@ -2,51 +2,64 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: wheat;
     font-size: 2rem;
+    padding: 30px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 .update-form__container {
     display: flex;
+    background-color: #f5f5f5;
+    border-radius: 20px;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    padding: 2rem 4rem;
 }
 
-.update-form__container input {
-    padding: 5px;
-    border-radius: 15px;
+.update-form__container label {
+    font-size: 1.8rem;
+    margin-top: 10px;
 }
 
-.update-form__container button{
+.update-form__container input,
+.update-form__container textarea {
+    width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+}
+
+.update-form__container textarea {
+    resize: vertical;
+}
+
+.update-form__container button {
     width: 150px;
-    padding: 5px;
-    float: left;
-    border-right: 2px solid white;
+    padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: black;
-    padding: 10px 12px;
-    border: none;
-    box-shadow: none;
     font-size: 1.6rem;
     background-color: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
 }
 
 .update-form__container button:hover {
-    background-color: grey;
+    background-color: #222222;
     color: white;
 }
 
-.update-form__container ul {
-    width: 300px;
+.buttons-container {
     display: flex;
     justify-content: space-between;
-    list-style-type: none;
-    overflow: hidden;
-    border-radius: 50px;
-    margin-bottom: 15px;
-    border: 1px solid grey;
+    width: 300px;
 }
 
 .button-icons {
@@ -55,5 +68,13 @@
 }
 
 #first-button {
-    border-right: 2px solid grey;
+    border-right: 2px solid #ccc;
+}
+
+/* Media query para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    .update-form__container input,
+    .update-form__container textarea {
+        width: 100%;
+    }
 }
