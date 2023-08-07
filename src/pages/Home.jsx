@@ -1,18 +1,15 @@
-import React from 'react';
 import '../styles/Home.scss';
 import Banner from '../components/Banner'
 import About from '../components/About'
-//import Gallery from '../components/Gallery'
 import GalleryContainer from '../containers/GalleryContainer';
 import Entrada from '../components/Entrada';
 import Contactanos from '../components/Contactanos';
 import EventoCarrousel from '../components/EventoCarrousel';
-
+import React from "react";
 
 
 const Home = () => {
-
-
+   
     return (
         <div>
             <div className='home-container'>
@@ -22,9 +19,11 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <About />
+            <div id="about">
+                <About />
+            </div>
             <hr className='hr-divisor' />
-            <EventoCarrousel/>
+            <EventoCarrousel />
             <GalleryContainer />
             <Entrada />
             <Contactanos />

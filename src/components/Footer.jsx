@@ -11,20 +11,20 @@ const Footer = () => {
                 <div className='footer-links'>
                     <div className='footer-links-div'>
                         <h4>Nosotros</h4>
-                        <Link to='/'>
+                        <Link to='/' className='div-links'>
                             Acerca de
                         </Link>
-                        <Link to='/eventos'>
+                        <Link to='/eventos' className='div-links'>
                             Eventos
                         </Link>
-                        <Link to='/menu'>
+                        <Link to='/menu' className='div-links'>
                             Menu
                         </Link>
                     </div>
                     <div className='footer-links-div'>
                         <h4>Contacto</h4>
-                        <span>Reservas: (261) 341-7030</span>
-                        <span>Correo: beatclubmendoza@gmail.com</span>
+                        <p>Reservas: (261) 341-7030</p>
+                        <p>Correo: beatclubmendoza@gmail.com</p>
                     </div>
                     <div className='footer-links-div'>
                         <h4>Redes</h4>

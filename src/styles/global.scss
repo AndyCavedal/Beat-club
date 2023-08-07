@@ -11,6 +11,7 @@
     /* colorhunt, colours */
     --light-red: #FD0054;
     --dark-red: #A80038;
+    --club-red: #ff2537;
     --brown-logo: #2B2024;
     --white-logo: #FBF9FA;
     --navbar-color: rgb(7, 7, 7);
@@ -29,7 +30,7 @@ html {
     font-family: 'DM Sans', sans-serif;
     font-family: 'Questrial', sans-serif;
     letter-spacing: 1px;
-    background-color: var(--smoothBlack);
+    background-color: var(--black);
 }
 
 .contenedor{

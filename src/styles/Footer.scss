@@ -4,7 +4,7 @@
 
 
 .footer{
-    background-color: var(--black);
+    background-color: var(--smoothBlack);
     margin-top: auto;
 }
 
@@ -41,7 +41,13 @@
 }
 
 .footer-links-div p{
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    line-height: 15px;
+    margin: 0.5rem 0;
+}
+
+.footer-links-div .div-links{
+    font-size: 1.3rem;
     line-height: 15px;
     margin: 0.5rem 0;
 }

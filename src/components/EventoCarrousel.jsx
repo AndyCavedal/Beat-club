@@ -21,7 +21,6 @@ const EventoCarrousel = () => {
         try {
             const response = await axios.get("https://server-api-beat-club.vercel.app/eventos/futuros");
             setApiEventosFuturos(response.data);
-            console.log("eventos futuros:",response.data)
             setLoading(false);
         } catch (error) {
             setLoading(false);

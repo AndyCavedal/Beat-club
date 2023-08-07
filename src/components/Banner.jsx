@@ -17,7 +17,7 @@ const Banner = () => {
             <div className='banner-btn'>
                 <Link to='/contacto' className='btn'>Contactanos</Link>
             </div>
-            <p className='banner-direccion'>Av. Perú 1775, M5500 Mendoza</p>
+            <p className='banner-direccion'>Av. Perú 1773, M5500 Mendoza</p>
         </div>
     )
 }

@@ -2,9 +2,9 @@ import React from 'react';
 import '../styles/About.scss';
 
 
-const About = () =>{
+const About = ({ name }) =>{
     return(
-        <div className='about-panel__container'>
+        <div id={name} className='about-panel__container'>
             <div className='about-title__container'>
                 <h1 className='about-title'>Acerca de</h1>
                 <h2 className='about-subtitle'>Beat Club</h2>
