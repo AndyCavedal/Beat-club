@@ -54,7 +54,7 @@ const PruebaMenu = () => {
                                 {categoriaData.productos.map((producto, index) => (
                                     <tr className="tr tr-grid" key={index}>
                                         <td className="td">{producto.nombre}</td>
-                                        <td className="td">${producto.precio}</td>
+                                        <td className="td td-precio">${producto.precio}</td>
                                         <td className="descripcion">{producto.descripcion}</td>
                                     </tr>
                                 ))}

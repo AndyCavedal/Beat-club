@@ -41,7 +41,7 @@ const Footer = () => {
                 <div className='footer-below'>
                     <div className='footer-copyright'>
                         <p>
-                            @{new Date().getFullYear()} Andy chupame el culo.
+                            @{new Date().getFullYear()} Estudios Chango.
                         </p>
                     </div>
                 </div>
