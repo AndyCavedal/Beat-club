@@ -7,7 +7,7 @@ module.exports = {
     entry: './src/index.js',
     //donde vivira el projecto =>
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'build'),
         //nombre del enpaquetado que se va a crear
         filename: 'bundle.js',
         publicPath: '/',
