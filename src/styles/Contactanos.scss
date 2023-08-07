@@ -25,6 +25,7 @@
     align-items: center;
     background-image: url(/src/assets/piano-beatclub.jpg);
     background-size: 155%;
+    background-size: cover;
     background-repeat: no-repeat;
     border-radius: 10px 0px 0px 10px;
     
@@ -198,7 +199,7 @@
         height: 400px;
     }
 
-    .square {
+    .square-contacto {
         width: 350px;
         height: 350px;
     }
@@ -258,7 +259,7 @@
         height: 300px;
     }
 
-    .square {
+    .square-contacto {
         width: 280px;
         height: 280px;
     }
