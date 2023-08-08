@@ -28,22 +28,37 @@ const Header = () => {
         setNavVisible(!isNavVisible)
     }
 
+    const hideNavbar = () => {
+        setNavVisible(false);
+    };
+
     return (
         <header>
             <nav ref={navRef} className={isNavVisible ? 'responsive_nav' : ''}>
                 <li className="navbar-list">
-                    <img src={logo} alt="beat-club logo" href="/" id="logo-header" className='desktop' />
-                    <Link className="header-link" id="inicio-link" to="/">Inicio</Link>
-                    <Link className="header-link" to="/eventos">Eventos</Link>
-                    <Link className="header-link" to="/menu">Menu</Link>
-                    <a className="header-link" href="##section-social"
+                    <img src={logo} alt="beat-club logo" href="/" id="logo-header" className="desktop" />
+                    <Link className="header-link" id="inicio-link" to="/" onClick={hideNavbar}>
+                        Inicio
+                    </Link>
+                    <Link className="header-link" to="/eventos" onClick={hideNavbar}>
+                        Eventos
+                    </Link>
+                    <Link className="header-link" to="/menu" onClick={hideNavbar}>
+                        Menu
+                    </Link>
+                    <a
+                        className="header-link"
+                        href="##section-social"
                         duration={500}
-                        
-                        offset={-70} >Contacto</a>
+                        offset={-70}
+                        onClick={hideNavbar}
+                    >
+                        Contacto
+                    </a>
                 </li>
             </nav>
-            <List onClick={showNavbar} className='nav-btn mobile' />
-            <img src={logo} alt="beat-club logo" href="/" id="logo-header" className='mobile' />
+            <List onClick={showNavbar} className="nav-btn mobile" />
+            <img src={logo} alt="beat-club logo" href="/" id="logo-header" className="mobile" />
         </header>
     )
 }

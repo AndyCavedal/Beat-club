@@ -35,6 +35,8 @@ const Footer = () => {
                     </div>
                     <div className='footer-links-div'>
                         <h4>Horarios</h4>
+                        <p>Abrimos a las 21:30hs</p>
+                        <p>Sabados y Domingos</p>
                     </div>
                 </div>
                 <hr />
