@@ -5,11 +5,14 @@ import GalleryContainer from '../containers/GalleryContainer';
 import Entrada from '../components/Entrada';
 import Contactanos from '../components/Contactanos';
 import EventoCarrousel from '../components/EventoCarrousel';
-import React from "react";
+import React, { useEffect } from 'react';
 
 
 const Home = () => {
-   
+    useEffect(() => {
+        window.scrollTo(0, 0); // Scroll al principio de la pagina
+    }, []);
+
     return (
         <div>
             <div className='home-container'>
@@ -19,9 +22,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <div id="about">
-                <About />
-            </div>
+            <About />
             <hr className='hr-divisor' />
             <EventoCarrousel />
             <GalleryContainer />

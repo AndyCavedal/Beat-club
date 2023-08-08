@@ -34,17 +34,21 @@
 }
 
 .banner-btn{
-    margin-top: 8rem;
+    display: flex;
+    justify-content: center;
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-top: 4px;
 }
 
-.contenedor-banner .btn{
-    background-color: var(--club-red);
-    font-size: 2rem;
-    text-decoration: none;
-    color: #fff;
-    padding: 10px;
-    border-radius: 10px;
-}
+// .contenedor-banner .btn{
+//     background-color: var(--club-red);
+//     font-size: 2rem;
+//     text-decoration: none;
+//     color: #fff;
+//     padding: 10px;
+//     border-radius: 10px;
+// }
 
 .banner-direccion {
     margin-top: 5rem;

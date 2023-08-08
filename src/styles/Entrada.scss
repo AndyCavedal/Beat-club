@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     margin: 70px auto 70px auto;
-    
+
 }
 
 .entradaweb__container {
@@ -48,16 +48,38 @@
     z-index: 0;
 }
 
-.entradaweb__container-izq .btn {
-    text-align: center;
-    width: 20vw;
-    background-color: var(--dark-red);
-    font-size: 2rem;
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
+    width: 205px;
+    font-size: 1.5rem;
     color: #fff;
-    padding: 10px;
-    border-radius: 10px;
-    font-family: 'Pathway Extreme', sans-serif;
+    cursor: pointer;
+    margin: 20px;
+    height: 55px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+
+    border-radius: 50px;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+
+    background-image: linear-gradient(to right, #eb3941, #f15e64, #e14e53, #e2373f);  box-shadow: 0 5px 15px rgba(242, 97, 103, .4);
+}
+
+.btn:hover {
+    background-position: 100% 0;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn:focus {
+    outline: none;
 }
 
 @media only screen and (max-width: 1050px) {
