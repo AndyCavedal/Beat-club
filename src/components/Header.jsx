@@ -5,6 +5,7 @@ import logo from '../assets/beat-club-logo-header.png';
 import { List, X } from 'react-bootstrap-icons';
 import { useRef, useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
+import { Link as ScrollLink } from 'react-scroll';
 
 
 const Header = () => {
@@ -46,15 +47,15 @@ const Header = () => {
                     <Link className="header-link" to="/menu" onClick={hideNavbar}>
                         Menu
                     </Link>
-                    <a
+                    <ScrollLink
                         className="header-link"
-                        href="##section-social"
+                        to="section-social"
+                        smooth={true}
                         duration={500}
-                        offset={-70}
                         onClick={hideNavbar}
                     >
                         Contacto
-                    </a>
+                    </ScrollLink>
                 </li>
             </nav>
             <List onClick={showNavbar} className="nav-btn mobile" />

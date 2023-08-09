@@ -5,7 +5,7 @@ import '../styles/About.scss';
 const About = ({ name }) =>{
     return(
         <div id={name} className='about-panel__container'>
-            <div className='about-title__container'>
+            <div id='about-section' className='about-title__container'>
                 <h1 className='about-title'>Acerca de</h1>
                 <h2 className='about-subtitle'>Beat <span className='club-text'>Club</span></h2>
             </div>

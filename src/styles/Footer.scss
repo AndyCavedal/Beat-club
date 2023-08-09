@@ -52,6 +52,10 @@
     margin: 0.5rem 0;
 }
 
+.div-links:hover {
+    cursor: pointer;
+}
+
 .footer a{
     text-decoration: none;
     color: #fff;
@@ -80,4 +84,17 @@
 
 .footer-links-redes .redes-logo:hover{
     color: var(--dark-red)
+}
+
+.footer-copyright p {
+    color: #b5b5b5;
+    font-size: 1.7rem;
+}
+
+.footer-copyright a {
+    color: #7e7e7e78;
+}
+
+.footer-copyright a:hover {
+    color: inherit;
 }
