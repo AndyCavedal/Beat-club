@@ -1,9 +1,9 @@
 import React from 'react';
 import '../styles/MenuMobileWidget.scss';
+import { Link } from 'react-scroll';
 import vinos from '../assets/menu/vinos.jpg';
 import picadas from '../assets/menu/picadas.jpg';
 import tragos from '../assets/menu/tragos.jpg';
-//import espumantes from '../assets/menu/espumantes.jpg';
 import promos from '../assets/menu/promos.svg';
 import whiskys from '../assets/menu/whiskys.jpg';
 import burgers from '../assets/menu/burgers.jpg';
@@ -19,43 +19,43 @@ const MenuMobileWidget = () => {
             <h2 className="widgets-title">Nuestra Carta</h2>
             <div className="grid-item">
                 <img src={vinos} alt="seccion vinos" />
-                <a className='menu-btn' href="#vinos">VINOS</a>
+                <Link className='menu-btn' to="vinos" smooth={true} duration={1000}>VINOS</Link>
             </div>
             <div className="grid-item">
                 <img src={picadas} alt="seccion picadas" />
-                <a className='menu-btn' href="#picadas">PICADAS</a>
+                <Link className='menu-btn' to="picadas" smooth={true} duration={1000}>PICADAS</Link>
             </div>
             <div className="grid-item">
                 <img src={bebidas} alt="seccion bebidas" />
-                <a className='menu-btn' href="#bebidas">BEBIDAS</a>
+                <Link className='menu-btn' to="bebidas" smooth={true} duration={1000}>BEBIDAS</Link>
             </div>
             <div className="grid-item">
                 <img src={sandwichs} alt="seccion sandwichs" />
-                <a className='menu-btn' href="#sandwiches">SANDWICHS</a>
+                <Link className='menu-btn' to="sandwiches" smooth={true} duration={1000}>SANDWICHS</Link>
             </div>
             <div className="grid-item">
                 <img src={burgers} alt="seccion burgers" />
-                <a className='menu-btn' href="#burgers">BURGERS</a>
+                <Link className='menu-btn' to="burgers" smooth={true} duration={1000}>BURGERS</Link>
             </div>
             <div className="grid-item">
                 <img src={promos} alt="seccion promos" />
-                <a className='menu-btn' href="#promociones">PROMOS</a>
+                <Link className='menu-btn' to="promociones" smooth={true} duration={1000}>PROMOS</Link>
             </div>
             <div className="grid-item">
                 <img src={postres} alt="seccion postres" />
-                <a className='menu-btn' href="#postres">POSTRES</a>
+                <Link className='menu-btn' to="postres" smooth={true} duration={1000}>POSTRES</Link>
             </div>
             <div className="grid-item">
                 <img src={tragos} alt="seccion tragos" />
-                <a className='menu-btn' href="#forever young">TRAGOS</a>
+                <Link className='menu-btn' to="forever young" smooth={true} duration={1000}>TRAGOS</Link>
             </div>
             <div className="grid-item">
                 <img src={whiskys} alt="seccion whiskys" />
-                <a className='menu-btn' href="#speakeasy licor scotch">WHISKYS</a>
+                <Link className='menu-btn' to="speakeasy licor scotch" smooth={true} duration={1000}>WHISKYS</Link>
             </div>
             <div className="grid-item">
                 <img src={ensaladas} alt="seccion ensaladas" />
-                <a className='menu-btn' href="#ensaladas">ENSALADAS</a>
+                <Link className='menu-btn' to="ensaladas" smooth={true} duration={500}>ENSALADAS</Link>
             </div>
         </div>
     );
