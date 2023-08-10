@@ -27,7 +27,7 @@ const Home = () => {
             <EventoCarrousel />
             <GalleryContainer />
             <Entrada />
-            <Contactanos />
+            <Contactanos id="contactos"/>
         </div>
     )
 }

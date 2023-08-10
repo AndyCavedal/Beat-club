@@ -4,7 +4,7 @@ import '../styles/MediaQuery.scss';
 import logo from '../assets/beat-club-logo-header.png';
 import { List, X } from 'react-bootstrap-icons';
 import { useRef, useState, useEffect } from 'react';
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Link as ScrollLink } from 'react-scroll';
 
 
@@ -12,6 +12,7 @@ const Header = () => {
     const navRef = useRef();
     const [isNavVisible, setNavVisible] = useState(false);
 
+    const location = useLocation()
 
     const handleTouchMove = () => {
         setNavVisible(false);
@@ -48,15 +49,27 @@ const Header = () => {
                         <Link className="header-link" to="/menu" onClick={hideNavbar}>
                             Menu
                         </Link>
-                        <ScrollLink
-                            className="header-link"
-                            to="section-social"
-                            smooth={true}
-                            duration={500}
-                            onClick={hideNavbar}
-                        >
-                            Contacto
-                        </ScrollLink>
+                        {location.pathname === '/' ? (
+
+                            <ScrollLink
+                                className="header-link"
+                                to="contacto"
+                                smooth={true}
+                                duration={500}
+                                onClick={hideNavbar}
+                            >
+                                Contacto
+                            </ScrollLink>
+                        ) :
+                            (
+                                <a
+                                    className="header-link"
+                                    href="/#contacto"
+                                    onClick={hideNavbar}
+                                >
+                                    Contacto
+                                </a>
+                            )}
                     </li>
                 </ul>
             </nav>
