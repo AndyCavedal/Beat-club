@@ -15,7 +15,7 @@ const Banner = () => {
             <hr></hr>
             <p className='banner-text'>cena - show - tragos</p>
             <div className='banner-btn'>
-                <a href='' target='_blank' className='btn'>Conocenos!</a>
+                <a href='/' target='_blank' className='btn'>Conocenos!</a>
             </div>
             <p className='banner-direccion'>Av. Perú 1773, M5500 Mendoza</p>
         </div>

@@ -62,7 +62,7 @@ const EventoCarrousel = () => {
                 {apiEventosFuturos.map((evento, index) => (
                     <div className="eventos-container__container" key={index}>
                         <div className="folleto__container">
-                            <h4>{evento.titulo}</h4>
+                            <h3>{evento.titulo}</h3>
                             <img src={evento.imagen_url} alt={evento.titulo} />
                             <span className="eventos-fecha">{formatDate(evento.fecha_evento)}</span>
                         </div>
