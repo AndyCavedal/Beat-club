@@ -33,7 +33,7 @@ const EventosPasados = () => {
         <div className="eventos-container__container">
             <h2>Ultimos Eventos</h2>
             <div className="eventos__container">
-                {apiEventosP.map((evento, index) => (
+                {Array.isArray(apiEventosP) && apiEventosP.map((evento, index) => (
                     <div className="eventos-container__container" key={index}>
                         <div className="folleto__container" >
                             <h3>{evento.titulo}</h3>

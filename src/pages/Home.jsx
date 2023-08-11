@@ -5,6 +5,7 @@ import GalleryContainer from '../containers/GalleryContainer';
 import Entrada from '../components/Entrada';
 import Contactanos from '../components/Contactanos';
 import EventoCarrousel from '../components/EventoCarrousel';
+import Mapa from '../components/Mapa';
 import React, { useEffect } from 'react';
 
 
@@ -27,7 +28,8 @@ const Home = () => {
             <EventoCarrousel />
             <GalleryContainer />
             <Entrada />
-            <Contactanos id="contactos"/>
+            <Contactanos />
+            <Mapa/>
         </div>
     )
 }
