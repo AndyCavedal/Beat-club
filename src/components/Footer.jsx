@@ -17,7 +17,8 @@ const Footer = () => {
                             to="about-section"
                             smooth={true}
                             duration={500}
-                            className='div-links'>
+                            className='div-links'
+                            href="#about-section">
                             Acerca de
                         </ScrollLink>
                         <Link to='/eventos' className='div-links'>
