@@ -22,10 +22,6 @@ const Galeria = () =>{
             id: 1,
             imgSrc: Img1,
         },
-        // {
-        //     id: 2,
-        //     imgSrc: Img2,
-        // },
         {
             id: 3,
             imgSrc: Img3,
@@ -50,10 +46,6 @@ const Galeria = () =>{
             id: 8,
             imgSrc: Img8,
         },
-        // {
-        //     id: 9,
-        //     imgSrc: Img9,
-        // },
         {
             id: 10,
             imgSrc: Img10,
@@ -62,19 +54,10 @@ const Galeria = () =>{
             id: 11,
             imgSrc: Img11,
         },
-        // {
-        //     id: 12,
-        //     imgSrc: Img12,
-        // },
-        
         {
             id: 15,
             imgSrc: Img15,
         },
-        // {
-        //     id: 16,
-        //     imgSrc: Img16,
-        // },
         {
             id: 17,
             imgSrc: Img17,
@@ -98,7 +81,7 @@ const Galeria = () =>{
             {data.map((item, index)=> {
                 return(
                     <div className='pics' data-aos="fade-up" data-aos-duration="2000" key={index}>
-                        <img src={item.imgSrc} alt={item.imgSrc} />
+                        <img src={item.imgSrc} alt={item.imgSrc} loading="lazy" />
                     </div>
                 )
             })}

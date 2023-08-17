@@ -64,7 +64,7 @@ const ReadCategorias = ()=>{
                     </tr>
                 </thead>
                 <tbody>
-                    {apiCategorias.map((elem, index) => (
+                    {Array.isArray(apiCategorias) && apiCategorias.map((elem, index) => (
                         <tr key={index}>
                             <td>{elem.nombre}</td>
                             <td><img className="readevent-foto" src={elem.imagen_url} alt={elem.nombre} /></td>

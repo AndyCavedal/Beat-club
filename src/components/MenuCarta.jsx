@@ -37,11 +37,11 @@ const PruebaMenu = () => {
             {Object.entries(productos).map(([categoriaId, categoriaData]) => (
                 <div id={categoriaData.categoria_nombre.toLowerCase()} key={categoriaId} className="tables__container" data-aos="zoom-in-down" data-aos-duration="500">
                     <div className="square square-left">
-                        <img src={categoriaData.categoria_imagen_url} alt={`imagen ${categoriaData.categoria_nombre}`} />
+                        <img src={categoriaData.categoria_imagen_url} alt={`imagen ${categoriaData.categoria_nombre}`} loading="lazy"/>
                     </div>
                     <div className="square square-right">
                         <div className="foto-responsive">
-                            <img src={categoriaData.categoria_imagen_url} alt={`imagen ${categoriaData.categoria_nombre}`} />
+                            <img src={categoriaData.categoria_imagen_url} alt={`imagen ${categoriaData.categoria_nombre}`} loading="lazy"/>
                         </div>
                         <h2 className="food-title">{categoriaData.categoria_nombre}</h2>
                         <table className="table">

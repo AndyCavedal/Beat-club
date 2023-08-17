@@ -11,11 +11,11 @@ const MenuPagos = () => {
         <div className='pagos__container'>
             <h2 className='pagos-title'>Medios de Pago</h2>
             <div className='image__container'>
-                <img src={visa} alt="visa" />
-                <img src={master} alt="mastercard" />
-                <img src={mp} alt="mercado pago" />
-                <img src={naranja} alt="tarjeta naranja" />
-                <img src={american} alt="american express" />
+                <img src={visa} alt="visa" loading="lazy"/>
+                <img src={master} alt="mastercard" loading="lazy"/>
+                <img src={mp} alt="mercado pago" loading="lazy" />
+                <img src={naranja} alt="tarjeta naranja" loading="lazy"/>
+                <img src={american} alt="american express" loading="lazy"/>
             </div>
         </div>
     )

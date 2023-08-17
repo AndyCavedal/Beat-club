@@ -37,7 +37,7 @@ const EventosPasados = () => {
                     <div className="eventos-container__container" key={index}>
                         <div className="folleto__container" >
                             <h3>{evento.titulo}</h3>
-                            <img src={evento.imagen_url} alt={evento.titulo} />
+                            <img src={evento.imagen_url} alt={evento.titulo} loading="lazy"/>
                             <span className="eventos-fecha">{formatDate(evento.fecha_evento)}</span>
                         </div>
                     </div>

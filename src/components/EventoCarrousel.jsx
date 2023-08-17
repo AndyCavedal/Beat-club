@@ -1,11 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import '../styles/EventoCarrousel.scss';
-import EventosFuturos from './EventosFuturos';
-import Slider from 'react-slick';
 import { ScaleLoader } from 'react-spinners'
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 
 const EventoCarrousel = () => {
     const [apiEventosFuturos, setApiEventosFuturos] = useState([])
@@ -59,11 +55,11 @@ const EventoCarrousel = () => {
         <div className="eventos-container__container">
             <h2 id="evento-futuro-title">Proximos Eventos!</h2>
             <div className="eventos__container">
-                {apiEventosFuturos.map((evento, index) => (
+                {Array.isArray(apiEventosFuturos) && apiEventosFuturos.map((evento, index) => (
                     <div className="eventos-container__container" key={index}>
                         <div className="folleto__container">
                             <h3>{evento.titulo}</h3>
-                            <img src={evento.imagen_url} alt={evento.titulo} />
+                            <img src={evento.imagen_url} alt={evento.titulo} loading="lazy" />
                             <span className="eventos-fecha">{formatDate(evento.fecha_evento)}</span>
                         </div>
                     </div>
