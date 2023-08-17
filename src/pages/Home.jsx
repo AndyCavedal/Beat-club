@@ -4,7 +4,6 @@ import About from '../components/About'
 import GalleryContainer from '../containers/GalleryContainer';
 import Entrada from '../components/Entrada';
 import Contactanos from '../components/Contactanos';
-import EventoCarrousel from '../components/EventoCarrousel';
 import Mapa from '../components/Mapa';
 import React, { useEffect } from 'react';
 
@@ -25,7 +24,6 @@ const Home = () => {
             </div>
             <About />
             <hr className='hr-divisor' />
-            <EventoCarrousel />
             <GalleryContainer />
             <Entrada />
             <Contactanos />
