@@ -1,19 +1,19 @@
 import React from 'react';
 import '../styles/Gallery.scss';
-import Img1 from '../assets/gallery/gallery-img1.jpeg';
-import Img3 from '../assets/gallery/gallery-img3.jpg';
-import Img4 from '../assets/gallery/gallery-img4.jpg';
-import Img5 from '../assets/gallery/gallery-img5.jpg';
-import Img6 from '../assets/gallery/gallery-img6.jpg';
-import Img7 from '../assets/gallery/gallery-img7.jpg';
-import Img8 from '../assets/gallery/gallery-img8.jpg';
-import Img10 from '../assets/gallery/gallery-img10.jpg';
-import Img11 from '../assets/gallery/gallery-img11.jpg';
-import Img14 from '../assets/gallery/gallery-img14.jpg';
-import Img15 from '../assets/gallery/gallery-img15.jpg';
-import Img17 from '../assets/gallery/gallery-img17.jpg';
-import Img18 from '../assets/gallery/gallery-img18.jpg';
-import Img19 from '../assets/gallery/gallery-img19.jpg';
+import Img1 from '../assets/gallery/gallery-img1.webp';
+import Img3 from '../assets/gallery/gallery-img3.webp';
+import Img4 from '../assets/gallery/gallery-img4.webp';
+import Img5 from '../assets/gallery/gallery-img5.webp';
+import Img6 from '../assets/gallery/gallery-img6.webp';
+import Img7 from '../assets/gallery/gallery-img7.webp';
+import Img8 from '../assets/gallery/gallery-img8.webp';
+import Img10 from '../assets/gallery/gallery-img10.webp';
+import Img11 from '../assets/gallery/gallery-img11.webp';
+import Img14 from '../assets/gallery/gallery-img14.webp';
+import Img15 from '../assets/gallery/gallery-img15.webp';
+import Img17 from '../assets/gallery/gallery-img17.webp';
+import Img18 from '../assets/gallery/gallery-img18.webp';
+import Img19 from '../assets/gallery/gallery-img19.webp';
 
 
 const Galeria = () =>{
