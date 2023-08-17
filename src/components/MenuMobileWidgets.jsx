@@ -1,9 +1,9 @@
 import React from 'react';
 import '../styles/MenuMobileWidget.scss';
 import { Link } from 'react-scroll';
-import vinos from '../assets/menu/vinos.jpg';
+import vinos from '../assets/menu/vinos.webp';
 import picadas from '../assets/menu/picadas.webp';
-import tragos from '../assets/menu/tragos.jpg';
+import tragos from '../assets/menu/tragos.webp';
 import promos from '../assets/menu/promos.svg';
 import whiskys from '../assets/menu/whiskys1.webp';
 import burgers from '../assets/menu/burgers.webp';

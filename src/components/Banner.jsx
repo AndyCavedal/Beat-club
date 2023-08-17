@@ -8,7 +8,7 @@ const Banner = () => {
     return (
         <div className='contenedor-banner' data-aos="zoom-in">
             <div>
-                <img src={beat} alt="logo beat" loading="lazy" />
+                <img src={beat} alt="logo beat" />
             </div>
             <p>Sabores y música en vivo en un solo lugar.</p>
             <p>¡Te esperamos!</p>

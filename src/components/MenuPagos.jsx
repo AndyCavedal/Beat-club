@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/MenuPagos.scss';
-import visa from '../assets/menu/Visa.jpg';
+import visa from '../assets/menu/visa.webp';
 import american from '../assets/menu/AmericanExpress.jpg';
 import master from '../assets/menu/mastercard.png';
 import mp from '../assets/menu/mercado-pago.png';
