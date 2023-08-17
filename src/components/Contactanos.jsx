@@ -6,8 +6,7 @@ const Contactanos = () => {
   return (
 
     <div className='container-container' id="contacto">
-      <h2 className='home-title'>Contactanos!</h2>
-      <div className='social-container' data-aos="fade-down" data-aos-duration="500">
+      <div className='social-container'>
         <div className='square-contacto'>
           <h2 className='contactanos-text'>Beat Club Mendoza</h2>
           <div>

@@ -1,0 +1,19 @@
+.contenedor-contacto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 1200px) {
+    .contenedor-contacto{
+        flex-direction: column;
+    }
+
+    .form__container {
+        border-radius: 15px;
+    }
+
+    .social-container {
+        border-radius: 15px;
+    }
+}
