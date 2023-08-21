@@ -11,7 +11,8 @@ const Formulario = () => {
 
         emailjs.sendForm('service_yvxia8w', 'template_c83lem7', form.current, '32Z8b9wgYpM0yQ3ER')
             .then((result) => {
-                console.log(result.text);
+                alert('Mensaje Enviado!')
+                form.current.reset()
             }, (error) => {
                 console.log(error.text);
             });
@@ -46,7 +47,7 @@ const Formulario = () => {
                 /> <br />
                 <label htmlFor="message">Mensaje:</label>
                 <textarea id="message" name="message" rows="4" ></textarea>
-                <input type="submit" value="Send"/>
+                <input type="submit" value="Enviar" className='form-submit'/>
             </form>
         </div>
     )
