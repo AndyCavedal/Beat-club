@@ -8,7 +8,6 @@ import EventoCarrousel from '../components/EventoCarrousel';
 import Mapa from '../components/Mapa';
 import React, { useEffect } from 'react';
 
-
 const Home = () => {
     useEffect(() => {
         window.scrollTo(0, 0); // Scroll al principio de la pagina
