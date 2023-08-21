@@ -49,27 +49,9 @@ const Header = () => {
                         <Link className="header-link" to="/menu" onClick={hideNavbar}>
                             Menu
                         </Link>
-                        {location.pathname === '/' ? (
-
-                            <ScrollLink
-                                className="header-link"
-                                to="contacto"
-                                smooth={true}
-                                duration={500}
-                                onClick={hideNavbar}
-                            >
-                                Contacto
-                            </ScrollLink>
-                        ) :
-                            (
-                                <a
-                                    className="header-link"
-                                    href="/#contacto"
-                                    onClick={hideNavbar}
-                                >
-                                    Contacto
-                                </a>
-                            )}
+                        <Link className="header-link" to="/contacto" onClick={hideNavbar}>
+                            Contacto
+                        </Link>
                     </li>
                 </ul>
             </nav>

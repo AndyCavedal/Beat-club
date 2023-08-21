@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from '../src/pages/Home';
 import Eventos from '../src/pages/Eventos';
 import Menu from '../src/pages/Menu'
+import Contacto from '../src/pages/Contacto'
 // import Layout from '../src/containers/Layout';
 import NotFound from '../src/pages/NotFound';
 import Header from '../src/components/Header';
@@ -30,6 +31,7 @@ const App = () => {
                 <Route exact path='/' element={<Home />} />
                 <Route exact path='/eventos' element={<Eventos />} />
                 <Route exact path='/menu' element={<Menu />} />
+                <Route exact path='/contacto' element={<Contacto />} />
                 <Route element={<ProtectedRoute />}>
                     <Route exact path='/root' element={<Admin />} />
                     <Route exact path='/readproductos' element={<ReadProductos />} />

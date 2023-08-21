@@ -8,7 +8,7 @@ const NotFound = () => {
 
     return (
     <div>
-        <h2 style={styleError}>Page not found, error 404.</h2>
+        <h2 style={styleError}>Pagina no encontrada, error 404.</h2>
     </div>
     );
 }

@@ -3,10 +3,9 @@ import Banner from '../components/Banner'
 import About from '../components/About'
 import GalleryContainer from '../containers/GalleryContainer';
 import Entrada from '../components/Entrada';
-import Contactanos from '../components/Contactanos';
+//import Contactanos from '../components/Contactanos';
 import Mapa from '../components/Mapa';
 import React, { useEffect } from 'react';
-
 
 const Home = () => {
     useEffect(() => {
@@ -26,7 +25,6 @@ const Home = () => {
             <hr className='hr-divisor' />
             <GalleryContainer />
             <Entrada />
-            <Contactanos />
             <Mapa/>
         </div>
     )
