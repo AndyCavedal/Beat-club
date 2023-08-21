@@ -13,14 +13,12 @@ const Footer = () => {
                 <div className='footer-links'>
                     <div className='footer-links-div'>
                         <h3>Nosotros</h3>
-                        <ScrollLink
-                            to="about-section"
-                            smooth={true}
-                            duration={500}
+                        <Link
+                            to="/contacto"
                             className='div-links'
-                            href="#about-section">
-                            Acerca de
-                        </ScrollLink>
+                            >
+                            Contactanos
+                        </Link>
                         <Link to='/eventos' className='div-links'>
                             Eventos
                         </Link>

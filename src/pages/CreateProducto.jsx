@@ -54,6 +54,7 @@ const CreateProducto = () => {
                     categoria_id: categoria,
                     imagen_url: imagen
                 })
+                alert("Producto cargado")
             }
         }
     };
@@ -100,12 +101,12 @@ const CreateProducto = () => {
                     </select>
                     <br />
                     <div className="buttons-container">
-                        <Link className="text-fix" to='/readproductos'>
+                        <div className="text-fix">
                             <button id="crear-categoria__link" onClick={postData} type="submit">
                                 Crear Producto
                                 <DatabaseAdd className="create-logo"/>
                             </button>
-                        </Link>
+                        </div>
                         <Link className="text-fix" to="/readproductos">
                             <button id="cerrar__link">
                                 Volver

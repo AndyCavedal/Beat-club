@@ -39,7 +39,9 @@ const Header = () => {
             <nav ref={navRef} className={isNavVisible ? 'responsive_nav' : ''}>
                 <ul>
                     <li className="navbar-list">
-                        <img src={logo} alt="beat-club logo" href="/" id="logo-header" className="desktop" />
+                        <Link to='/'>
+                            <img src={logo} alt="beat-club logo" id="logo-header" className="desktop" />
+                        </Link>
                         <Link className="header-link" id="inicio-link" to="/" onClick={hideNavbar}>
                             Inicio
                         </Link>
