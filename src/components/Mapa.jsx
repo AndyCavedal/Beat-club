@@ -5,11 +5,9 @@ import '../styles/Mapa.scss';
 
 
 const Mapa = () => {
-    const apiKey = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
-    console.log("Clave Api:", process.env.REACT_APP_GOOGLE_MAPS_API_KEY);
 
     const { isLoaded } = useLoadScript({
-        apiKey,
+        googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
     });
 
     if (!isLoaded) {

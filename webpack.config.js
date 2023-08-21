@@ -4,7 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const Dotenv = require('dotenv-webpack');
 
 module.exports = {
-		mode: 'development',
+    mode: 'development',
     entry: './src/index.js',
     //donde vivira el projecto =>
     output: {
@@ -44,9 +44,9 @@ module.exports = {
             {
                 test: /\.(css|scss)$/,
                 use: [
-                        'style-loader',
-                        'css-loader',
-                        'sass-loader',
+                    'style-loader',
+                    'css-loader',
+                    'sass-loader',
 
                 ]
             },
