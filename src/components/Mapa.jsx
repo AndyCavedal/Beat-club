@@ -5,7 +5,8 @@ import '../styles/Mapa.scss';
 
 
 const Mapa = () => {
-    const googleMapsApiKey = process.env.GOOGLE_MAPS_API_KEY;
+    const googleMapsApiKey = process.env.local.GOOGLE_MAPS_API_KEY;
+    console.log('Api Key:', googleMapsApiKey);
     const { isLoaded } = useLoadScript({
         googleMapsApiKey,
     });
