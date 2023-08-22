@@ -6,7 +6,7 @@ const MenuBienvenida = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            setScrollPosY(window.scrollY * 0.3);
+            setScrollPosY(window.scrollY * 0.2);
         };
 
         window.addEventListener('scroll', handleScroll);
