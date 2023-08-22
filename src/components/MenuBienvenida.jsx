@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect  } from 'react';
 import '../styles/MenuBienvenida.scss';
 
 const MenuBienvenida = () => {
@@ -6,7 +6,7 @@ const MenuBienvenida = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            setScrollPosY(window.scrollY);
+            setScrollPosY(window.scrollY * 0.3);
         };
 
         window.addEventListener('scroll', handleScroll);
