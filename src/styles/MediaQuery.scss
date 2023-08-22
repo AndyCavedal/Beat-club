@@ -63,6 +63,7 @@
     transition: 1s;
     transform: translateY(-100vh);
     border-bottom: 3px solid var(--dark-red);
+    z-index: 1;
 }
 
 .home-container {

@@ -1,4 +1,5 @@
 
+
 .navbar-list {
     // background-color: var(--navbar-color);
     height: 115px;
@@ -16,6 +17,7 @@
     position: absolute;
     left: 0;
     top: 20px;
+    z-index: 1;
 }
 
 .nav-btn {
@@ -26,6 +28,7 @@
     top: 0;
     visibility: hidden;
     opacity: 0;
+    z-index: 1;
 }
 
 #logo-header:hover {

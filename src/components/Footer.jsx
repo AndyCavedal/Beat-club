@@ -2,7 +2,6 @@ import React from 'react';
 import '../styles/Footer.scss';
 import { Instagram, Facebook } from 'react-bootstrap-icons';
 import { Link } from "react-router-dom";
-import { Link as ScrollLink } from 'react-scroll';
 
 
 const Footer = () => {
