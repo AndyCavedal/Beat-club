@@ -5,7 +5,6 @@ import Img3 from '../assets/gallery/gallery-img3.webp';
 import Img4 from '../assets/gallery/gallery-img4.webp';
 import Img5 from '../assets/gallery/gallery-img5.webp';
 import Img6 from '../assets/gallery/gallery-img6.webp';
-import Img7 from '../assets/gallery/gallery-img7.webp';
 import Img8 from '../assets/gallery/gallery-img8.webp';
 import Img10 from '../assets/gallery/gallery-img10.webp';
 import Img11 from '../assets/gallery/gallery-img11.webp';
@@ -37,10 +36,6 @@ const Galeria = () =>{
         {
             id: 6,
             imgSrc: Img6,
-        },
-        {
-            id: 7,
-            imgSrc: Img7,
         },
         {
             id: 8,
