@@ -28,13 +28,11 @@
 
 html {
     font-size: 62.5%;
-    font-family: 'DM Sans', sans-serif;
-    font-family: 'Questrial', sans-serif;
     letter-spacing: 1px;
     background-color: var(--black);
     scroll-behavior: smooth;
     scroll-snap-type: y proximity;
-    // font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     // font-family: 'Poppins', sans-serif;
 }
 
@@ -49,10 +47,9 @@ html {
     text-align: center;
     justify-content: center;
     color: white;
-    font-family: 'Pathway Extreme', sans-serif;
-    font-size: 3.7rem;
+    font-size: 3.4rem;
     padding: 55px 25px 5px 25px;
-
+    font-family: 'Poppins', sans-serif;
 }
 
 .create-logo {

@@ -1,4 +1,3 @@
-import '../styles/Menu.scss';
 import React, { useEffect } from 'react';
 import MenuComponents from '../containers/MenuComponents';
 

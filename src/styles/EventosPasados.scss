@@ -30,6 +30,10 @@
     /* Establece un ancho máximo para cada elemento */
     margin: 16px;
     /* Añade un espacio entre los elementos */
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 /* Estilos para el contenedor principal */
@@ -39,14 +43,14 @@
 }
 
 .eventos-container__container h2 {
-    font-size: 4rem;
+    font-size: 3.4rem;
     margin-bottom: 16px;
     padding: 8px;
     color: white;
     border-bottom: 3px solid var(--dark-red);
     display: inline-block;
-    scroll-snap-align: start;
-    scroll-margin-top: 115px;
+    // scroll-snap-align: start;
+    // scroll-margin-top: 115px;
 }
 
 /* Estilos para la fecha */
@@ -59,7 +63,7 @@
 }
 
 .folleto__container h3 {
-    font-size: 2rem;
+    font-size: 1.9rem;
     height: 60px;
 }
 
