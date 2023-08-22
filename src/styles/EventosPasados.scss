@@ -45,6 +45,8 @@
     color: white;
     border-bottom: 3px solid var(--dark-red);
     display: inline-block;
+    scroll-snap-align: start;
+    scroll-margin-top: 115px;
 }
 
 /* Estilos para la fecha */

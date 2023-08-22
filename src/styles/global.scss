@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Pathway+Extreme&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Questrial&family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&display=swap');
 
 :root {
     --white: #fefefe;
@@ -33,6 +33,9 @@ html {
     letter-spacing: 1px;
     background-color: var(--black);
     scroll-behavior: smooth;
+    scroll-snap-type: y proximity;
+    // font-family: 'Open Sans', sans-serif;
+    // font-family: 'Poppins', sans-serif;
 }
 
 .contenedor {
@@ -49,6 +52,7 @@ html {
     font-family: 'Pathway Extreme', sans-serif;
     font-size: 3.7rem;
     padding: 55px 25px 5px 25px;
+
 }
 
 .create-logo {
