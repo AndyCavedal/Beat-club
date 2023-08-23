@@ -63,7 +63,10 @@ const Header = () => {
             </nav>
             <List onClick={showNavbar} className="nav-btn mobile" />
             <Link to="/" onClick={scrollToTop}>
-                <img src={logo} alt="beat-club logo" href="/" id="logo-header" className="mobile" />
+                <div className="logo-container">
+                    <div className="background-shape"></div>
+                    <img src={logo} alt="beat-club logo" id="logo-header" className="mobile" />
+                </div>
             </Link>
         </header>
     )
