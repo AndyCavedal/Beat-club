@@ -13,142 +13,143 @@
 }
 
 @media only screen and (max-width: 850px) {
- //HEADER
- .mobile {
-    display: flex;
- }
 
- .desktop {
-    display: none;
- }
+    //HEADER
+    .mobile {
+        display: flex;
+    }
 
-.navbar-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-}
+    .desktop {
+        display: none;
+    }
 
-.header-link{
-    margin-right: 0px;
-    margin-top: 10px;
-    font-size: 2.5rem;
-}
+    .navbar-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
 
-#inicio-link {
-    margin-top: 280px;
-}
+    .header-link {
+        margin-right: 0px;
+        margin-top: 10px;
+        font-size: 2.5rem;
+    }
 
- .nav-btn {
-    visibility: visible;
-    opacity: 1;
-    position: absolute;
-    top: 2rem;
-    right: 2rem;
- }
+    #inicio-link {
+        margin-top: 280px;
+    }
 
- #logo-header {
-    position: fixed;
- }
+    .nav-btn {
+        visibility: visible;
+        opacity: 1;
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+    }
 
- header nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vw;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
-    gap: 1.5rem;
-    background-color: var(--black);
-    transition: 1s;
-    transform: translateY(-100vh);
-    border-bottom: 3px solid var(--dark-red);
-    z-index: 1;
-}
+    #logo-header {
+        position: fixed;
+    }
 
-.home-container {
-    top: 0;
-}
+    header nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vw;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        gap: 1.5rem;
+        background-color: var(--black);
+        transition: 1s;
+        transform: translateY(-100vh);
+        border-bottom: 3px solid var(--dark-red);
+        z-index: 2;
+    }
 
-.responsive_nav {
-    transform: none;
- }
+    .home-container {
+        top: 0;
+    }
 
- #logo-header {
+    .responsive_nav {
+        transform: none;
+    }
+
+    #logo-header {
         margin: 10px;
         width: 80px;
         top: 0;
- }
+    }
 
- //BANNER 
- .contenedor-banner p{
-    font-size: 1.8rem;
+    //BANNER 
+    .contenedor-banner p {
+        font-size: 1.8rem;
+    }
+
+    // .banner-btn {
+    //     margin-top: 6rem;
+    // }
+
+    .banner-direccion {
+        margin-top: 3.5rem;
+    }
+
+    //about 
+    .about-title__container {
+        margin-left: 20px;
+    }
+
 }
 
-// .banner-btn {
-//     margin-top: 6rem;
-// }
-
-.banner-direccion{
-    margin-top: 3.5rem;
-}
-
-//about 
-.about-title__container {
-    margin-left: 20px;
-}
-
-}
 
 
+@media only screen and (max-width: 425px) {
 
-@media only screen and (max-width: 425px){
-
-//BANNER
-    .contenedor-banner p{
-        font-size: 1.5rem;
+    //BANNER
+    .contenedor-banner p {
+        font-size: 1.6rem;
     }
 
     // .banner-btn{
     //     margin-top: 4.5rem;
     // }
 
-    .banner-direccion{
+    .banner-direccion {
         margin-top: 2.5rem;
     }
 
-    .contenedor-banner .btn{
-        font-size: 1.5rem;
+    .contenedor-banner .btn {
+        font-size: 1.7rem;
     }
 
-//FOOTER
-    .footer-links-div{
+    //FOOTER
+    .footer-links-div {
         margin: 1rem 0;
     }
 
 
-//ENTRADA
+    //ENTRADA
 
-#entrada-title {
-    font-size: 3rem;
-    padding: 15px 0;
-}
+    #entrada-title {
+        font-size: 3rem;
+        padding: 15px 0;
+    }
 
-#entrada-subtitle {
-    font-size: 1.5rem;
-    padding: 5px 0 10px 0;
-}
+    #entrada-subtitle {
+        font-size: 1.5rem;
+        padding: 5px 0 10px 0;
+    }
 
-.entradaweb__container-izq{
-    width: 80%;
-}
+    .entradaweb__container-izq {
+        width: 80%;
+    }
 
-.entradaweb__container-izq .btn{
-    font-size: 1.4rem;
-}
+    .entradaweb__container-izq .btn {
+        font-size: 1.4rem;
+    }
 
 }

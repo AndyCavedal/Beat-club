@@ -14,9 +14,12 @@ const MenuBienvenida = () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
+
+    const translateYValue = -scrollPosY;
+
     return (
         <div className='menu__container'>
-            <div className='menu-background' style={{ transform: `translateY(-${scrollPosY}px)` }}>
+            <div className='menu-background' style={{ transform: `translateY(${translateYValue}px)` }}>
             <h1 className='menu-title'>Bienvenidos a <br></br> Beat Club Mendoza</h1>
             </div>
         </div>

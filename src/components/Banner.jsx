@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/Banner.scss';
-import beat from '../assets/beat-club-logo-header.png'
-import { Link } from "react-router-dom";
+import beat from '../assets/beat-club-logo-header.png';
+import { Link as ScrollLink } from 'react-scroll';
 
 
 const Banner = () => {
@@ -15,7 +15,15 @@ const Banner = () => {
             <hr></hr>
             <p className='banner-text'>cena - show - tragos</p>
             <div className='banner-btn'>
-                <a href='/' target='_blank' className='btn'>Conocenos!</a>
+
+                <ScrollLink
+                    to="about-section" // ID del elemento al que deseas desplazarte
+                    smooth={true}
+                    offset={-40} // Ajusta el desplazamiento según tus necesidades
+                    duration={500} // Duración de la animación en milisegundos
+                >
+                    <a href='/' target='_blank' className='btn'>Conocenos!</a>
+                </ScrollLink>
             </div>
             <p className='banner-direccion'>Av. Perú 1773, M5500 Mendoza</p>
         </div>
