@@ -5,7 +5,7 @@ import logo from '../assets/beat-club-logo-header.png';
 import { List, X } from 'react-bootstrap-icons';
 import { useRef, useState, useEffect } from 'react';
 import { Link, useLocation } from "react-router-dom";
-import { animateScroll as scroll } from 'react-scroll';
+import { Link as ScrollLink } from 'react-scroll';
 
 
 const Header = () => {
@@ -34,10 +34,6 @@ const Header = () => {
         setNavVisible(false);
     };
 
-    const scrollToTop = () => {
-        scroll.scrollToTop();
-    };
-
     return (
         <header>
             <nav ref={navRef} className={isNavVisible ? 'responsive_nav' : ''}>
@@ -62,9 +58,7 @@ const Header = () => {
                 </ul>
             </nav>
             <List onClick={showNavbar} className="nav-btn mobile" />
-            <Link to="/" onClick={scrollToTop}>
-                <img src={logo} alt="beat-club logo" href="/" id="logo-header" className="mobile" />
-            </Link>
+            <img src={logo} alt="beat-club logo" href="/" id="logo-header" className="mobile" />
         </header>
     )
 }

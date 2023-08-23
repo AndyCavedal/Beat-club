@@ -17,12 +17,12 @@ const Banner = () => {
             <div className='banner-btn'>
 
                 <ScrollLink
-                    to="about-section" // ID del elemento al que deseas desplazarte
+                    to="about-section"
                     smooth={true}
-                    offset={-40} // Ajusta el desplazamiento según tus necesidades
-                    duration={500} // Duración de la animación en milisegundos
+                    offset={-40}
+                    duration={500}
                 >
-                    <a href='/' target='_blank' className='btn'>Conocenos!</a>
+                    <div className='btn'>Conocenos!</div>
                 </ScrollLink>
             </div>
             <p className='banner-direccion'>Av. Perú 1773, M5500 Mendoza</p>
