@@ -1,12 +1,13 @@
 import React, { useState, useEffect  } from 'react';
 import '../styles/MenuBienvenida.scss';
+import { useSpring, animated } from 'react-spring';
 
 const MenuBienvenida = () => {
     const [scrollPosY, setScrollPosY] = useState(0);
 
     useEffect(() => {
         const handleScroll = () => {
-            setScrollPosY(window.scrollY * 0.2);
+            setScrollPosY(window.scrollY);
         };
 
         window.addEventListener('scroll', handleScroll);
@@ -15,12 +16,14 @@ const MenuBienvenida = () => {
         };
     }, []);
 
-    const translateYValue = -scrollPosY;
+    const titleSpring = useSpring({
+        transform: `translateY(-${scrollPosY * 0.2}px)`,
+    });
 
     return (
         <div className='menu__container'>
-            <div className='menu-background' style={{ transform: `translateY(${translateYValue}px)` }}>
-            <h1 className='menu-title'>Bienvenidos a <br></br> Beat Club Mendoza</h1>
+            <div className='menu-background'>
+                <animated.h1 className='menu-title' style={titleSpring}>Bienvenidos a <br /> Beat Club Mendoza</animated.h1>
             </div>
         </div>
     );
