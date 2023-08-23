@@ -16,7 +16,9 @@ const MenuBienvenida = () => {
         };
     }, []);
 
-    const translateYValue = -scrollPosY;
+    const titleSpring = useSpring({
+        transform: `translateY(-${scrollPosY * 0.3}px)`,
+    });
 
     return (
         <div className='menu__container'>
