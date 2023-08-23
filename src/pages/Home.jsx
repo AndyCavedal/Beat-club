@@ -6,13 +6,14 @@ import Entrada from '../components/Entrada';
 import Mapa from '../components/Mapa';
 import React, { useEffect, useState } from 'react';
 import EventosFuturos from '../components/EventosFuturos';
+import { useSpring, animated } from 'react-spring';
 
 const Home = () => {
     const [scrollPosY, setScrollPosY] = useState(0);
 
     useEffect(() => {
         const handleScroll = () => {
-            setScrollPosY(window.scrollY * 0.2);
+            setScrollPosY(window.scrollY);
         };
 
         window.addEventListener('scroll', handleScroll);
@@ -21,21 +22,33 @@ const Home = () => {
         };
     }, []);
 
+    const backgroundSpring = useSpring({
+        transform: `translateY(-${scrollPosY * 0.4}px)`,
+    });
+
+    const bannerSpring = useSpring({
+        transform: `translateY(${scrollPosY * 0.1}px)`,
+    });
+
+
+
     return (
         <div>
             <div className='home-container'>
-                <div className='background' style={{ transform: `translateY(-${scrollPosY}px)` }}>
+                <animated.div className='background' style={backgroundSpring}>
                     <div className='contenedor'>
-                        <Banner />
+                        <animated.div className='banner' style={bannerSpring}>
+                            <Banner />
+                        </animated.div>
                     </div>
-                </div>
+                </animated.div>
             </div>
             <About />
             <hr className='hr-divisor' />
-            <EventosFuturos/>
+            <EventosFuturos />
             <GalleryContainer />
             <Entrada />
-            <Mapa/>
+            <Mapa />
         </div>
     )
 }
