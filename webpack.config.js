@@ -2,18 +2,16 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const Dotenv = require('dotenv-webpack');
+const { ProvidePlugin } = require('webpack');
 
 module.exports = {
     mode: 'development',
     entry: './src/index.js',
-    //donde vivira el projecto =>
     output: {
         path: path.resolve(__dirname, 'build'),
-        //nombre del enpaquetado que se va a crear
         filename: 'bundle.js',
         publicPath: '/',
     },
-    //que extensiones se van a usar
     resolve: {
         extensions: ['.js', '.jsx'],
         alias: {
@@ -22,16 +20,15 @@ module.exports = {
             '@pages': path.resolve(__dirname, 'src/pages/'),
             '@containers': path.resolve(__dirname, 'src/containers/'),
             '@icons': path.resolve(__dirname, 'src/assets/')
+        },
+        fallback: {
+            "path": require.resolve("path-browserify")
         }
     },
-    //Aqui trabajaremos las reglas que se crearan con los loaders y los plugins que agreguemos
     module: {
         rules: [
-            //configuraciones necesarias dentro de objetos
             {
-                //aqui le decimos con que tiene que trabajar
                 test: /\.(js|jsx)$/,
-                //aqui le decimos que no queremos que lea en este proyecto
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader'
@@ -47,11 +44,9 @@ module.exports = {
                     'style-loader',
                     'css-loader',
                     'sass-loader',
-
                 ]
             },
             {
-                //le decimos que trabaje con html
                 test: /\.html$/,
                 use: [
                     {
@@ -61,7 +56,6 @@ module.exports = {
             }
         ]
     },
-    //nos permite agregar plugins que queremos usar
     plugins: [
         new HtmlWebpackPlugin({
             template: './public/index.html',
@@ -71,9 +65,11 @@ module.exports = {
             filename: '[name].css'
         }),
         new Dotenv(),
+        new ProvidePlugin({
+            process: 'process/browser',
+        }),
     ],
-
     devServer: {
         historyApiFallback: true,
     },
-}
+};
