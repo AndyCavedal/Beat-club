@@ -65,10 +65,11 @@
     .background-shape {
         width: 100px;
         height: 80px;
-        background-color: black;
+        background-color: rgb(11, 11, 11);
         clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
         border-radius: 0 50px 50px 0;
         z-index: 2;
+        box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
     }
 
     header nav {
