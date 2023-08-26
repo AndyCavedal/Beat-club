@@ -2,9 +2,6 @@ import React from 'react';
 import { useMemo } from 'react';
 import { GoogleMap, useLoadScript, Marker } from '@react-google-maps/api';
 import '../styles/Mapa.scss';
-require('dotenv').config()
-console.log(process.env)
-
 
 const Mapa = () => {
 

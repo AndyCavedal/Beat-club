@@ -2,7 +2,6 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const Dotenv = require('dotenv-webpack');
-const { ProvidePlugin } = require('webpack');
 
 module.exports = {
     mode: 'development',
@@ -21,9 +20,6 @@ module.exports = {
             '@containers': path.resolve(__dirname, 'src/containers/'),
             '@icons': path.resolve(__dirname, 'src/assets/')
         },
-        fallback: {
-            "path": require.resolve("path-browserify")
-        }
     },
     module: {
         rules: [
@@ -65,9 +61,6 @@ module.exports = {
             filename: '[name].css'
         }),
         new Dotenv(),
-        new ProvidePlugin({
-            process: 'process/browser',
-        }),
     ],
     devServer: {
         historyApiFallback: true,
