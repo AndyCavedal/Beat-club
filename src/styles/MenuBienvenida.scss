@@ -13,26 +13,11 @@
     width: 100%;
     height: calc(100% - 115px);
     z-index: -1;
-    background-image: url(../assets/DSC_0478.jpg);
+    background-image: url(../assets/menu-trago.webp);
     background-size: cover;
     background-position: center;
     display: flex;
     align-items: flex-end;
-    transition: 1s ease;
-}
-
-.menu-background::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url(../assets/DSC_0478.jpg);
-    background-size: cover;
-    background-position: center;
-    filter: blur(1px); /* Ajusta el valor según el nivel de desenfoque deseado */
-    z-index: -1;
     transition: 1s ease;
 }
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/MenuPagos.scss';
 import visa from '../assets/menu/visa.webp';
-import american from '../assets/menu/AmericanExpress.jpg';
+import american from '../assets/menu/AmericanExpress.webp';
 import master from '../assets/menu/mastercard.png';
 import mp from '../assets/menu/mercado-pago.png';
 import naranja from '../assets/menu/tarjeta-naranja.png';
