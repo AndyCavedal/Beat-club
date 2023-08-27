@@ -4,7 +4,7 @@ import { Link } from 'react-scroll';
 import vinos from '../assets/menu/vinos.webp';
 import picadas from '../assets/menu/picadas.webp';
 import tragos from '../assets/menu/tragos.webp';
-import promos from '../assets/menu/promos.svg';
+import promos from '../assets/menu/promo-beat-scape.webp';
 import whiskys from '../assets/menu/whiskys1.webp';
 import burgers from '../assets/menu/burgers.webp';
 import postres from '../assets/menu/postres.webp';
@@ -15,23 +15,23 @@ import ensaladas from '../assets/menu/ensaladas.webp';
 
 const MenuMobileWidget = () => {
 
-    const [scrollPosY, setScrollPosY] = useState(0);
+    // const [scrollPosY, setScrollPosY] = useState(0);
 
-    useEffect(() => {
-        const handleScroll = () => {
-            setScrollPosY(window.scrollY * 0.2);
-        };
+    // useEffect(() => {
+    //     const handleScroll = () => {
+    //         setScrollPosY(window.scrollY * 0.2);
+    //     };
 
-        window.addEventListener('scroll', handleScroll);
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
+    //     window.addEventListener('scroll', handleScroll);
+    //     return () => {
+    //         window.removeEventListener('scroll', handleScroll);
+    //     };
+    // }, []);
 
-    const translateYValue = -scrollPosY;
+    // const translateYValue = -scrollPosY;
 
     return (
-        <div style={{ transform: `translateY(${translateYValue}px)` }}>
+        <div>
             <div className="grid-container">
                 <h2 className="widgets-title">Nuestra Carta</h2>
                 <div className="grid-item">

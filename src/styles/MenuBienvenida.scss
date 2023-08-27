@@ -46,12 +46,13 @@
 
 .menu-title span {
     color: #ed3237;
+    text-shadow: 0 0 2px #ed3237;
 }
 //no pasar a mediaquerys.scss hasta que no terminemos de mejorar la portada
 @media only screen and (max-width: 800px) {
     .menu-title {
         padding: 10px;
-        font-size: 3.2rem;
+        font-size: 4rem;
     }
 
     .menu-background {
