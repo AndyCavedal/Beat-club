@@ -23,7 +23,7 @@ const MenuBienvenida = () => {
     return (
         <div className='menu__container'>
             <div className='menu-background'>
-                <animated.h1 className='menu-title' style={titleSpring}>Bienvenidos a <br /> Beat Club Mendoza</animated.h1>
+                <animated.h1 className='menu-title' style={titleSpring}>Bienvenidos a <br /> Beat<span>/CLUB</span></animated.h1>
             </div>
         </div>
     );
