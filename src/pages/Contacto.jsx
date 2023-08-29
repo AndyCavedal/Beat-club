@@ -1,9 +1,11 @@
-import React, { useEffect } from 'react';
-import Contactanos from '../components/Contactanos';
-import Mapa from '../components/Mapa';
+import React, { useEffect, lazy, Suspense } from 'react';
 import Formulario from '../components/Formulario';
-import { Form } from 'react-router-dom';
 import '../styles/Contacto.scss';
+import { ScaleLoader } from 'react-spinners'
+
+const Contactanos = lazy(()=> import ('../components/Contactanos'));
+const Mapa = lazy(()=> import ('../components/Mapa'));
+const Form = lazy(()=> import('react-router-dom'))
 
 
 const Contacto = () => {
@@ -13,11 +15,20 @@ const Contacto = () => {
 
     return(
         <div>
+            <Suspense fallback={<div className="loading-message general">
+                <ScaleLoader
+                    color="#A80038"
+                    height={70}
+                    margin={4}
+                    width={8}
+                />
+            </div>}>
             <div className='contenedor-contacto' data-aos="fade-down" data-aos-duration="500">
                 <Contactanos/>
                 <Formulario/>
             </div>
             <Mapa/>
+            </Suspense>
         </div>
     );
 };

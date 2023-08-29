@@ -1,16 +1,26 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import MenuBienvenida from '../components/MenuBienvenida';
-import MenuMobileWidget from '../components/MenuMobileWidgets';
-import MenuPagos from '../components/MenuPagos';
-import MenuCarta from '../components/MenuCarta'
+const MenuMobileWidget = lazy(() => import('../components/MenuMobileWidgets'));
+const MenuPagos = lazy(() => import('../components/MenuPagos'));
+const MenuCarta = lazy(() => import('../components/MenuCarta'));
+import { ScaleLoader } from 'react-spinners'
 
 const MenuComponents = () => {
     return (
         <div>
             <MenuBienvenida/>
-            <MenuMobileWidget/>
-            <MenuCarta/>
-            <MenuPagos/>
+            <Suspense fallback={<div className="loading-message general">
+                <ScaleLoader
+                    color="#A80038"
+                    height={70}
+                    margin={4}
+                    width={8}
+                />
+            </div>}>
+                <MenuMobileWidget/>
+                <MenuCarta/>
+                <MenuPagos/>
+            </Suspense>
         </div>
     )
 }

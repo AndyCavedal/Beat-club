@@ -66,8 +66,7 @@
 
 .contactanos-link {
     display: flex;
-    flex-direction: column;
-
+    flex-direction: row;
     margin-left: 80px;
     position: absolute;
     font-size: 1.8rem;
@@ -172,6 +171,10 @@
     color: white;
 }
 
+.box-arrow {
+    margin: 2px 0px 0px 4px;
+}
+
 @media only screen and (max-width: 800px) {
 
     .home-title {
@@ -270,7 +273,7 @@
         margin-top: 17px;
         padding: 1px;
         border-radius: 6px;
-        border: 1px solid white;
+        border: none;
     }
 
     #location-link {
@@ -331,7 +334,6 @@
         margin-top: 16.5px;
         padding: 1px;
         border-radius: 6px;
-        border: 1px solid white;
     }
 
     #location-link {
