@@ -1,18 +1,14 @@
-import '../styles/Home.scss';
-import Banner from '../components/Banner'
-///import About from '../components/About'
-//import GalleryContainer from '../containers/GalleryContainer';
-//import Entrada from '../components/Entrada';
-//import Mapa from '../components/Mapa';
 import React, { useEffect, useState, lazy, Suspense } from 'react';
-import EventosFuturos from '../components/EventosFuturos';
-import { useSpring, animated } from 'react-spring';
-
-const About = lazy(() => import('../components/About'))
-const Entrada = lazy(() => import('../components/Entrada'))
-const GalleryContainer = lazy(() => import('../containers/GalleryContainer'))
-const Mapa = lazy(() => import('../components/Mapa'))
 import { ScaleLoader } from 'react-spinners'
+import '../styles/Home.scss';
+
+const Banner = lazy(() => import('../components/Banner'));
+const EventosFuturos = lazy(() => import('../components/EventosFuturos'));
+const About = lazy(() => import('../components/About'))
+const GalleryContainer = lazy(() => import('../containers/GalleryContainer'))
+const Entrada = lazy(() => import('../components/Entrada'))
+const Mapa = lazy(() => import('../components/Mapa'))
+import { useSpring, animated } from 'react-spring';
 
 const Home = () => {
     const [scrollPosY, setScrollPosY] = useState(0);

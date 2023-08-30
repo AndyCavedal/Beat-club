@@ -3,6 +3,8 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import { ArrowReturnLeft, Pencil, Trash3 } from 'react-bootstrap-icons';
 import database from '../assets/database-add.svg';
+import '../styles/ReadProductos.scss';
+import '../styles/ReadEventos.scss';
 
 
 

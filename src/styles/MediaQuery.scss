@@ -14,7 +14,7 @@
 
 @media only screen and (max-width: 850px) {
 
-    //HEADER
+    /* //HEADER */
     .mobile {
         display: flex;
     }
@@ -104,20 +104,16 @@
         top: 0;
     }
 
-    //BANNER 
+    /* //BANNER  */
     .contenedor-banner p {
         font-size: 1.8rem;
     }
-
-    // .banner-btn {
-    //     margin-top: 6rem;
-    // }
 
     .banner-direccion {
         margin-top: 3.5rem;
     }
 
-    //about 
+    /* //about  */
     .about-title__container {
         margin-left: 20px;
     }
@@ -128,14 +124,10 @@
 
 @media only screen and (max-width: 425px) {
 
-    //BANNER
+    /* //BANNER */
     .contenedor-banner p {
         font-size: 1.6rem;
     }
-
-    // .banner-btn{
-    //     margin-top: 4.5rem;
-    // }
 
     .banner-direccion {
         margin-top: 2.5rem;
@@ -145,13 +137,13 @@
         font-size: 1.7rem;
     }
 
-    //FOOTER
+    /* //FOOTER */
     .footer-links-div {
         margin: 1rem 0;
     }
 
 
-    //ENTRADA
+    /* //ENTRADA */
 
     #entrada-title {
         font-size: 3rem;

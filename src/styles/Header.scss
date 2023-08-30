@@ -1,5 +1,4 @@
 .navbar-list {
-    // background-color: var(--navbar-color);
     height: 115px;
     display: flex;
     flex-direction: row;
@@ -7,8 +6,6 @@
     justify-content: flex-end;
     position: relative;
     z-index: 2;
-    // border-bottom: 3px solid var(--dark-red);
-    // box-shadow: 0 2px 4px #a8003869;
 }
 
 #logo-header {
@@ -46,12 +43,10 @@
     font-family: 'Poppins', sans-serif;
     padding: 5px;
     transition: transform 0.3s ease;
-    // border: 2px solid var(--navbar-color);
 }
 
 .header-link:hover {
     color: var(--dark-red);
-    // border-bottom: 2px solid var(--dark-red);
     border-radius: 3px;
     padding-bottom: 7px;
     transform: scale(1.2);

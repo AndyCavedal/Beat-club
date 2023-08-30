@@ -10,7 +10,7 @@ import burgers from '../assets/menu/burgers.webp';
 import postres from '../assets/menu/postres.webp';
 import sandwichs from '../assets/menu/sandwichs.webp';
 import bebidas from '../assets/menu/bebidas.webp';
-import ensaladas from '../assets/menu/ensaladas.webp';
+import ensaladas from '../assets/menu/ensalada.webp';
 
 
 const MenuMobileWidget = () => {

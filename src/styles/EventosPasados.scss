@@ -48,8 +48,6 @@
     border-bottom: 3px solid var(--dark-red);
     display: inline-block;
     font-family: 'Poppins', sans-serif;
-    // scroll-snap-align: start;
-    // scroll-margin-top: 115px;
 }
 
 /* Estilos para la fecha */
@@ -84,7 +82,7 @@
     }
 }
 
-//cuando no hay eventos
+
 .no-events__container {
     display: flex;
     justify-content: center;

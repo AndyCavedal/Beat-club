@@ -2,7 +2,6 @@
     padding: 3rem;
     background-color: rgba(0, 0, 0, 0.9);
     max-width: 450px;
-    //antes tenia max-width:450px
     margin: auto;
     margin-top: 140px;
     text-align: center;
@@ -46,15 +45,6 @@
     z-index: 1;
 }
 
-// .contenedor-banner .btn{
-//     background-color: var(--club-red);
-//     font-size: 2rem;
-//     text-decoration: none;
-//     color: #fff;
-//     padding: 10px;
-//     border-radius: 10px;
-// }
-
 .banner-direccion {
     margin-top: 5rem;
 }
@@ -64,5 +54,4 @@
         margin-top: 290px;
         max-width: 400px;
     }
-    //para resolucion baja
 }
