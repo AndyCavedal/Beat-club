@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import backarrow from '../assets/back-arrow2.svg';
 import database from '../assets/database-add.svg';
-import '../styles/CreateEvento.scss';
+import '../styles/CreateMenu.scss';
 import { DatabaseAdd, ArrowReturnLeft } from "react-bootstrap-icons";
 
 const CreateEvento = () => {
@@ -34,7 +34,7 @@ const CreateEvento = () => {
 
     return (
         <div className="supercontainer container-create">
-            <div className="producto-form__container">
+            <div className="form__container">
                 <form>
                     <label>Título</label> <br />
                     <input

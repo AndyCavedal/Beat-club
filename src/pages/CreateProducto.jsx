@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import '../styles/CreateProducto.scss';
+import '../styles/CreateMenu.scss';
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { DatabaseAdd, ArrowReturnLeft } from "react-bootstrap-icons";
@@ -20,7 +20,6 @@ const CreateProducto = () => {
         getProductos()
         getCategorias()
     }, []);
-
 
     function getProductos() {
         axios.get("https://server-api-beat-club.vercel.app/productos")
@@ -62,7 +61,7 @@ const CreateProducto = () => {
 
     return (
         <div className="supercontainer">
-            <div className="producto-form__container">
+            <div className="form__container">
                 <form>
                     <label>Nombre</label> <br />
                     <input

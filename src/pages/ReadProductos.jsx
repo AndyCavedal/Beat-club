@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import '../styles/ReadProductos.scss';
+import '../styles/ReadMenu.scss';
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { ArrowReturnLeft, Pencil, Trash3 } from 'react-bootstrap-icons';
@@ -36,15 +36,15 @@ const ReadProductos = () => {
     }
 
     return (
-        <div className="productos-container__container">
+        <div className="read-container__container">
             <div className="links">
-                <div className="new-product__link">
-                    <Link className="create-product__link" to="/createproducto">
+                <div className="new__link">
+                    <Link className="create__link" to="/createproducto">
                         <button>Nuevo producto</button>
                         <img src={database} className="database-logo" alt="database add icon" />
                     </Link>
                 </div>
-                <div className="new-product__link">
+                <div className="new__link">
                     <Link className="volver__link" to="/root">
                         <button>Volver</button>
                         <ArrowReturnLeft className="database-logo" />

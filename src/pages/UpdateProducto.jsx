@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import '../styles/UpdateProducto.scss';
+import '../styles/UpdateForm.scss';
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { X, Check } from "react-bootstrap-icons";

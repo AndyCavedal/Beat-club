@@ -3,7 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import { ArrowReturnLeft, Pencil, Trash3 } from 'react-bootstrap-icons';
 import database from '../assets/database-add.svg';
-import '../styles/ReadEventos.scss';
+import '../styles/ReadMenu.scss';
 
 
 const ReadEventos = () => {
@@ -68,15 +68,15 @@ const ReadEventos = () => {
     };
 
     return (
-        <div className='contenedor-readeventos'>
+        <div className='read-container__container'>
             <div className="links linkeventos">
-                <div className="new-product__link">
-                    <Link className="create-product__link" to='/createevento' >
+                <div className="new__link">
+                    <Link className="create__link" to='/createevento' >
                         <button>Nuevo evento</button>
                         <img src={database} className="database-logo" alt="database add icon" />
                     </Link>
                 </div>
-                <div className="new-product__link">
+                <div className="new__link">
                     <Link className="volver__link" to='/root'>
                         <button>Volver</button>
                         <ArrowReturnLeft className="database-logo" />
@@ -85,7 +85,7 @@ const ReadEventos = () => {
             </div>
             <div className="readeventos__container">
                 <h2>Eventos Futuros</h2>
-                <table className="eventos-table">
+                <table className="datatable">
                     <thead>
                         <tr>
                             <th className="table-title">Imagen</th>
@@ -110,7 +110,7 @@ const ReadEventos = () => {
             </div>
             <div className="readeventos__container">
                 <h2>Eventos Pasados</h2>
-                <table className="eventos-table">
+                <table className="datatable">
                     <thead>
                         <tr>
                             <th className="table-title">Imagen</th>

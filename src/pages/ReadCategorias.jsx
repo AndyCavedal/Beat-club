@@ -3,8 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import { ArrowReturnLeft, Pencil, Trash3 } from 'react-bootstrap-icons';
 import database from '../assets/database-add.svg';
-import '../styles/ReadProductos.scss';
-import '../styles/ReadEventos.scss';
+import '../styles/ReadMenu.scss';
 
 
 
@@ -41,15 +40,15 @@ const ReadCategorias = ()=>{
     }
 
     return(
-        <div className="productos-container__container">
+        <div className="read-container__container">
             <div className="links">
-                <div className="new-product__link">
-                    <Link className="create-product__link" to='/createcategorias' >
+                <div className="new__link">
+                    <Link className="create__link" to='/createcategorias' >
                         <button>Nueva Categoria</button>
                         <img src={database} className="database-logo" alt="database add icon" />
                     </Link>
                 </div>
-                <div className="new-product__link">
+                <div className="new__link">
                     <Link className="volver__link" to='/root'>
                         <button>Volver</button>
                         <ArrowReturnLeft className="database-logo" />

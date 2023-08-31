@@ -1,4 +1,4 @@
-.productos-container__container {
+.read-container__container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,6 +22,13 @@
     text-align: left;
     border: 1px solid #444;
   }
+
+  .readeventos__container h2 {
+    font-size: 3rem;
+    text-align: center;
+    padding: 15px;
+    color: #fff;
+}
   
   .datatable tbody tr:nth-child(even) {
     background-color: #222222;
@@ -63,8 +70,12 @@
     border: none;
     cursor: pointer;
   }
+
+  .linkeventos {
+    justify-content: center;
+}
   
-  .new-product__link {
+  .new__link {
     background-color: white;
     display: flex;
     align-items: center;
@@ -77,7 +88,7 @@
     margin: 15px 25px 20px 25px;
   }
   
-  .new-product__link:hover {
+  .new__link:hover {
     transform: scale(1.2);
     transform-origin: center;
   }
@@ -87,7 +98,7 @@
     width: 35px;
   }
   
-  .create-product__link {
+  .create__link {
     display: flex;
     text-decoration: none;
     margin-left: 5px;
@@ -104,3 +115,12 @@
     font-size: 3.1rem;
     color: inherit;
   }
+
+  .table-header {
+    display: flex;
+    justify-content: center;
+}
+
+.readevent-foto {
+  width: 100px;
+}
