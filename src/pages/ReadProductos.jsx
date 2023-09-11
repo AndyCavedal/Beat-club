@@ -41,7 +41,7 @@ const ReadProductos = () => {
                 <div className="new__link">
                     <Link className="create__link" to="/createproducto">
                         <button>Nuevo producto</button>
-                        <img src={database} className="database-logo" alt="database add icon" />
+                        <img src={database} className="database-logo" alt="Icono de DataBase" />
                     </Link>
                 </div>
                 <div className="new__link">

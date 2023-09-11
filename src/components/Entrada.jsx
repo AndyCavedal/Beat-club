@@ -11,7 +11,7 @@ const Entrada = () => {
                     <h2 className='entrada-text' id='entrada-subtitle'>Compra tu entrada y veni a vivir una experiencia única en Beat Club.</h2>
                     <a href='https://www.entradaweb.com.ar/index.php?r=site%2Flistado-filtrado&recinto=RCTO-24e15b33' target='_blank' className='btn'>COMPRA TU ENTRADA</a>
                 </div>
-                <img src={publico} alt="foto escenario" className='entradaweb-img' loading="lazy" />
+                <img src={publico} alt="Foto de espectáculo" className='entradaweb-img' loading="lazy" />
             </div>
         </div>
     )

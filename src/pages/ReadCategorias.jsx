@@ -45,7 +45,7 @@ const ReadCategorias = ()=>{
                 <div className="new__link">
                     <Link className="create__link" to='/createcategorias' >
                         <button>Nueva Categoria</button>
-                        <img src={database} className="database-logo" alt="database add icon" />
+                        <img src={database} className="database-logo" alt="Icono de DataBase" />
                     </Link>
                 </div>
                 <div className="new__link">

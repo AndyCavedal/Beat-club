@@ -32,8 +32,6 @@ const Home = () => {
         transform: `translateY(${scrollPosY * 0.1}px)`,
     });
 
-
-
     return (
         <div>
             <div className='home-container'>

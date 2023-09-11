@@ -44,7 +44,7 @@ const Header = () => {
                 <ul>
                     <li className="navbar-list">
                         <Link to='/'>
-                            <img src={logo} alt="beat-club logo" id="logo-header" className="desktop" />
+                            <img src={logo} alt="Logotipo de Beat Club" id="logo-header" className="desktop" />
                         </Link>
                         <Link className="header-link" id="inicio-link" to="/" onClick={hideNavbar}>
                             Inicio
@@ -65,7 +65,7 @@ const Header = () => {
             <Link to="/" onClick={scrollToTop}>
                 <div className="logo-container">
                     <div className="background-shape"></div>
-                    <img src={logo} alt="beat-club logo" id="logo-header" className="mobile" />
+                    <img src={logo} alt="Logotipo de Beat Club" id="logo-header" className="mobile" />
                 </div>
             </Link>
         </header>
