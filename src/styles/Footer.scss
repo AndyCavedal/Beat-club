@@ -2,14 +2,12 @@
     padding: 4rem 4rem;
 }
 
-
 .footer{
     background-color: var(--smoothBlack);
     margin-top: auto;
     font-family: 'Poppins', sans-serif;
 
 }
-
 
 .footer-above{
     display: flex;
@@ -54,7 +52,7 @@
     margin: 0.5rem 0;
     display: inline-block; 
     width: 100%; 
-    padding: 0.5rem;
+    padding-bottom: 3px;
 }
 
 .div-links:hover {
