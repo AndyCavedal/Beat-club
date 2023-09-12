@@ -5,17 +5,15 @@
     line-height: 51px;
     bottom: 12px;
     right: 12px;
-    background: #0df053;
+    // background: #0df053;
     color: #fff;
     border-radius: 50px;
     text-align: center;
-    font-size: 30px;
-    box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+    font-size: 3rem;
     z-index: 100;
 }
 
 .btn-wsp:hover{
     text-decoration: none;
-    color: #0df053;
-    background: #fff;
+    color: var(--dark-red);
 }

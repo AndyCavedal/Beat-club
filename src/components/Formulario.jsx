@@ -21,8 +21,8 @@ const Formulario = () => {
 
     return (
         <div className='form__container'>
+            <h2 className='title'>Envianos un mensaje</h2>
             <form ref={form} onSubmit={sendEmail}>
-                <label>Nombre*</label> <br />
                 <input
                     type='text'
                     name='user_name'
@@ -30,7 +30,6 @@ const Formulario = () => {
                     required
 
                 />
-                <label>Telefono/Celular</label> <br />
                 <input
                     type='text'
                     name='user_number'
@@ -38,16 +37,14 @@ const Formulario = () => {
 
 
                 />
-                <label>Correo Electronico*</label> <br />
                 <input
                     type='email'
                     name='user_email'
                     placeholder="Correo"
 
                 /> <br />
-                <label htmlFor="message">Mensaje:</label>
                 <textarea id="message" name="message" rows="4" ></textarea>
-                <input type="submit" value="Enviar" className='form-submit'/>
+                <input type="submit" value="Enviar" className='form-submit' placeholder="Mensaje"/>
             </form>
         </div>
     )

@@ -61,7 +61,7 @@
         align-items: center;
         z-index: 9999;
     }
-    
+
     .background-shape {
         width: 100px;
         height: 80px;
@@ -123,12 +123,19 @@
         margin-left: 20px;
     }
 
+    // Formulario
+
+    .form__container h2 {
+        margin-bottom: 15px;
+    }
+
 }
 
 
 
 @media only screen and (max-width: 425px) {
 
+    
     /* //BANNER */
     .contenedor-banner p {
         font-size: 1.6rem;
