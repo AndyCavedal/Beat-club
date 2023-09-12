@@ -8,6 +8,7 @@ const About = lazy(() => import('../components/About'))
 const GalleryContainer = lazy(() => import('../containers/GalleryContainer'))
 const Entrada = lazy(() => import('../components/Entrada'))
 const Mapa = lazy(() => import('../components/Mapa'))
+const Bienvenida = lazy(() => import('../components/Bienvenida'))
 import { useSpring, animated } from 'react-spring';
 
 const Home = () => {
@@ -34,14 +35,8 @@ const Home = () => {
 
     return (
         <div>
-            <div className='home-container'>
-                <animated.div className='background' style={backgroundSpring}>
-                    <div className='contenedor'>
-                        <animated.div className='banner' style={bannerSpring}>
-                            <Banner />
-                        </animated.div>
-                    </div>
-                </animated.div>
+            <div>
+                <Bienvenida />
             </div>
             <Suspense fallback={<div className="loading-message">
                 <ScaleLoader
