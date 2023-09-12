@@ -32,7 +32,7 @@
     width: 100%;
     max-width: 300px;
     border-radius: 100%;
-    box-shadow: 0 0 10px rgba(251, 57, 57, 0.3);
+    // box-shadow: 0 0 10px rgba(251, 57, 57, 0.3);
     height: auto;
 }
 
@@ -42,15 +42,16 @@
 }
 
 .menu-btn {
-    background-color: #ed3237;
+    // background-color: #ed3237;
     color: white;
     font-size: 1.5rem;
     font-weight: bold;
     text-decoration: none;
     padding: 10px;
     margin: 15px 0px 10px 0px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(67, 67, 67, 0.4);
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(67, 67, 67, 0.2);
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
 
 }
 

@@ -1,6 +1,6 @@
 {
   "name": "beat-club",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "This is a Web Page proyect for Beat Club, a music and food bar in Mendoza, Argentina.",
   "main": "index.js",
   "scripts": {
