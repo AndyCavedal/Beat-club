@@ -61,7 +61,10 @@ const Header = () => {
                     </li>
                 </ul>
             </nav>
+            <div className='logo-container-menu'>
+            <div className="background-shape-menu"></div>
             <List onClick={showNavbar} className="nav-btn mobile" />
+            </div>
             <Link to="/" onClick={scrollToTop}>
                 <div className="logo-container">
                     <div className="background-shape"></div>

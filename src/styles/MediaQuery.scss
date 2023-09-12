@@ -6,6 +6,13 @@
     display: flex;
 }
 
+@media only screen and (min-width: 855px) and (max-width: 1150px) {
+    .menu-title {
+        font-size: 6rem;
+    }
+
+}
+
 @media only screen and (min-width: 900px) {
     .about-title__container {
         margin-left: 90px;
@@ -44,7 +51,7 @@
     .nav-btn {
         visibility: visible;
         opacity: 1;
-        position: absolute;
+        position: fixed;
         top: 2rem;
         right: 2rem;
     }
@@ -71,6 +78,28 @@
         z-index: 2;
         box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
     }
+
+    //forma envoltoria para menu
+    // .logo-container-menu {
+    //     position: fixed;
+    //     top: 5px;
+    //     right: 0px;
+    //     /* Cambia "left" a "right" */
+    //     display: flex;
+    //     align-items: center;
+    //     z-index: 9999;
+    // }
+
+    // .background-shape-menu {
+    //     width: 100px;
+    //     height: 80px;
+    //     background-color: rgb(11, 11, 11);
+    //     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    //     border-radius: 50px 0 0 50px;
+    //     /* Cambia el orden de los valores para reflejar la esquina superior derecha */
+    //     z-index: 2;
+    //     box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+    // }
 
     header nav {
         position: fixed;
@@ -104,7 +133,7 @@
         top: 0;
     }
 
-    
+
 
     /* //BANNER  */
 
@@ -142,7 +171,7 @@
 
 @media only screen and (max-width: 425px) {
 
-    
+
     /* //BANNER */
     .contenedor-banner p {
         font-size: 1.6rem;
