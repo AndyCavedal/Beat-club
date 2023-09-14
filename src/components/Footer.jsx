@@ -10,7 +10,7 @@ const Footer = () => {
             <div className='footer-above footer-padding'>
                 <div className='footer-links'>
                     <div className='footer-links-div'>
-                        <p>Abrimos a las 21:30hs Viernes y Sábados</p>
+                        <p>Viernes y Sábados a partir de las 21:30hs</p>
                     </div>
                 </div>
                 <hr />
