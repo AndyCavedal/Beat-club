@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
 import '../styles/EventosPasados.scss';
 import { ScaleLoader } from 'react-spinners'
 
-const EventosFuturos = () => {
+const EventosFuturos = ({ estilos }) => {
 
     const [apiEventosF, setApiEventosF] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -76,14 +75,13 @@ const EventosFuturos = () => {
         );
     }
 
-
     return apiEventosF.length === 0 ? (
         <div className="no-events__container">
             <h3>No Hay Eventos Próximos</h3>
         </div>
     ) : (
         <div className="eventos-container__container">
-            <h2 id="evento-futuro-title">Próximos Eventos!</h2>
+            <h2 style={estilos} id="evento-futuro-title">Próximos Eventos!</h2>
             <div className="eventos__container">
                 {Array.isArray(apiEventosF) && apiEventosF.map((evento, index) => (
                     <div className="eventos-container__container" key={index}>

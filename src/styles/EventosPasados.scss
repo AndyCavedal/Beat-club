@@ -83,8 +83,7 @@
 @media only screen and (max-width: 850px) {
     #evento-futuro-title {
         margin-top: 100px;
-    border-bottom: 3px solid var(--dark-red);
-
+        border-bottom: 3px solid var(--dark-red);
     }
 
     .eventos__container img {
@@ -115,12 +114,12 @@
 }
 
 
-.loading-message{
+.loading-message {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.general{
+.general {
     height: 65vh;
 }
