@@ -6,13 +6,10 @@ import { List } from 'react-bootstrap-icons';
 import { Link, useLocation } from 'react-router-dom'; // Nota: No es necesario withRouter en React Router v6
 import { animateScroll as scroll } from 'react-scroll';
 
+
 const Header = () => {
     const location = useLocation();
     const { pathname } = location;
-
-    const rutaTituloMap = {};
-
-    const tituloActual = rutaTituloMap[pathname];
 
     const navRef = useRef();
     const [isNavVisible, setNavVisible] = useState(false);
@@ -35,10 +32,6 @@ const Header = () => {
 
     const hideNavbar = () => {
         setNavVisible(false);
-    };
-
-    const scrollToTop = () => {
-        scroll.scrollToTop();
     };
 
     return (
@@ -68,13 +61,12 @@ const Header = () => {
                 <div className="background-shape-menu"></div>
                 <List onClick={showNavbar} className="nav-btn mobile" />
             </div>
-            <Link to="/" onClick={scrollToTop}>
+            <Link to="#" onClick={() => window.scrollTo(0, 0)}  >
                 <div className="logo-container">
                     <div className="background-shape"></div>
                     <img src={logo} alt="Logotipo de Beat Club" id="logo-header" className="mobile" />
                 </div>
             </Link>
-            <h1>{tituloActual}</h1> {/* Muestra el título correspondiente a la ruta actual */}
         </header>
     );
 };

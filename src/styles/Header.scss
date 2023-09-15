@@ -58,11 +58,11 @@
 }
 
 .active {
-    
+
     color: var(--dark-red);
     border-radius: 3px;
     padding-bottom: 7px;
     transform: scale(1.2);
     transform-origin: center;
-    cursor: pointer; /* Cambia el estilo del texto según tus preferencias */
-  }
+    cursor: pointer;
+}
