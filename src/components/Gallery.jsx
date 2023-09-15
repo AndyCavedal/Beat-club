@@ -5,14 +5,15 @@ import Img3 from '../assets/gallery/gallery-img3.webp';
 import Img4 from '../assets/gallery/gallery-img4.webp';
 import Img5 from '../assets/gallery/gallery-img5.webp';
 import Img6 from '../assets/gallery/gallery-img6.webp';
-import Img8 from '../assets/gallery/gallery-img8.webp';
+import Img18 from '../assets/gallery/gallery-img8.webp';
 import Img10 from '../assets/gallery/gallery-img10.webp';
 import Img11 from '../assets/gallery/gallery-img11.webp';
 import Img14 from '../assets/gallery/gallery-img14.webp';
 import Img15 from '../assets/gallery/gallery-img15.webp';
 import Img17 from '../assets/gallery/gallery-img17.webp';
-import Img18 from '../assets/gallery/gallery-img18.webp';
-import Img19 from '../assets/gallery/gallery-img19.webp';
+import Img8 from '../assets/gallery/gallery-img18.webp';
+import Img21 from '../assets/gallery/gallery-img19.webp';
+import Img19 from '../assets/gallery/gallery-img21.webp'
 
 
 const Galeria = () =>{
@@ -69,6 +70,10 @@ const Galeria = () =>{
             id: 20,
             imgSrc: Img19,
         },
+        {
+            id: 21,
+            imgSrc: Img21,
+        }
     ]
 
     return(
