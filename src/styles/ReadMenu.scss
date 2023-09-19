@@ -1,126 +1,194 @@
 .read-container__container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  
-  .datatable {
-    color: #fff;
-    font-size: 1.8rem;
-    width: 95%;
-    border-collapse: collapse;
-    margin-bottom: 5rem;
-  }
-  
-  .table-title {
-    font-size: 2rem;
-    font-weight: bold;
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    text-align: left;
-    border: 1px solid #444;
-  }
-
-  .readeventos__container h2 {
-    font-size: 3rem;
-    text-align: center;
-    padding: 15px;
-    color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-  
-  .datatable tbody tr:nth-child(even) {
-    background-color: #222222;
-  }
-  
-  .datatable td {
-    padding: 10px 20px;
-    border: 1px solid #444;
-  }
-  
-  .datatable button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.8rem;
-    padding: 5px;
-    margin: 2px;
-    background-color: white;
-    color: black;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    border: 1px solid black;
-  }
 
-  
-  .datatable button:hover {
-    background-color: white;
-    color: var(--dark-red);
-    border: 1px solid var(--dark-red);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .links button {
-    font-size: 2.2rem;
-    background-color: white;
-    border-radius: 3px;
-    color: black;
-    border: none;
-    cursor: pointer;
-  }
-
-  .linkeventos {
-    justify-content: center;
+.datatable {
+  color: #fff;
+  font-size: 1.8rem;
+  border-collapse: collapse;
+  margin: 0px 15px 15px 15px;
 }
-  
-  .new__link {
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    padding: 15px;
-    border-radius: 50px;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-    margin: 15px 25px 20px 25px;
-  }
-  
-  .new__link:hover {
-    transform: scale(1.2);
-    transform-origin: center;
-  }
-  
-  .database-logo {
-    margin-left: 20px;
-    width: 35px;
-  }
-  
-  .create__link {
-    display: flex;
-    text-decoration: none;
-    margin-left: 5px;
-  }
-  
-  .links {
-    display: flex;
-    flex-direction: row;
-  }
-  
-  .volver__link {
-    display: flex;
-    text-decoration: none;
-    font-size: 3.1rem;
-    color: inherit;
-  }
 
-  .table-header {
-    display: flex;
-    justify-content: center;
+.table-title {
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  text-align: left;
+  border: 1px solid #444;
+}
+
+.readeventos__container h2 {
+  font-size: 3rem;
+  text-align: center;
+  padding: 15px;
+  color: #fff;
+}
+
+.datatable tbody tr:nth-child(even) {
+  background-color: #222222;
+}
+
+.datatable td {
+  padding: 10px 20px;
+  border: 1px solid #444;
+  max-width: 340px;
+}
+
+.datatable button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  padding: 5px;
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+.button-img {
+  max-width: 100%;
+  height: auto;
+}
+
+.datatable button:hover {
+  background-color: white;
+  color: var(--dark-red);
+  border: 1px solid var(--dark-red);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.links button {
+  font-size: 2.2rem;
+  background-color: white;
+  border-radius: 3px;
+  color: black;
+  border: none;
+  cursor: pointer;
+}
+
+.linkeventos {
+  justify-content: center;
+}
+
+.new__link {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  padding: 15px;
+  border-radius: 50px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  margin: 15px 25px 20px 25px;
+}
+
+.new__link:hover {
+  transform: scale(1.2);
+  transform-origin: center;
+}
+
+.database-logo {
+  margin-left: 20px;
+  width: 35px;
+}
+
+.create__link {
+  display: flex;
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+}
+
+.volver__link {
+  display: flex;
+  text-decoration: none;
+  font-size: 3.1rem;
+  color: inherit;
+}
+
+.table-header {
+  display: flex;
+  justify-content: center;
+}
+
+.readcategoria-foto {
+  width: 130px;
+  height: 75px;
 }
 
 .readevent-foto {
   width: 100px;
+}
+
+.button-crud {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+@media only screen and (max-width: 800px) {
+  .datatable {
+    font-size: 1.2rem;
+  }
+
+  .table-title {
+    font-size: 1.5rem;
+    padding: 5px 10px;
+  }
+
+  .datatable td {
+    padding: 5px 10px;
+  }
+
+  .datatable button {
+    font-size: 1.4rem;
+  }
+
+  .noshow {
+    display: none;
+  }
+
+  .new__link {
+    padding: 2px;
+    margin: 100px 10px 15px 10px;
+  }
+
+  .links button {
+    padding: 0px 4px 0px 6px;
+    font-size: 1.6rem;
+    background-color: transparent;
+  }
+
+  .database-logo {
+    margin-left: 0px;
+    width: 27px;
+    padding: 2px;
+  }
+
+  // categoria
+
+  .readcategoria-foto {
+    width: 80px;
+    height: 50px;
+  }
+
+  // eventos
+
+  .readevent-foto {
+    width: 60px;
+  }
 }

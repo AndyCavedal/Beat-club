@@ -61,22 +61,21 @@ const ReadCategorias = ()=>{
                         <td className="table-title">Nombre</td>
                         <td className="table-title">Imagen</td>
                         <th className="table-title">Editar</th>
-                        <th className="table-title">Eliminar</th>
                     </tr>
                 </thead>
                 <tbody>
                     {Array.isArray(apiCategorias) && apiCategorias.map((elem, index) => (
                         <tr key={index}>
                             <td>{elem.nombre}</td>
-                            <td><img className="readevent-foto" src={elem.imagen_url} alt={elem.nombre} /></td>
-                            <td>
+                            <td><img className="readcategoria-foto" src={elem.imagen_url} alt={elem.nombre} /></td>
+                            <td className="button-crud">
                                 <Link to='/updatecategorias'>
                                     <button onClick={() => setData(elem)}>
                                         <Pencil />
                                     </button>
                                 </Link>
                             </td>
-                            <td>
+                            <td className="button-crud">
                                 <button onClick={() => onDelete(elem.categoria_id)}><Trash3 /></button>
                             </td>
                         </tr>

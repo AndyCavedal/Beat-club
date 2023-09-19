@@ -3,8 +3,9 @@
     justify-content: center;
     align-items: center;
     font-size: 2rem;
-    padding: 30px;
+    margin: 150px 0px 70px 0px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    height: 500px;
 }
 
 .update-form__container {
@@ -14,21 +15,20 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2rem 4rem;
+    padding: 1rem 2rem;
 }
 
 .update-form__container label {
-    font-size: 1.8rem;
-    margin-top: 10px;
+    font-size: 1.6rem;
+    margin-top: 5px;
 }
 
 .update-form__container input,
 .update-form__container textarea {
-    width: 300px;
+    width: 250px;
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
-    margin-bottom: 15px;
 }
 
 .update-form__container textarea {
@@ -36,14 +36,13 @@
 }
 
 .update-form__container button {
-    width: 150px;
-    padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #222222;
     font-size: 1.6rem;
-    background-color: white;
-    color: black;
+    padding: 8px;
+    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -52,14 +51,13 @@
 }
 
 .update-form__container button:hover {
-    background-color: #222222;
-    color: white;
+    background-color: #333;
 }
 
 .buttons-container {
     display: flex;
     justify-content: space-between;
-    width: 300px;
+    width: 265px;
 }
 
 .button-icons {

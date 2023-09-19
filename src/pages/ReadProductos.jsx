@@ -56,10 +56,9 @@ const ReadProductos = () => {
                     <tr>
                         <th className="table-title">Nombre</th>
                         <th className="table-title">Precio</th>
-                        <th className="table-title">Descripcion</th>
-                        <th className="table-title">Categoria</th>
+                        <th className="table-title noshow">Descripcion</th>
+                        <th className="table-title noshow">Categoria</th>
                         <th className="table-title">Editar</th>
-                        <th className="table-title">Eliminar</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -67,18 +66,18 @@ const ReadProductos = () => {
                         <tr key={index}>
                             <td>{elem.nombre}</td>
                             <td>${elem.precio}</td>
-                            <td>{elem.descripcion}</td>
-                            <td>{elem.categoria_nombre}</td>
-                            <td>
+                            <td className="noshow">{elem.descripcion}</td>
+                            <td className="noshow">{elem.categoria_nombre}</td>
+                            <td className="button-crud">
                                 <Link to="/updateproducto">
                                     <button onClick={() => setData(elem)}>
-                                        <Pencil />
+                                        <Pencil className="button-img"/>
                                     </button>
                                 </Link>
                             </td>
-                            <td>
+                            <td className="button-crud">
                                 <button onClick={() => onDelete(elem.producto_id)}>
-                                    <Trash3 />
+                                    <Trash3 className="button-img"/>
                                 </button>
                             </td>
                         </tr>
