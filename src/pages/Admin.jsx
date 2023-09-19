@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 const Admin = ()=> {
     return (
         <div className="root-interface__container">
-            <h2>MENU PARA ADMIN</h2>
-            <div>
+            <h2>Menu Admin</h2>
+            <div className="buttons__container">
                 <Link to='/readproductos'>
                     <button>Productos</button>
                 </Link>

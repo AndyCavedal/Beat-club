@@ -34,12 +34,12 @@ const Login = () => {
 
     return (
         <div className='login-container'>
-            <h2>Iniciar Sesión</h2>
             <form className='login-form' onSubmit={onSubmit}>
+            <h2>Iniciar Sesión</h2>
                 <div>
-                    <label>Usuario:</label>
                     <input
                         type="text"
+                        placeholder='Usuario'
                         value={body.username}
                         onChange={inputChange}
                         name='username'
@@ -47,9 +47,9 @@ const Login = () => {
                     />
                 </div>
                 <div>
-                    <label>Contraseña:</label>
                     <input
                         type="password"
+                        placeholder='Contraseña'
                         value={body.password}
                         onChange={inputChange}
                         name='password'
