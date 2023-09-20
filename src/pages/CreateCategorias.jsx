@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import backarrow from '../assets/back-arrow2.svg';
-import database from '../assets/database-add.svg';
 import { ArrowReturnLeft, DatabaseAdd } from "react-bootstrap-icons";
 import '../styles/CreateMenu.scss';
 
@@ -46,7 +44,7 @@ const CreateCategorias = () => {
 
   return (
     <div className="supercontainer container-create ">
-      <div className="form__container">
+      <div id="reducir" className="form__container">
         <form>
           <label>Nombre</label> <br />
           <input

@@ -34,7 +34,7 @@ const CreateEvento = () => {
 
     return (
         <div className="supercontainer container-create">
-            <div className="form__container">
+            <div id="reducir" className="form__container">
                 <form>
                     <label>Título</label> <br />
                     <input

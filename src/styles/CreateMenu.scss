@@ -1,51 +1,51 @@
 .supercontainer {
-    background-color: var(--black);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    margin-top: 80px;
-  }
-  
-  .container-create{
-    min-height: 70vh;
+  background-color: var(--black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-top: 80px;
 }
-  
-  .form__container {
-    max-width: 600px;
-    padding: 20px;
-    background-color: #f5f5f5;
-    border-radius: 15px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    margin: 10px;
-  }
-  
-  .form__container form {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-  }
-  
-  .form__container label {
-    text-decoration: none;
-    font-size: 1.6rem;
-    margin-top: 5px;
-  }
-  
-  .form__container input,
-  .form__container select {
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    margin-bottom: 10px;
-  }
-  
-  .form__container input::placeholder,
-  .form__container select::placeholder {
-    color: #999;
-  }
-  
-  .form__container button {
+
+.container-create {
+  min-height: 70vh;
+}
+
+.form__container {
+  max-width: 600px;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+}
+
+.form__container form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.form__container label {
+  text-decoration: none;
+  font-size: 1.6rem;
+  margin-top: 5px;
+}
+
+.form__container input,
+.form__container select {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.form__container input::placeholder,
+.form__container select::placeholder {
+  color: #999;
+}
+
+.form__container button {
   display: flex;
   background-color: #222222;
   justify-content: center;
@@ -58,25 +58,29 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
   text-decoration: none;
-  }
+}
 
-  .text-fix {
-    text-decoration: none;
-  }
-  
-  .form__container button:hover {
-    background-color: #333;
-  }
-  
-  .buttons-container {
-    display: flex;
-    justify-content: space-evenly;
-    width: 300px;
-  }
-  
-  .links-icons {
-    width: 20px;
-    height: 20px;
-    margin-left: 10px;
-    fill: #fff;
-  }
+.text-fix {
+  text-decoration: none;
+}
+
+.form__container button:hover {
+  background-color: #333;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 300px;
+}
+
+.links-icons {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  fill: #fff;
+}
+
+#reducir {
+  height: auto;
+}
