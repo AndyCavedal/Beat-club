@@ -1,6 +1,7 @@
 import React, { useEffect, useState, lazy, Suspense } from 'react';
 import { ScaleLoader } from 'react-spinners'
 import '../styles/Home.scss';
+import { app, analytics } from "../firebase";
 
 const EventosFuturos = lazy(() => import('../components/EventosFuturos'));
 const About = lazy(() => import('../components/About'))

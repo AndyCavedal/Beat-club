@@ -2,10 +2,11 @@ import React, { useEffect, lazy, Suspense } from 'react';
 import Formulario from '../components/Formulario';
 import '../styles/Contacto.scss';
 import { ScaleLoader } from 'react-spinners'
+import { app, analytics } from "../firebase";
 
 const Contactanos = lazy(()=> import ('../components/Contactanos'));
 const Mapa = lazy(()=> import ('../components/Mapa'));
-const Form = lazy(()=> import('react-router-dom'))
+// const Form = lazy(()=> import('react-router-dom'))
 
 
 const Contacto = () => {

@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import MenuComponents from '../containers/MenuComponents';
+import { app, analytics } from "../firebase";
 
 const Menu = () =>{
     useEffect(() => {
