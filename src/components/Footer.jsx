@@ -1,9 +1,21 @@
 import React from 'react';
 import '../styles/Footer.scss';
 import { Instagram, Facebook, EnvelopeFill } from 'react-bootstrap-icons';
+import { useLocation } from 'react-router-dom';
 
 
 const Footer = () => {
+
+    const location = useLocation();
+
+    const routesWithFooter = ['/readproductos', '/readeventos', '/root', '/createproducto', '/updateproducto', '/createevento', '/readcategorias', '/createcategorias', '/updatecategorias', '/login'];
+
+    const shouldShowWhatsApp = !routesWithFooter.includes(location.pathname);
+
+    if (!shouldShowWhatsApp) {
+        return null;
+    }
+
     return (
 
         <div className='footer'>
