@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+Allow: /menu/
+Allow: /contacto/
+Allow: /eventos/
+Disallow: /login/
+Disallow: /root/
+Disallow: /readproductos/
+Disallow: /readeventos/
+Disallow: /createproducto/
+Disallow: /updateproducto/
+Disallow: /createevento/
+Disallow: /readcategorias/
+Disallow: /createcategorias/
+Disallow: /updatecategorias/
