@@ -1,48 +1,51 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
 import '../styles/Login.scss';
+import { useAuth } from '../context/authContext';
 
 const Login = () => {
-    const [body, setBody] = useState({ username: '', password: '' });
+    const [user, setUser] = useState({
+        email: "",
+        password: "",
+    });
+
+    const { login } = useAuth();
+
     const navigate = useNavigate();
 
-    //para el mensaje de error
-    const [errorMessage, setErrorMessage] = useState('');
+    const [error, setError] = useState();
 
-    const inputChange = (e) => {
-        const { name, value } = e.target;
-        setBody({
-            ...body,
-            [name]: value
-        });
+    const handleChange = ({ target: { name, value } }) => {
+        setUser({ ...user, [name]: value });
     };
 
-    const onSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        axios.post('https://server-api-beat-club.vercel.app/api/login', body)
-            .then(({ data }) => {
-                localStorage.setItem('auth', '"yes"');
-                navigate('/root'); // Redirige al usuario a la página protegida
-                console.log(data);
-            })
-            .catch(({ response }) => {
-                console.log(response.data);
-                setErrorMessage('Verificación Incorrecta');
-            });
+        setError('')
+        try {
+            await login(user.email, user.password);
+            navigate("/root");
+        } catch (error) {
+            console.log(error.code)
+            if (error.code === "auth/invalid-email"){
+                setError('Correo invalido')
+            }
+            // setError(error.message);
+        }
     };
+
 
     return (
         <div className='login-container'>
-            <form className='login-form' onSubmit={onSubmit}>
+            {error && <p>{error}</p>}
+            <form className='login-form' onSubmit={handleSubmit}>
             <h2>Iniciar Sesión</h2>
                 <div>
                     <input
-                        type="text"
-                        placeholder='Usuario'
-                        value={body.username}
-                        onChange={inputChange}
-                        name='username'
+                        type="email"
+                        placeholder='Ingrese Email'
+                        onChange={handleChange}
+                        name='email'
                         required
                     />
                 </div>
@@ -50,14 +53,13 @@ const Login = () => {
                     <input
                         type="password"
                         placeholder='Contraseña'
-                        value={body.password}
-                        onChange={inputChange}
+                        onChange={handleChange}
                         name='password'
+                        id='password'
                         required
                     />
                 </div>
                 <button type="submit">Verificar</button>
-            {errorMessage && <p>{errorMessage}</p>}
             </form>
         </div>
     );

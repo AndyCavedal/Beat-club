@@ -1,24 +1,24 @@
 import { Navigate, Outlet } from "react-router-dom"
-import React, { useState, useEffect } from 'react'
+import React from 'react'
+import { useAuth } from "../context/authContext"
+import { ScaleLoader } from 'react-spinners'
 
-const ProtectedRoute = ({redirectPath='/'})=>{
-    const [isAuth, setIsAuth] = useState(true)
+const ProtectedRoute = ({})=>{
+    const {user, loading} = useAuth()
 
-    const init = () => {
-        if (!localStorage.getItem("auth")) {
-            setIsAuth(false)
-        } else {
-            const auth = JSON.parse(localStorage.getItem('auth'))
-            if (auth === 'yes') {
-                setIsAuth(true)
-            } else {
-                setIsAuth(false)
-            }
-        }
-    }
-    useEffect(init, [])
+    if(loading) return (<div className="loading-message">
+    <ScaleLoader
+        color="#A80038"
+        height={70}
+        margin={4}
+        width={8}
+    />
+</div>
+    )
 
-    return isAuth ? <Outlet /> : <Navigate to={redirectPath}/>
+    if(!user) return <Navigate to='/' />
+
+    return <Outlet />
 }
 
 export default ProtectedRoute;

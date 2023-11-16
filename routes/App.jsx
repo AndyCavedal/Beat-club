@@ -24,42 +24,45 @@ const CreateCategorias = lazy(() => import('../src/pages/CreateCategorias'));
 const UpdateCategorias = lazy(() => import('../src/pages/UpdateCategorias'));
 
 import { ScaleLoader } from 'react-spinners'
+import { AuthProvider } from '../src/context/authContext';
 
 const App = () => {
     return (
-        <BrowserRouter>
-            <Header />
-            <Suspense fallback={<div className="loading-message general">
-                <ScaleLoader
-                    color="#A80038"
-                    height={70}
-                    margin={4}
-                    width={8}
-                />
-            </div>}>
-                <Routes>
-                    <Route exact path='/' element={<Home />} />
-                    <Route exact path='/eventos' element={<Eventos />} />
-                    <Route exact path='/menu' element={<Menu />} />
-                    <Route exact path='/contacto' element={<Contacto />} />
-                    <Route element={<ProtectedRoute />}>
-                        <Route exact path='/root' element={<Admin />} />
-                        <Route exact path='/readproductos' element={<ReadProductos />} />
-                        <Route exact path='/readeventos' element={<ReadEventos />} />
-                        <Route exact path='/createproducto' element={<CreateProducto />} />
-                        <Route exact path='/updateproducto' element={<UpdateProducto />} />
-                        <Route exact path='/createevento' element={<CreateEvento />} />
-                        <Route exact path='/readcategorias' element={<ReadCategorias />} />
-                        <Route exact path='/createcategorias' element={<CreateCategorias />} />
-                        <Route exact path='/updatecategorias' element={<UpdateCategorias />} />
-                    </Route>
-                    <Route exact path='/login' element={<Login />} />
-                    <Route exact path='*' element={<NotFound />} />
-                </Routes>
-            </Suspense>
-            <WhatsApp />
-            <Footer />
-        </BrowserRouter>
+        <AuthProvider>
+            <BrowserRouter>
+                <Header />
+                <Suspense fallback={<div className="loading-message general">
+                    <ScaleLoader
+                        color="#A80038"
+                        height={70}
+                        margin={4}
+                        width={8}
+                    />
+                </div>}>
+                    <Routes>
+                        <Route exact path='/' element={<Home />} />
+                        <Route exact path='/eventos' element={<Eventos />} />
+                        <Route exact path='/menu' element={<Menu />} />
+                        <Route exact path='/contacto' element={<Contacto />} />
+                        <Route element={<ProtectedRoute />}>
+                            <Route exact path='/root' element={<Admin />} />
+                            <Route exact path='/readproductos' element={<ReadProductos />} />
+                            <Route exact path='/readeventos' element={<ReadEventos />} />
+                            <Route exact path='/createproducto' element={<CreateProducto />} />
+                            <Route exact path='/updateproducto' element={<UpdateProducto />} />
+                            <Route exact path='/createevento' element={<CreateEvento />} />
+                            <Route exact path='/readcategorias' element={<ReadCategorias />} />
+                            <Route exact path='/createcategorias' element={<CreateCategorias />} />
+                            <Route exact path='/updatecategorias' element={<UpdateCategorias />} />
+                        </Route>
+                        <Route exact path='/login' element={<Login />} />
+                        <Route exact path='*' element={<NotFound />} />
+                    </Routes>
+                </Suspense>
+                <WhatsApp />
+                <Footer />
+            </BrowserRouter>
+        </AuthProvider>
     )
 };
 
