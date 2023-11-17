@@ -4,6 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const Dotenv = require('dotenv-webpack');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     mode: 'production',
@@ -64,6 +65,12 @@ module.exports = {
             filename: '[name].css'
         }),
         new Dotenv(),
+        new CopyPlugin({
+            patterns: [
+                { from: 'public/robots.txt', to: 'robots.txt', noErrorOnMissing: true },
+                { from: 'public/sitemap.xml', to: 'sitemap.xml', noErrorOnMissing: true }
+            ],
+        }),
     ],
     optimization: {
         minimizer: [
